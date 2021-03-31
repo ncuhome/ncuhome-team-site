@@ -3,7 +3,7 @@
     width: 1600px;
     height: 100%;
     display: flex;
-    margin-left: 360px;
+    margin-left: 260px;
 
     .home-team-l-bg {
       width: 100%;
@@ -37,7 +37,7 @@
           margin-bottom: 30px
         }
         .home-team-desc {
-          margin-bottom: 32px;
+          margin-bottom: 26px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -57,11 +57,11 @@
         height: 100%;
         width: 600px;
         bottom: -60px;
-        left: 30px;
+        left: 10px;
         position: relative;
         & > img {
-          width: 680px;
-          height: 280px;
+          width: 700px;
+          height: 300px;
         }
       }
     }

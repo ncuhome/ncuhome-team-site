@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 import BoldButton from "../components/BoldButton";
 import circle from "@/assets/img/circle.png"
-import line from "@/assets/img/circle.png"
+import line from "@/assets/img/line.png"
 
 const About: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const About: React.FC = () => {
           <p className="home-about-text2">
             家园欢迎每一位热爱互联网的的出色青年
           </p>
-          <BoldButton text="Join us" bgColor="#FAFCFF" />
+          <BoldButton text="Join us" bgColor="#ABD9F8" />
           {/* <img src="/assets/img/line2.png" /> */}
         </div>
       </div>

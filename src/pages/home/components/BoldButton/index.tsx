@@ -3,7 +3,7 @@ import "./style.scss";
 
 interface Props {
   text: string;
-  bgColor: "#fff" | "#FAFCFF";
+  bgColor: "#fff" | "#FAFCFF"|"#ABD9F8";
 }
 
 const BoldButton: React.FC<Props> = ({ text }) => {
