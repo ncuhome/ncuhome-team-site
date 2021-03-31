@@ -1,0 +1,69 @@
+@media (max-width: 767px) {
+  .ncuhome-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    .ncuhome-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 65px;
+    }
+    .ncuhome-right {
+      width: 100%;
+      // margin-bottom: 44px;
+      height: calc(100% - 48px);
+      position: relative;
+      .ncuhome-rt-bg {
+        height: 250px;
+        width: 60%;
+        margin-left: 40%;
+        background-color: #FAFCFF;
+        // display: flex;
+        // flex-direction: column;
+        img {
+          // align-self: flex-end;
+          width: 90%;
+          position: absolute;
+          bottom: -20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ncuhome-wrapper {
+    height: 100%;
+    width: 1600px;
+    display: flex;
+    background-color: #FAFCFF;
+    .ncuhome-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 24px 0 24px 98px;
+      height: calc(100% - 48px);
+      width: 600px;
+    }
+    .ncuhome-right {
+      width: 1000px;
+      margin: 24px 0;
+      height: calc(100% - 48px);
+      .ncuhome-rt-bg {
+        height: 100%;
+        width: 660px;
+        margin-left: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+          width: 700px;
+          margin-left: -110px;
+        }
+      }
+    }
+  }
+}

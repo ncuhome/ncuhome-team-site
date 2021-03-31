@@ -1,0 +1,16 @@
+.hs-content-limit {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display:  flex;
+  .hs-horizontal-content {
+    display: flex;
+    width: 5560px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    height: calc(4950px + 100vh);
+  }
+}

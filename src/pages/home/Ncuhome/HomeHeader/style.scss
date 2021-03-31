@@ -1,0 +1,50 @@
+@media (max-width: 767px) {
+  .home-header {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-header {
+    height: 56px;
+    width: 100%;
+    position: relative;
+    ul {
+      height: 100%;
+      width: auto;
+      display: flex;
+      align-items: center;
+
+      li {
+        width: 46px;
+        padding: 0 4px;
+        text-align: center;
+        margin-right: 53px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      li:last-child {
+        width: 90px;
+        color: #fff;
+        background-color: #1B8FF4;
+        padding: 7px 12px;
+        border-radius: 20px;
+        margin: 0;
+        transition: all .6s;
+      }
+    }
+
+    .home-header-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 54px;
+      background-color: #000;
+      border-radius: 2.5px;
+      transition: all 0.3s ease-out;
+    }
+  }
+}
+

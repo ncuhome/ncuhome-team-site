@@ -1,0 +1,27 @@
+@media (max-width: 767px) {
+  .bold-btn {
+    height: 36px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 16px;
+    letter-spacing: 4px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bold-btn {
+    height: 50px;
+    width: 180px;
+    border: 2px solid black;
+    border-radius: 18px;
+    letter-spacing: 8px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+  }
+}
