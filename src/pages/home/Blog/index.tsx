@@ -15,7 +15,6 @@ const Blog: React.FC = () => {
       <div className="home-blog-right">
         <div className="home-blog-title home-title">
           Blogs
-          <div className="home-blog-tailling-s">s</div>
         </div>
         <div className="home-blog-desc">
           <p>关于前端架构的一些思考</p>

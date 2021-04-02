@@ -12,7 +12,6 @@ const Products: React.FC = () => {
       <div className="home-prod-right">
         <div className="home-prod-title home-title">
           Products
-          <div className="home-prod-tailling-s">s</div>
         </div>
         <div className="home-prod-desc">
           <p>南大家园APP —— 改变，从这里开始</p>

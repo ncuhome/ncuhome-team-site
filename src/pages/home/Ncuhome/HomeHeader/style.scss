@@ -7,8 +7,11 @@
 @media (min-width: 768px) {
   .home-header {
     height: 56px;
-    width: 100%;
-    position: relative;
+    width: 27%;
+    top: 0px;
+    left: 30px;
+    background-color: #fff;
+    position: fixed;
     ul {
       height: 100%;
       width: auto;

@@ -20,19 +20,23 @@
 
 @media(min-width: 768px) {
   .home-ach {
-    width: 550px;
+    width: 500px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 180px;
+    padding-bottom: 130px;
     .home-ach-item {
-      height: 60px;
+      height: 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       & > img {
-        width: 40px;
+        width: 50px;
       }
+    }
+    .home-ach-item-title{
+      padding-top: 10px;
+      font-weight: 500;
     }
   }
 }

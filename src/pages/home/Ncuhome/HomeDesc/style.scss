@@ -36,6 +36,7 @@
     display: flex;
     flex-direction: column;
     z-index: 2;
+    margin-top: 120px;
     .home-name {
       display: flex;
       flex-direction: column;
@@ -43,12 +44,9 @@
         letter-spacing: 4px;
         font-size: 24px;
       }
-      .home-desc-characters {
-        margin-left: -50px;
-      }
       & > img {
-        width: 600px;
-        margin-top: 20px;
+        width: 500px;
+        margin-top: 50px;
       }
     }
     .home-desc-intro {
@@ -56,7 +54,8 @@
       p {
         letter-spacing: 2px;
         margin-top: 8px;
-        font-size: 16px;
+        font-size: 15px;
+        font-weight:530;
       }
     }
   }

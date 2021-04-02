@@ -7,7 +7,7 @@ const HomeDesc: React.FC = () => {
     <div className="home-desc">
       <div className="home-name">
         <div className="home-desc-eng">NCUHOME</div>
-        <img className="home-desc-characters" src={characters} alt="characters" />
+        <img src={characters} alt="characters" />
       </div>
 
       <div className="home-desc-intro">

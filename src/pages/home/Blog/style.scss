@@ -33,26 +33,20 @@
       padding-bottom: 20px;
       .home-title {
         font-size: 70px;
-        letter-spacing: 6px;
-        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        letter-spacing: 2px;
+        font-weight: bolder;
         margin-bottom: 50px;
         position: relative;
-        .home-blog-tailling-s {
-          color: #FAFCFF;
-          position: absolute;
-          bottom: -4px;
-          right: 12px;
-          z-index: -1;
-        }
       }
       .home-blog-desc {
         margin-bottom: 42px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         & > p {
-          font-size: 20px;
-          margin-bottom: 16px;
+          font-size: 16px;
+          margin-bottom: 18px;
           color: rgba(0, 0, 0, 0.85);
         }
       }
