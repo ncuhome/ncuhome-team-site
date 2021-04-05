@@ -4,10 +4,10 @@ import { useMedia } from "react-use";
 import "./index.scss";
 
 const Ncuhome = lazy(() => import("./Ncuhome"));
-const Products = lazy(() => import("./Products"));
-const Blog = lazy(() => import("./Blog"));
-const Team = lazy(() => import("./Team"));
-const About = lazy(() => import("./About"));
+const Products = lazy(() => import("./ProductsCard"));
+const Blog = lazy(() => import("./BlogCard"));
+const Team = lazy(() => import("./TeamCard"));
+const About = lazy(() => import("./AboutCard"));
 
 const Pages: React.FC = () => {
   return (

@@ -5,6 +5,9 @@
 }
 
 @media (min-width: 768px) {
+  a {
+    text-decoration: none;
+  }
   .home-header {
     height: 56px;
     width: 27%;

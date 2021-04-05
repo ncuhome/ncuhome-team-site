@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from "react";
 import introBg from "@/assets/img/intro-bg.png"
 import "./style.scss";
 
-const HomeHeader = lazy(() => import("./HomeHeader"));
+const HomeHeader = lazy(() => import("../../HomeHeader"));
 const HomeDesc = lazy(() => import("./HomeDesc"));
 const HomeAchievement = lazy(() => import("./HomeAchievement"));
 
