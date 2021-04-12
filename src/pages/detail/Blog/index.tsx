@@ -1,9 +1,10 @@
 import React from "react"
+import List from "../components/Lists"
 
 const Blog = () => {
     return(
         <div>
-            blog
+            <List />
         </div>
     )
 }

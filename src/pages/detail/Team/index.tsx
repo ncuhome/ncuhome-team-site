@@ -1,3 +1,4 @@
+import BoldButton from "@/pages/home/components/BoldButton";
 import React from "react"
 
 const Team = () => {

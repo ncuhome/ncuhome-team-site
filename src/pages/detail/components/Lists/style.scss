@@ -1,0 +1,66 @@
+.list-box {
+  position: relative;
+  margin: 0px 0px 30px 0px;
+  /* border: 1px dashed rgba(0, 169, 216,0.3); */
+}
+
+.list-box a {
+  text-decoration: none;
+}
+
+.list-box:last-child {
+  margin: 0;
+}
+
+.list-line {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -16px;
+  background-color: rgb(214, 214, 214);
+}
+
+.list-title {
+  font-size: 18px;
+  margin: 0 0 4px 0;
+  color: rgb(0, 169, 216);
+  transition: 0.2s;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.list-title:hover {
+  color: rgb(0, 145, 185);
+  text-decoration: underline;
+}
+
+.list-summary {
+  color: dimgrey;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.1s;
+}
+
+.list-summary:last-child {
+  margin-bottom: 0;
+}
+
+.list-summary:hover {
+  color: rgb(39, 39, 39);
+}
+
+.list-tag {
+  color: dimgrey;
+  font-size: 12px;
+  background-color: rgb(214, 214, 214);
+  margin-right: 3px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}

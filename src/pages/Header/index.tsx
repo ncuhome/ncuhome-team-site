@@ -34,7 +34,7 @@ const HomeHeader: React.FC = () => {
   };
 
   return (
-    <div className="home-header">
+    <div className="header">
       <ul>
         {headerItems.map((item, index) => {
           return (
@@ -56,7 +56,7 @@ const HomeHeader: React.FC = () => {
         <li style={{ fontSize: 20 }}><Link to="/about">加入我们</Link></li>
       </ul>
       <div
-        className="home-header-bar"
+        className="header-bar"
         style={{ transform: `translateX(${barOffsetX}px)` }}
       ></div>
     </div>

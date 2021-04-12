@@ -1,5 +1,5 @@
 @media (max-width: 767px) {
-  .home-header {
+  .header {
     display: none;
   }
 }
@@ -8,11 +8,11 @@
   a {
     text-decoration: none;
   }
-  .home-header {
+  .header {
     height: 56px;
-    width: 27%;
+    width: 100%;
     top: 0px;
-    left: 30px;
+    left: 0px;
     background-color: #fff;
     position: fixed;
     ul {
@@ -22,10 +22,9 @@
       align-items: center;
 
       li {
-        width: 46px;
-        padding: 0 4px;
+        width: 80px;
+        padding: 0 10px;
         text-align: center;
-        margin-right: 53px;
         font-size: 24px;
         cursor: pointer;
       }
@@ -41,10 +40,7 @@
       }
     }
 
-    .home-header-bar {
-      position: absolute;
-      // bottom: 0;
-      left: 0;
+    .header-bar {
       height: 3px;
       width: 54px;
       background-color: #000;
