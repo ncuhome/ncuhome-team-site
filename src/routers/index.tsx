@@ -10,13 +10,12 @@ import Home from "../pages/home";
 const Routes: React.FC = () => {
   return (
     <BrowserRouter>
-      <Header />
       <Switch>
-        <Route path="/" component={Home} exact/>
+        <Route path="/" component={Home} exact />
         <Route path="/product" component={Product} />
         <Route path="/team" component={Team} />
         <Route path="/blog" component={Blog} />
-        <Route path="/about/:id" component={About} />
+        <Route path="/about" component={About} />
       </Switch>
     </BrowserRouter>
   );

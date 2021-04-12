@@ -11,7 +11,7 @@ const Ncuhome: React.FC = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <div className="ncuhome-wrapper">
         <div className="ncuhome-left">
-          {/* <HomeHeader /> */}
+          <HomeHeader />
           <HomeDesc />
           <HomeAchievement />
         </div>

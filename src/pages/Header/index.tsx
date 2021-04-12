@@ -27,9 +27,9 @@ const HomeHeader: React.FC = () => {
 
   const changeBarOffset = (index: number): void => {
     if (index !== 0) {
-      setBarOffsetX(index * 107);
+      setBarOffsetX(index * 117 + 35);
     } else {
-      setBarOffsetX(0);
+      setBarOffsetX(35);
     }
   };
 

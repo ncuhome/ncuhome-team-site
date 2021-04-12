@@ -1,10 +1,10 @@
 import React from "react";
 import HomeHeader from "./pages/HomeHeader";
-import Routes from './routers'
+import Routes from "./routers";
 
 const App: React.FC = () => {
   return (
-    <Routes />
+      <Routes />
   );
 };
 
