@@ -1,7 +1,7 @@
 import React from "react";
 import List from "../components/Lists";
 import Header from "../../Header";
-import TeamSlider from "../components/TeamSlider"
+import TeamSlider from "../Team/TeamSlider"
 
 
 const Blog = () => {

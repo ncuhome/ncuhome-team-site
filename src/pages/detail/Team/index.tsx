@@ -2,22 +2,30 @@ import BoldButton from "@/pages/home/components/BoldButton";
 import React from "react";
 import "./style.scss";
 import Header from "../../Header";
-import TeamSlider from "../components/TeamSlider";
+import TeamSlider from "./TeamSlider";
+import TeamFooter from "./TeamFooter";
+import line3 from "@/assets/img/line3.png";
 
 const Team: React.FC = () => {
   return (
     <div className="team-wrapper">
-      <div className="header-wrapper">
+      <div className="team-header-wrapper">
         <Header />
       </div>
-      <div className="slider-wrapper">
-      <TeamSlider />
+      <div className="team-slider-wrapper">
+        <TeamSlider />
       </div>
-      <div className="content-wrapper">
-
+      <div className="team-content-rectangle"></div>
+      <div className="team-content-wrapper">
+        <img src={line3} />
+        <div className="team-content-title1">
+          <p>WE, NCUHOMERS</p>
+        </div>
+        <img src={line3} />
       </div>
-      <div className="c-wrapper">
-
+      <div className="c-wrapper"></div>
+      <div>
+        <TeamFooter />
       </div>
     </div>
   );

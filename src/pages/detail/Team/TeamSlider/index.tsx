@@ -7,10 +7,12 @@ import TeamBG4 from "@/assets/img/TeamBG4.png";
 import TeamBG5 from "@/assets/img/TeamBG5.png";
 
 const settings = {
+  arrow:true,
+  autoplay:true,
   dots: true,
   fade: true,
   infinite: true,
-  speed: 500,
+  autoplayspeed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
