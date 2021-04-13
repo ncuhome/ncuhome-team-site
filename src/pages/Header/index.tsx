@@ -5,7 +5,7 @@ import "./style.scss";
 const headerItems = [
   {
     name: "首页",
-    link: " ",
+    link: "",
   },
   {
     name: "产品",

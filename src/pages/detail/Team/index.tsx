@@ -1,14 +1,26 @@
 import BoldButton from "@/pages/home/components/BoldButton";
 import React from "react";
-import Header from  "../../Header"
+import "./style.scss";
+import Header from "../../Header";
+import TeamSlider from "../components/TeamSlider";
 
-const Team = () => {
-    return(
-        <div>
-            <Header />
-            team
-        </div>
-    )
-}
+const Team: React.FC = () => {
+  return (
+    <div className="team-wrapper">
+      <div className="header-wrapper">
+        <Header />
+      </div>
+      <div className="slider-wrapper">
+      <TeamSlider />
+      </div>
+      <div className="content-wrapper">
+
+      </div>
+      <div className="c-wrapper">
+
+      </div>
+    </div>
+  );
+};
 
 export default Team;

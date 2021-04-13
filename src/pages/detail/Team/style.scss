@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+  .team-wrapper{
+    height: 100%;
+    width: 1600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+    background-color: #F4F4F5;
+    .header-wrapper{
+      display: fixed;
+      margin-top: 0px;
+      width: 100%;
+      height: 70px;
+    }
+    .slider-wrapper{
+      width: 100%;
+      height: 900px;
+    }
+    .content-wrapper{
+      display: flex;
+      width: 100%;
+      height: 200px;
+      background-color: green;
+    }
+  }
+}
