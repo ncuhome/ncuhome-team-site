@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import React from "react";
+import "./style.scss"
 import TeamBG1 from "@/assets/img/TeamBG1.png";
 import TeamBG2 from "@/assets/img/TeamBG2.png";
 import TeamBG3 from "@/assets/img/TeamBG3.png";
@@ -7,9 +8,7 @@ import TeamBG4 from "@/assets/img/TeamBG4.png";
 import TeamBG5 from "@/assets/img/TeamBG5.png";
 
 const settings = {
-  arrow:true,
   autoplay:true,
-  dots: true,
   fade: true,
   infinite: true,
   autoplayspeed: 500,
@@ -19,7 +18,7 @@ const settings = {
 
 const TeamSlider:React.FC = () => {
   return (
-    <Slider {...settings}>
+    <Slider className="slider-wrapper" {...settings}>
       <div>
         <img src={TeamBG1} />
       </div>

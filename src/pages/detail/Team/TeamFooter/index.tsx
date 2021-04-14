@@ -1,17 +1,25 @@
 import React from "react";
+import BoldButton from "../../../home/components/BoldButton"
+import CompanyLogo from "@/assets/img/CompanyLogo.png"
 import "./style.scss";
 
 const About: React.FC = () => {
   return (
     <div className="team-footer-wrapper">
       <div className="team-footer-top">
-        <p>Ncu Homers </p>
-        <p> travel</p>
-        <p> around the world</p>
+        <p className="team-footer-top-text1">Ncu Homers </p>
+        <p className="team-footer-top-text2"> travel</p>
+        <p className="team-footer-top-text3"> around the world</p>
+        <div className="team-footer-top-img">
+        <img src={CompanyLogo} alt="company" />
+        </div>
       </div>
       <div className="team-footer-middle">
-        <p className="team-footer-middle-title">Let's make something great</p><br/>
-        <p className="team-footer-text1">together</p>
+        <p className="team-footer-middle-text1">Let's make something great</p><br/>
+        <p className="team-footer-middle-text2">together</p>
+        <div className="team-footer-middle-btn">
+        <BoldButton text="Jion us" bgColor="#FAFCFF" />
+        </div>
       </div>
       <div className="team-footer-bottom">
         <ul>

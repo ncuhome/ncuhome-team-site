@@ -2,9 +2,8 @@ import About from "@/pages/detail/About";
 import Blog from "@/pages/detail/Blog";
 import Product from "@/pages/detail/Product";
 import Team from "@/pages/detail/Team";
-import Header from "@/pages/Header";
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route} from "react-router-dom";
 import Home from "../pages/home";
 
 const Routes: React.FC = () => {
