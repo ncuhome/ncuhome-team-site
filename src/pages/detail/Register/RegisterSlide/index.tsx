@@ -15,7 +15,7 @@ const settings = {
   speed: 500,
 };
 
-const NewAboutSlider = () => {
+const RegisterSlider = () => {
   return (
     <Slider {...settings}>
       <div>
@@ -37,4 +37,4 @@ const NewAboutSlider = () => {
   );
 };
 
-export default NewAboutSlider;
+export default RegisterSlider;
