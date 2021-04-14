@@ -16,6 +16,7 @@ const Routes: React.FC = () => {
         <Route path="/team" component={Team} />
         <Route path="/blog" component={Blog} />
         <Route path="/about" component={About} />
+        <Route path="/register" component={About} />
       </Switch>
     </BrowserRouter>
   );
