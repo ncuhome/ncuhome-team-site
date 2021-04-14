@@ -1,26 +1,12 @@
 @media (min-width: 768px) {
-  .team-footer-wrapper {
+  .blog-footer-wrapper {
     width: 100%;
-    height: 800px;
+    height: 200px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    .team-footer-top {
-      align-content: center;
-      display: flex;
-      height: 300px;
-      width: 100%;
-      background-color: #191919;
-    }
-    .team-footer-middle {
-      display: flex;
-      align-items: center;
-      background-color: #1b8ff4;
-      height: 300px;
-      width: 100%;
-    }
-    .team-footer-bottom {
+    .blog-footer-bottom {
       height: 200px;
       width: 100%;
       display: flex;

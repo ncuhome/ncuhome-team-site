@@ -1,17 +1,26 @@
 import React from "react";
 import List from "../components/Lists";
 import Header from "../../Header";
-import TeamSlider from "../Team/TeamSlider"
-
+import BlogFooter from "./BlogFooter"
+import "./style.scss"
 
 const Blog = () => {
   return (
-    <div>
-      <Header />
-      <div>
-          {/* <TeamSlider /> */}
+    <div className="blog-wrapper">
+      <div className="blog-header-wrapper">
+        <Header />
       </div>
-      <List />
+      <div className="blog-title-wrapper">
+        <p className="blog-title-text1">Blogs</p>
+        <p className="blog-title-text2">Thoughts, stories and ideas...</p>
+        <p className="blog-title-text3">家园人的点滴思考与分享</p>
+      </div>
+      <div className="blog-content-wrapper">
+        <List />
+      </div>
+      <div className="blog-footer-wrapper">
+        <BlogFooter />
+      </div>
     </div>
   );
 };

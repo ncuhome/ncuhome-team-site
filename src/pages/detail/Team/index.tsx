@@ -24,7 +24,7 @@ const Team: React.FC = () => {
         <img src={line3} />
       </div>
       <div className="c-wrapper"></div>
-      <div>
+      <div className="team-footer-wrapper">
         <TeamFooter />
       </div>
     </div>
