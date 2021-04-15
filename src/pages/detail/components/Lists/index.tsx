@@ -48,7 +48,7 @@ const List: React.FC = () => {
               <div className="list-item-group">{item.group}</div>
               <div className="list-item-author">{item.author}</div>
               <div className="list-item-author">{item.time}</div>
-              <div className="list-item-img"></div>
+              {/* <div className="list-item-img"></div> */}
             </li>
           );
         })}

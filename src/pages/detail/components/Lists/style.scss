@@ -1,8 +1,8 @@
 @media (min-width: 768px) {
   .list-wrapper {
     height: 900px;
-    width: 70%;
-    padding: 20px 30px 20px 10px;
+    width: 60%;
+    padding: 20px 10px 20px 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,8 +13,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      width: 100%;
-      height: 200px;
+      width: 90%;
+      height: 180px;
       padding: 20px 10px 20px 10px;
       .list-item-title {
         display: flex;
@@ -27,16 +27,19 @@
         display: flex;
         padding-right: 5px;
         color: #858585;
+        font-size: 10px;
       }
       .list-item-author{
         width: 90%;
         display: flex;
         color: #858585;
+        font-size: 10px;
       }
       .list-item-time{
         display: flex;
         align-self: flex-end;
         color: #858585;
+        font-size: 10px;
       }
       .list-item-img{
         display: flex;

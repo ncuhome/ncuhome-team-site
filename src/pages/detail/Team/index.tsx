@@ -1,4 +1,3 @@
-import BoldButton from "@/pages/home/components/BoldButton";
 import React from "react";
 import "./style.scss";
 import Header from "../../Header";
