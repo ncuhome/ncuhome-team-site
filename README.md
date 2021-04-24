@@ -6,16 +6,12 @@
 
 + React (with Hooks) & react-router-dom
 + Sass
-+ webpack
++ snowpack
 + TypeScript
 
 ## 设计图稿
 
-+ [Sketch Cloud - 主站](https://sketch.cloud/s/xd5j5)
-
-## 我在开发过程中的思考
-
-+ To be filled.
++ [家园主站 UI 设计稿](https://ncuhome.yuque.com/ncuhomer/pproject/toeqik)
 
 ## License
 
