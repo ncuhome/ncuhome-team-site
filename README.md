@@ -13,7 +13,3 @@
 
 + [家园主站 UI 设计稿](https://ncuhome.yuque.com/ncuhomer/pproject/toeqik)
 
-## License
-
-MIT License @Wzb3422
-
