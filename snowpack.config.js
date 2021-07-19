@@ -14,4 +14,7 @@ module.exports = {
   alias: {
     "@": "./src"
   },
+  routes: [
+    {"match": "routes", "src": ".*", "dest": "/index.html"},
+  ],
 };
