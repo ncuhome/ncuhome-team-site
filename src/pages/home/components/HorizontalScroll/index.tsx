@@ -19,7 +19,7 @@ const HorizontalScroll: React.FC = ({ children }) => {
     <div className="hs-content-limit" style={{ position: "fixed" }}>
       <div
         className="hs-horizontal-content"
-        style={{ transform: `translateX(-${computedOffset}px)` }}
+        style={{ transform: `translateX(-${computedOffset}px)`}}
       >
         {children}
       </div>

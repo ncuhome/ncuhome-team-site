@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import BoldButton from "../components/BoldButton";
 import homeBlog from "@/assets/img/home-blog.png"
+import { useHistory } from "react-router-dom";
 
 const Blog: React.FC = () => {
   return (
@@ -20,7 +21,12 @@ const Blog: React.FC = () => {
           <p>关于前端架构的一些思考</p>
           <p>南大家园的从0到1</p>
         </div>
-        <BoldButton text="MORE" bgColor="#fff" />
+        <div onClick={() => {
+          window.location.replace(`https://ncuhome.yuque.com/ncuhome`)
+        }
+        }>
+          <BoldButton text="MORE" bgColor="#fff" />
+        </div>
       </div>
     </div>
   );

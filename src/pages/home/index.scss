@@ -1,4 +1,15 @@
+@media (max-width: 767px){
+  .ncuhome-header{
+    position: fixed;
+    z-index: 1000;
+  }
+  
+}
 @media (min-width: 768px) {
+  .ncuhome-header{
+    position: fixed;
+    z-index: 1000;
+  }
   .home-content-limit {
     margin-left: 160px;
     height: 100%;
