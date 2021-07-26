@@ -1,0 +1,325 @@
+@media (min-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  .product-wrapper-b {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fafcff;
+    .product-header-wrappe-b {
+      display: fixed;
+      margin-top: 0px;
+      width: 100%;
+      height: 70px;
+    }
+    .product-content-wrapper1-b {
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 900px;
+      background-color: #fafafa;
+      .product-content-left-wrapper-b {
+        display: flex;
+        width: 50%;
+        height: 900px;
+        padding-left: 5%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .product-content-logo-b {
+          object-fit: contain;
+          display: flex;
+          width: 80%;
+          height: 400px;
+        }
+        .product-content-description-b {
+          display: flex;
+          height: 10%;
+          width: 70%;
+          font-size: 25px;
+        }
+        .product-content-button1-b {
+          display: flex;
+          width: 300px;
+          padding-bottom: 200px;
+          .product-bold-btn-b {
+            height: 50px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 18px;
+            letter-spacing: 3px;
+            color: #353535;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+          }
+          .product-bold-btn-b:hover {
+            height: 50px;
+            width: 200px;
+            border: 2px solid #1b8ff4;
+            border-radius: 18px;
+            letter-spacing: 3px;
+            color: #1b8ff4;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+          }
+        }
+        .product-content-button2-b {
+          display: flex;
+          width: 300px;
+          padding-bottom: 200px;
+          .product-bold-btn-b {
+            height: 50px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 18px;
+            letter-spacing: 3px;
+            color: #353535;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+          }
+          .product-bold-btn-b:hover {
+            height: 50px;
+            width: 200px;
+            border: 2px solid #1b8ff4;
+            border-radius: 18px;
+            letter-spacing: 3px;
+            color: #1b8ff4;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+          }
+        }
+      }
+      .product-content-example-b {
+        object-fit:contain;
+        display: flex;
+        width: 50%;
+        height: 900px;
+      }
+    }
+
+    .product-content-wrapper2-b {
+      display: flex;
+      width: 100%;
+      height: 900px;
+      padding-top: 5%;
+      background-color: #fafafa;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .product-content-left-wrapper-b {
+        padding-top: 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 50%;
+        .product-content-logo-b {
+          object-fit:contain;
+          display: flex;
+          width: 60%;
+          height: 400px;
+          padding-bottom: 50px;
+        }
+        .product-content-description-b {
+          display: flex;
+          height: 30%;
+          width: 70%;
+          padding-left: 50px;
+          font-size: 25px;
+          padding-bottom: 300px;
+        }
+      }
+      .product-content-example-b {
+        object-fit:contain;
+        display: flex;
+        width: 40%;
+        height: 800px;
+      }
+    }
+
+    .product-content-wrapper3-b {
+      display: flex;
+      width: 100%;
+      height: 900px;
+      background-color: #fafafa;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .product-content-left-wrapper-b {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 50%;
+        padding-top: 200px;
+        .product-content-logo-b {
+          object-fit:contain;
+          display: flex;
+          width: 60%;
+          height: 450px;
+          padding-bottom: 50px;
+        }
+        .product-content-description-b {
+          display: flex;
+          height: 30%;
+          width: 70%;
+          padding-left: 50px;
+          font-size: 25px;
+          padding-bottom: 300px;
+        }
+      }
+      .product-content-example-b {
+        object-fit:contain;
+        display: flex;
+        width: 30%;
+        height: 400px;
+      }
+    }
+
+    .product-content-wrapper4-b {
+      display: flex;
+      width: 100%;
+      height: 900px;
+      background-color: #fafafa;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .product-content-left-wrapper-b {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 50%;
+        .product-content-logo-b {
+          object-fit:contain;
+          display: flex;
+          width: 60%;
+          height: 350px;
+          padding-bottom: 50px;
+        }
+        .product-content-description-b {
+          display: flex;
+          height: 30%;
+          width: 70%;
+          padding-left: 50px;
+          font-size: 25px;
+          padding-bottom: 100px;
+        }
+      }
+      .product-content-example-b {
+        object-fit:contain;
+        display: flex;
+        width: 35%;
+        height: 700px;
+        padding-bottom: 100px;
+      }
+    }
+
+    .product-content-wrapper5-b {
+      display: flex;
+      width: 100%;
+      height: 900px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: center;
+      transition: all 1s;
+      .product-content-left-wrapper-b {
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        .product-content-gameTitle-b {
+          height: 10%;
+          font-size: 45px;
+          margin-left: 70px;
+          margin-top: 60px;
+          margin-bottom: 120px;
+          color: #707070;
+        }
+        .product-content-gameName-b {
+          display: flex;
+          font-size: 75px;
+          color: #fafafa;
+          width: 60%;
+          height: 20%;
+          margin-bottom: 30px;
+          margin-left: 70px;
+        }
+        .product-content-description-b {
+          display: flex;
+          color: white;
+          height: 40%;
+          width: 70%;
+          margin-left: 70px;
+          font-size: 20px;
+          padding-bottom: 100px;
+        }
+        .product-content-buttonArea-b {
+          height: 30%;
+          padding-bottom: 270px;
+        }
+        .product-content-changeButton-b {
+          height: auto;
+          display: flex;
+          color: white;
+          background-color: #1b8ff4;
+          margin-left: 360px;
+          padding: 17px 50px;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: color 0.2s;
+        }
+        .product-content-changeButton-b:hover {
+          height: auto;
+          display: flex;
+          color: black;
+          background-color: #1b8ff4;
+          margin-left: 360px;
+          padding: 17px 50px;
+          border-radius: 25px;
+          cursor: pointer;
+        }
+      }
+      .product-content-example-b {
+        object-fit: cover;
+        display: flex;
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+}

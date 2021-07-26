@@ -22,7 +22,7 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className="team-footer-bottom">
-        <ul>
+        <ul className="team-footer-list">
           <li>
             <ul className="team-footer-ul-about">
               <li>

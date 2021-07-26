@@ -1,6 +1,14 @@
 @media (min-width: 768px) {
   .slider-wrapper{
-    width: 100%;
-    height: 800px;
+    margin: 0;
+    padding: 0;
+    width: calc(100vw);
+    height: 660px;
+  }
+
+  .slick-initialized { overflow: hidden; }
+
+  .slider-img{
+    width:calc(100vw);
   }
 }

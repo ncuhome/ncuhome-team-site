@@ -42,7 +42,7 @@ const HomeHeader: React.FC = () => {
               <div className="header-home-list">
                 <li onClick={() => history.push('./product')}>产品</li>
                 <li
-                  onClick={() => window.location.replace('https://ncuhome.yuque.com/ncuhome')}
+                  onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
                 >博客</li>
                 <li onClick={() => history.push('./team')}>团队</li>
                 <li><Link to="/about">加入我们</Link></li>
@@ -56,7 +56,7 @@ const HomeHeader: React.FC = () => {
             <div className="header-home-list">
               <li onClick={() => history.push('./product')}>产品</li>
               <li
-                onClick={() => window.location.replace('https://ncuhome.yuque.com/ncuhome')}
+                onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
               >博客</li>
               <li onClick={() => history.push('./team')}>团队</li>
               <li><Link to="/about">加入我们</Link></li>

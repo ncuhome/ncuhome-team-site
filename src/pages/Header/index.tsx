@@ -18,10 +18,10 @@ const HomeHeader: React.FC = () => {
 
   return (
     <div
-      className="header-home"
+      className="header"
     >
       <ul>
-        <div className="header-home-fixed">
+        <div className="header-fixed">
           <p onClick={() => history.push('./')}>
             {windowWidth < 768 ?
               "NCUHOME" :
@@ -36,13 +36,13 @@ const HomeHeader: React.FC = () => {
             null
           }
         </div>
-        {windowWidth < 768 ?
-          (showControl ?
+        {windowWidth < 768 ?   //当页面检测为移动端时启用下拉按钮
+          (showControl ? 
             (
-              <div className="header-home-list">
+              <div className="header-list">
                 <li onClick={() => history.push('./product')}>产品</li>
                 <li
-                  onClick={() => window.location.replace('https://ncuhome.yuque.com/ncuhome')}
+                  onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
                 >博客</li>
                 <li onClick={() => history.push('./team')}>团队</li>
                 <li><Link to="/about">加入我们</Link></li>
@@ -53,10 +53,10 @@ const HomeHeader: React.FC = () => {
           )
           :
           (
-            <div className="header-home-list">
+            <div className="header-list">
               <li onClick={() => history.push('./product')}>产品</li>
               <li
-                onClick={() => window.location.replace('https://ncuhome.yuque.com/ncuhome')}
+                onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
               >博客</li>
               <li onClick={() => history.push('./team')}>团队</li>
               <li><Link to="/about">加入我们</Link></li>
