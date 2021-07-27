@@ -2,15 +2,22 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  display:  flex;
+  display: flex;
   .hs-horizontal-content {
+    background: #FFF;
     display: flex;
-    width: 5560px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  .hs-horizontal-content::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
   }
 }
 
 @media (min-width: 768px) {
   .hs-body {
-    height: calc(4950px + 100vh);
+    height: 100vh;
   }
 }
