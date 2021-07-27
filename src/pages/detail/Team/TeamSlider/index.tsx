@@ -1,14 +1,14 @@
 import Slider from "react-slick";
 import React from "react";
 import "./style.scss"
-import TeamBG1 from "@/assets/img/TeamBG1.png";
-import TeamBG2 from "@/assets/img/TeamBG2.png";
-import TeamBG3 from "@/assets/img/TeamBG3.png";
-import TeamBG4 from "@/assets/img/TeamBG4.png";
-import TeamBG5 from "@/assets/img/TeamBG5.png";
+import TeamBG1 from "@/assets/img/teamBG1.svg";
+import TeamBG2 from "@/assets/img/teamBG2.svg";
+import TeamBG3 from "@/assets/img/teamBG3.svg";
+import TeamBG4 from "@/assets/img/teamBG4.svg";
+import TeamBG5 from "@/assets/img/teamBG5.svg";
 
 const settings = {
-  autoplay:true,
+  autoplay: true,
   fade: true,
   infinite: true,
   autoplayspeed: 500,
@@ -16,25 +16,28 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const TeamSlider:React.FC = () => {
+const TeamSlider: React.FC = () => {
   return (
-    <Slider className="slider-wrapper" {...settings}>
-      <div>
-        <img src={TeamBG1} />
-      </div>
-      <div>
-        <img src={TeamBG2} />
-      </div>
-      <div>
-        <img src={TeamBG3} />
-      </div>
-      <div>
-        <img src={TeamBG4} />
-      </div>
-      <div>
-        <img src={TeamBG5} />
-      </div>
-    </Slider>
+    <div className="slider-wrapper">
+      <Slider {...settings}>
+        <div>
+          <img className="slider-img" src={TeamBG1} />
+        </div>
+        <div>
+          <img className="slider-img" src={TeamBG2} />
+        </div>
+        <div>
+          <img className="slider-img" src={TeamBG3} />
+        </div>
+        <div>
+          <img className="slider-img" src={TeamBG4} />
+        </div>
+        <div>
+          <img className="slider-img" src={TeamBG5} />
+        </div>
+      </Slider>
+    </div>
+
   );
 };
 
