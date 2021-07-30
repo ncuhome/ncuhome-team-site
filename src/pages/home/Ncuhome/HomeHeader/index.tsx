@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png"
 import downHandle from "@/assets/img/down-handle.png";
@@ -8,6 +8,7 @@ const HomeHeader: React.FC = () => {
   const history = useHistory();
   let windowWidth = window.outerWidth;
   let controlHandle: string; //控制menu的下拉与上拉显示
+  // const controlHandleEl = useRef(upHandle);
   const [showControl, setShowControl] = useState(false);
 
   if (showControl) {

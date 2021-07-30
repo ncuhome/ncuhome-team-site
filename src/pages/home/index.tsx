@@ -3,7 +3,6 @@ import HorizontalScroll from "./components/HorizontalScroll";
 import { useMedia } from "react-use";
 import "./index.scss";
 
-//const Loading = lazy(() => import("./components/Loading"));
 const HomeHeader = lazy(() => import("./Ncuhome/HomeHeader"))
 const Ncuhome = lazy(() => import("./Ncuhome"));
 const Products = lazy(() => import("./ProductsCard"));

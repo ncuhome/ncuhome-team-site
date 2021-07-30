@@ -6,7 +6,7 @@ import "./style.scss";
 
 const HomeHeader: React.FC = () => {
   const history = useHistory();
-  let windowWidth = window.outerWidth;
+  const windowWidth = window.outerWidth;
   let controlHandle: string; //控制menu的下拉与上拉显示
   const [showControl, setShowControl] = useState(false);
 

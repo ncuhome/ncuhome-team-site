@@ -3,7 +3,7 @@ import ProductSmall from "./ProductSmall";
 import ProductBig from './ProductBig';
 
 const Product: React.FC = () => {
-  let windowWidth = window.outerWidth;
+  const windowWidth = window.outerWidth;
   return (
     <div>
       {windowWidth < 768 ?

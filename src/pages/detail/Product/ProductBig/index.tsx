@@ -70,16 +70,16 @@ const ProductBig: React.FC = () => {
             </p>
           </div>
           <div className="product-content-button1-b">
-            <div className="product-bold-btn-b" onClick={()=> window.open("https://incu-download.ncuos.com/iNCU_latest.apk")}>
-              <img src={android} style={{ width: "20px" }} />
-              &nbsp;Android下载
+            <div className="product-bold-btn-b" onClick={() => window.open("https://incu-download.ncuos.com/iNCU_latest.apk")}>
+              <img src={android} style={{ width: "20px", marginRight: "7px" }} />
+              Android下载
             </div>
             {/* <BoldButton text="Android下载" bgColor="#FAFCFF" /> */}
           </div>
           <div className="product-content-button2-b">
-            <div className="product-bold-btn-b" onClick={()=> window.open("https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561")}>
-              <img src={apple} style={{ width: "25px" }} />
-              &nbsp;App Store
+            <div className="product-bold-btn-b" onClick={() => window.open("https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561")}>
+              <img src={apple} style={{ width: "25px", marginRight: "7px" }} />
+              App Store
             </div>
           </div>
         </div>
