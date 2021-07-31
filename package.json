@@ -34,7 +34,6 @@
     "react-slick": "^0.28.1",
     "react-use": "^17.1.1",
     "reset.css": "^2.0.2",
-    "slick-carousel": "^1.8.1",
     "typescript": "^4.1.5"
   }
 }

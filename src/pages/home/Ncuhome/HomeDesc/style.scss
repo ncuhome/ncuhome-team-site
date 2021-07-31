@@ -12,6 +12,7 @@
       .home-desc-eng {
         letter-spacing: 4px;
         font-size: 14px;
+        padding-top: 8px;
       }
       & > img {
         width: 60%;
@@ -37,6 +38,7 @@
     flex-direction: column;
     z-index: 2;
     margin-top: 120px;
+    margin-bottom: 50px;
     .home-name {
       display: flex;
       flex-direction: column;

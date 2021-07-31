@@ -2,8 +2,11 @@ import React from "react";
 import padHand from "@/assets/img/pad-hand.png";
 import BoldButton from "../components/BoldButton";
 import "./style.scss";
+import { useHistory } from "react-router-dom";
 
 const Products: React.FC = () => {
+  const history = useHistory();
+
   return (
     <div className="home-prod-wrapper">
       <div className="home-prod-left">
@@ -17,7 +20,9 @@ const Products: React.FC = () => {
           <p>南大家园APP —— 改变，从这里开始</p>
           <p>云家园 —— 数字化南大，尽在掌握</p>
         </div>
-        <BoldButton text="MORE" bgColor="#fff" />
+        <div onClick={() => history.push("./product")}>
+            <BoldButton text="Join us" bgColor="#ABD9F8" />
+        </div>
       </div>
     </div>
   );

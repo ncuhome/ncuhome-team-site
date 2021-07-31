@@ -180,9 +180,10 @@
       display: flex;
       box-sizing: border-box;
       padding-left: 8%;
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       a {
         color: rgba(0, 0, 0, 0.7);
+        white-space: nowrap;
         text-decoration: none;
         font-size: 10px;
         height: 1.6em;

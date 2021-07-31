@@ -1,65 +1,71 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
+import upHandle from "@/assets/img/up-handle.png"
+import downHandle from "@/assets/img/down-handle.png";
 import "./style.scss";
 
-const headerItems = [
-  {
-    name: "首页",
-    link: " ",
-  },
-  {
-    name: "产品",
-    link: "product",
-  },
-  {
-    name: "博客",
-    link: "blog",
-  },
-  {
-    name: "团队",
-    link: "team",
-  },
-];
-
 const HomeHeader: React.FC = () => {
-  const [barOffsetX, setBarOffsetX] = useState<number>(0);
-  const history = useHistory()
+  const history = useHistory();
+  let windowWidth = window.outerWidth;
+  let controlHandle: string; //控制menu的下拉与上拉显示
+  // const controlHandleEl = useRef(upHandle);
+  const [showControl, setShowControl] = useState(false);
 
-  const changeBarOffset = (index: number): void => {
-    if (index !== 0) {
-      setBarOffsetX(index * 107);
-    } else {
-      setBarOffsetX(0);
-    }
-  };
+  if (showControl) {
+    controlHandle = upHandle
+  } else {
+    controlHandle = downHandle
+  }
 
   return (
-    <div className="home-header">
+    <div
+      className="header-home"
+    >
       <ul>
-        {headerItems.map((item, index) => {
-          return (
-            <li
-              onClick={() => history.push(`./${item.link}`)}
-              key={item.name}
-              style={{ fontSize: 20 }}
-              onMouseOver={() => {
-                changeBarOffset(index);
-              }}
-              onMouseLeave={() => {
-                changeBarOffset(0);
-              }}
-            >
-              {item.name}
-            </li>
-          );
-        })}
-        <li style={{ fontSize: 20 }}><Link to="/about">加入我们</Link></li>
+        <div className="header-home-fixed">
+          <p>
+            {windowWidth < 768 ?
+              "NCUHOME" :
+              "首页"}
+          </p>
+          {windowWidth < 768 ?
+            <img
+              onClick={() => setShowControl(!showControl)}
+              src={controlHandle}
+            />
+            :
+            null
+          }
+        </div>
+        {windowWidth < 768 ?
+          (showControl ?
+            (
+              <div className="header-home-list">
+                <li onClick={() => history.push('./product')}>产品</li>
+                <li
+                  onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
+                >博客</li>
+                <li onClick={() => history.push('./team')}>团队</li>
+                <li><Link to="/about">加入我们</Link></li>
+              </div>
+            )
+            :
+            null
+          )
+          :
+          (
+            <div className="header-home-list">
+              <li onClick={() => history.push('./product')}>产品</li>
+              <li
+                onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
+              >博客</li>
+              <li onClick={() => history.push('./team')}>团队</li>
+              <li><Link to="/about">加入我们</Link></li>
+            </div>
+          )
+        }
       </ul>
-      <div
-        className="home-header-bar"
-        style={{ transform: `translateX(${barOffsetX}px)` }}
-      ></div>
-    </div>
+    </div >
   );
 };
 

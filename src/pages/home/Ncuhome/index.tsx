@@ -2,16 +2,14 @@ import React, { Suspense, lazy } from "react";
 import introBg from "@/assets/img/intro-bg.png"
 import "./style.scss";
 
-const HomeHeader = lazy(() => import("./HomeHeader"));
 const HomeDesc = lazy(() => import("./HomeDesc"));
 const HomeAchievement = lazy(() => import("./HomeAchievement"));
 
 const Ncuhome: React.FC = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={''}>
       <div className="ncuhome-wrapper">
         <div className="ncuhome-left">
-          <HomeHeader />
           <HomeDesc />
           <HomeAchievement />
         </div>

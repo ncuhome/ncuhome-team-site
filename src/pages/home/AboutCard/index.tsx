@@ -3,8 +3,10 @@ import "./style.scss";
 import BoldButton from "../components/BoldButton";
 import circle from "@/assets/img/circle.png"
 import line from "@/assets/img/line.png"
+import { useHistory } from "react-router-dom";
 
 const About: React.FC = () => {
+  const history = useHistory();
   return (
     <div className="home-about-wrapper">
       <div className="home-about-content">
@@ -16,8 +18,9 @@ const About: React.FC = () => {
           <p className="home-about-text2">
             家园欢迎每一位热爱互联网的的出色青年
           </p>
-          <BoldButton text="Join us" bgColor="#ABD9F8" />
-          {/* <img src="/assets/img/line2.png" /> */}
+          <div onClick={() => history.push("./about")}>
+            <BoldButton text="Join us" bgColor="#ABD9F8" />
+          </div>
         </div>
       </div>
       <div className="home-about-bottom">
