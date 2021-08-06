@@ -1,0 +1,112 @@
+@media (min-width: 768px) {
+  .reg-header {
+    width: 100%;
+    .header {
+      z-index: 100;
+    }
+    overflow: scroll;
+  }
+  .background-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    height: calc(80vh);
+    .reg-group-img {
+      width: calc(60vh);
+      margin-top: calc(25vh);
+      margin-left: calc(-5vh);
+    }
+  }
+  .reg-group-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .reg-group-name {
+      background-color: #abd9f8;
+      text-align: center;
+      margin-top: -30px;
+      width: 110px;
+      height: 35px;
+    }
+    .reg-group-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .reg-group-desc-title {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #4a4a4a;
+      }
+      .reg-group-desc-content {
+        font-size: 10px;
+        margin-top: 15px;
+        color: #4a4a4a;
+      }
+      .reg-group-desc-footer {
+        font-size: 15px;
+        margin-top: 20px;
+        color: #4a4a4a;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .reg-header {
+    width: 100%;
+    .header {
+      z-index: 100;
+    }
+    overflow: scroll;
+  }
+  .background-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    height: calc(80vh);
+    .reg-group-img {
+      width: calc(60vh);
+      margin-top: calc(10vh);
+      margin-left: calc(-10vh);
+    }
+  }
+  .reg-group-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .reg-group-name {
+      background-color: #abd9f8;
+      text-align: center;
+      margin-top: -30px;
+      margin-left: 6%;
+      width: 110px;
+      height: 35px;
+    }
+    .reg-group-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 6%;
+      .reg-group-desc-title {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #4a4a4a;
+      }
+      .reg-group-desc-content {
+        font-size: 10px;
+        margin-top: 15px;
+        color: #4a4a4a;
+      }
+      .reg-group-desc-footer {
+        font-size: 15px;
+        margin-top: 20px;
+        color: #4a4a4a;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.team-act-wrapper-b{
+  width: 80%;
+  height: 320px;
+  margin: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  .team-act-img-b{
+    width: 360px;
+    height: 320px;
+  }
+  .team-act-trail-b{
+    margin-left: 10px;
+    margin-right: 20px;
+    height: 240px;
+  }
+  .team-act-text-b{
+    display: flex;
+    height: 240px;
+    flex-direction: column;
+    
+  }
+}

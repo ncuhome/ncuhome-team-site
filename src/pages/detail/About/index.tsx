@@ -18,8 +18,8 @@ const About = () => {
           <img src={about_bg} />
         </div>
         <div className="about-content-text">
-          <p style={{ color: "white", fontSize: "50px", margin: "50px" }}>JOIN US</p>
-          <p style={{ color: "white", fontSize: "20px" }}>Work & Play together </p>
+          <p className="about-content-text-1">JOIN US</p>
+          <p className="about-content-text-2" >Work & Play together </p>
           <div className="about-content-botton-area">
             <div onClick={() => history.push("./oldregister")}>
               <BoldButton text="老生招聘" bgColor="#1B8FF4" />

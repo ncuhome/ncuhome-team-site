@@ -1,0 +1,13 @@
+<svg id="组件_23_1" data-name="组件 23 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1805" height="1024" viewBox="0 0 1805 1024">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="矩形_576" data-name="矩形 576" width="1805" height="1024" transform="translate(0.5 0.5)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="蒙版组_1" data-name="蒙版组 1" transform="translate(-0.5 -0.5)" clip-path="url(#clip-path)">
+    <ellipse id="椭圆_1" data-name="椭圆 1" cx="985" cy="353" rx="985" ry="353" transform="translate(-82.5 -244.5)" fill="#abd9f8"/>
+    <ellipse id="椭圆_2" data-name="椭圆 2" cx="985" cy="353" rx="985" ry="353" transform="translate(-65.5 -244.5)" fill="#abd9f8"/>
+    <text id="NCUHOME备份" transform="translate(904 508)" fill="#fff" font-size="280" font-family="SegoeUI, Segoe UI" letter-spacing="0.106em"><tspan x="-778.513" y="0">NCUHOME</tspan></text>
+    <ellipse id="椭圆形" cx="180.5" cy="178.5" rx="180.5" ry="178.5" transform="translate(710 278)" fill="#f4f4f5"/>
+  </g>
+</svg>
