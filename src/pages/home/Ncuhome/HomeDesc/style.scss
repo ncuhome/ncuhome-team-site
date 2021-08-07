@@ -32,7 +32,7 @@
   }
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .home-desc {
     display: flex;
     flex-direction: column;
@@ -53,11 +53,13 @@
     }
     .home-desc-intro {
       margin-top: 30px;
+      color: #494949;
+
       p {
         letter-spacing: 2px;
         margin-top: 8px;
+        line-height: 18px;
         font-size: 15px;
-        font-weight:530;
       }
     }
   }

@@ -1,18 +1,19 @@
-$shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04);
+$shadow: 0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04);
+$primary-color: #1b8ff4;
+$text-color: #1f2329;
 
 .home-tab-active {
-  color: #1b8ff4;
+  color: $primary-color;
 }
 
 @media (max-width: 767px) {
   a {
     text-decoration: none;
-    color: black;
     transition: color 0.2s;
   }
 
   a:hover {
-    color: #1b8ff4;
+    color: $primary-color;
   }
 
   .header-home {
@@ -28,6 +29,7 @@ $shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04)
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: $text-color;
 
       .header-home-fixed {
         display: flex;
@@ -61,8 +63,8 @@ $shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04)
         a {
           font-size: 14px;
           color: #fff;
-          padding: 5px 5px;
-          background-color: #1b8ff4;
+          padding: 5px 10px;
+          background-color: $primary-color;
           border-radius: 20px;
         }
       }
@@ -99,8 +101,7 @@ $shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04)
       display: flex;
       align-items: center;
       font-size: 16px;
-      font-weight: 500;
-      color: #2e2e2e;
+      color: $text-color;
 
       .header-home-fixed {
         p {
@@ -113,7 +114,7 @@ $shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04)
         }
 
         p:hover {
-          color: #1b8ff4;
+          color: $primary-color;
           width: 46px;
           padding: 0 4px;
           text-align: center;
@@ -134,7 +135,7 @@ $shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04)
         }
 
         li:hover {
-          color: #1b8ff4;
+          color: $primary-color;
           width: 46px;
           padding: 0 4px;
           text-align: center;
@@ -145,7 +146,7 @@ $shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04)
         li:last-child {
           box-sizing: border-box;
           width: 90px;
-          background-color: #1b8ff4;
+          background-color: $primary-color;
           padding: 7px 6px;
           border-radius: 20px;
           color: white;
@@ -158,10 +159,10 @@ $shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04)
 
           &:hover {
             background-color: white;
-            border: solid 2px #1b8ff4;
+            border: solid 2px $primary-color;
 
             a {
-              color: #1b8ff4;
+              color: $primary-color;
             }
           }
         }
