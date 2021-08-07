@@ -1,19 +1,21 @@
 import About from "@/pages/detail/About";
 import Product from "@/pages/detail/Product";
 import Team from "@/pages/detail/Team";
-import NewRegister from "@/pages/detail/Register/NewRegister"
-import OldRegister from "@/pages/detail/Register/OldRegister"
+import NewRegister from "@/pages/detail/Register/NewRegister";
+import OldRegister from "@/pages/detail/Register/OldRegister";
 import React from "react";
-import { BrowserRouter, Switch, Route} from "react-router-dom";
+import HomeHeader from "@/pages/Header";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "../pages/home";
 
 const Routes: React.FC = () => {
   return (
     <BrowserRouter>
+      <HomeHeader />
       <Switch>
-        <Route path="/" component={Home} exact/>
-        <Route path="/product" component={Product}  />
-        <Route path="/team" component={Team}  />
+        <Route path="/" component={Home} exact />
+        <Route path="/product" component={Product} />
+        <Route path="/team" component={Team} />
         <Route path="/about" component={About} />
         <Route path="/newregister" component={NewRegister} />
         <Route path="/oldregister" component={OldRegister} />

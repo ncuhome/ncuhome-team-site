@@ -1,71 +1,91 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import upHandle from "@/assets/img/up-handle.png"
+import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
 import "./style.scss";
 
-const HomeHeader: React.FC = () => {
-  const history = useHistory();
-  const windowWidth = window.outerWidth;
-  let controlHandle: string; //控制menu的下拉与上拉显示
-  const [showControl, setShowControl] = useState(false);
+const routes = [
+  { name: "首页", url: "/" },
+  { name: "产品", url: "/product" },
+  { name: "博客", url: "https://ncuhome.yuque.com/ncuhome" },
+  { name: "团队", url: "/team" },
+];
 
-  if (showControl) {
-    controlHandle = upHandle
-  } else {
-    controlHandle = downHandle
-  }
+const about = { name: "加入我们", url: "/about" };
+
+const Header: React.FC = () => {
+  // 控制 menu 的下拉与上拉显示
+  const [showControl, setShowControl] = useState(false);
+  const [index, setIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.outerWidth < 768);
+  const history = useHistory();
+
+  useEffect(() => {
+    const onResize = () => {
+      setIsMobile(window.outerWidth < 768);
+    }
+    window.addEventListener("resize", onResize)
+    const listener = history.listen((item) => {
+      const value = routes.findIndex((i) => i.url === item.pathname);
+      setIndex(value);
+    });
+
+    return () => {
+      listener();
+      window.removeEventListener("resize", onResize)
+    };
+  }, []);
+
+  const renderFirstElement = () => {
+    if (isMobile) {
+      return (
+        <>
+          <p>NCUHOME</p>
+          <img
+            onClick={() => setShowControl(!showControl)}
+            src={showControl ? upHandle : downHandle}
+          />
+        </>
+      );
+    }
+
+    return <p onClick={() => history.push("/")}>{routes[0].name}</p>;
+  };
+
+  const renderList = () => {
+    if (showControl || !isMobile) {
+      return (
+        <div className="header-home-list">
+          {routes.slice(1).map((item) => (
+            <li
+              key={item.name}
+              onClick={() =>
+                item.url.includes("http")
+                  ? window.open(item.url)
+                  : history.push(item.url)
+              }
+            >
+              {item.name}
+            </li>
+          ))}
+          <li>
+            <Link to={about.url}>{about.name}</Link>
+          </li>
+        </div>
+      );
+    }
+
+    return null;
+  };
 
   return (
-    <div
-      className="header"
-    >
+    <div className="header-home">
       <ul>
-        <div className="header-fixed">
-          <p onClick={() => history.push('./')}>
-            {windowWidth < 768 ?
-              "NCUHOME" :
-              "首页"}
-          </p>
-          {windowWidth < 768 ?
-            <img
-              onClick={() => setShowControl(!showControl)}
-              src={controlHandle}
-            />
-            :
-            null
-          }
-        </div>
-        {windowWidth < 768 ?   //当页面检测为移动端时启用下拉按钮
-          (showControl ? 
-            (
-              <div className="header-list">
-                <li onClick={() => history.push('./product')}>产品</li>
-                <li
-                  onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
-                >博客</li>
-                <li onClick={() => history.push('./team')}>团队</li>
-                <li><Link to="/about">加入我们</Link></li>
-              </div>
-            )
-            :
-            null
-          )
-          :
-          (
-            <div className="header-list">
-              <li onClick={() => history.push('./product')}>产品</li>
-              <li
-                onClick={() => window.open('https://ncuhome.yuque.com/ncuhome')}
-              >博客</li>
-              <li onClick={() => history.push('./team')}>团队</li>
-              <li><Link to="/about">加入我们</Link></li>
-            </div>
-          )
-        }
+        <div className="header-home-fixed">{renderFirstElement()}</div>
+        {renderList()}
       </ul>
-    </div >
+    </div>
   );
 };
 
-export default HomeHeader;
+export default Header;

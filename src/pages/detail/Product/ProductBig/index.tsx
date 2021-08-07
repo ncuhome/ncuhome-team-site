@@ -12,7 +12,6 @@ import apple from "@/assets/img/apple.png";
 import game_1 from "@/assets/img/game-1.png";
 import game_2 from "@/assets/img/game-2.png";
 import game_3 from "@/assets/img/game-3.png"
-import Header from "../../../Header";
 import BoldButton from "@/pages/home/components/BoldButton";
 import "./style.scss";
 
@@ -58,9 +57,6 @@ const ProductBig: React.FC = () => {
 
   return (
     <div className="product-wrapper-b">
-      <div className="product-header-wrapper-b">
-        <Header />
-      </div>
       <div className="product-content-wrapper1-b">
         <div className="product-content-left-wrapper-b">
           <img className="product-content-logo-b" src={ncuhome} alt="" />

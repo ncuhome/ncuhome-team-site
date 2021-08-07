@@ -3,7 +3,7 @@ import HorizontalScroll from "./components/HorizontalScroll";
 import { useMedia } from "react-use";
 import "./index.scss";
 
-const HomeHeader = lazy(() => import("./Ncuhome/HomeHeader"))
+const HomeHeader = lazy(() => import("../Header"))
 const Ncuhome = lazy(() => import("./Ncuhome"));
 const Products = lazy(() => import("./ProductsCard"));
 const Blog = lazy(() => import("./BlogCard"));
@@ -28,9 +28,6 @@ const Home: React.FC = () => {
   return (
     <>
       <Suspense fallback={''}>
-        <div className="ncuhome-header">
-          <HomeHeader />
-        </div>
         {isWide ? (
           <HorizontalScroll>
             <Pages />

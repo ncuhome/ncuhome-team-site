@@ -13,7 +13,6 @@ import game_logo from "@/assets/img/game-logo.svg";
 import game_bg_1 from "@/assets/img/game-bg-1.svg";
 import game_bg_2 from "@/assets/img/game-bg-2.svg";
 import game_bg_3 from "@/assets/img/game-bg-3.svg";
-import Header from "../../../Header";
 import "./style.scss";
 
 
@@ -91,10 +90,6 @@ const ProductSmall: React.FC = () => {
 
   return (
     <div className="product-wrapper">
-      <div className="product-header-wrapper">
-        <Header />
-      </div>
-
       <div style={bgImage_ncuhome} className="product-content-wrapper1">
         <img
           className="product-content-logo"

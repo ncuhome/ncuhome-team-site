@@ -1,3 +1,5 @@
+$shadow:0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04);
+
 @media (max-width: 767px) {
   a {
     text-decoration: none;
@@ -9,12 +11,12 @@
     color: #1b8ff4;
   }
 
-  .header {
+  .header-home {
+    z-index: 1000;
     width: 100%;
     height: 52px;
     background-color: #fff;
     position: fixed;
-
     ul {
       height: auto;
       width: 100%;
@@ -23,14 +25,14 @@
       justify-content: center;
       align-items: center;
 
-      .header-fixed {
+      .header-home-fixed {
         display: flex;
         height: 52px;
         justify-content: center;
         align-items: center;
       }
 
-      .header-list {
+      .header-home-list {
         height: 100%;
         width: 100%;
         display: flex;
@@ -72,34 +74,38 @@
         height: 16px;
       }
     }
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: $shadow;
   }
 }
 
 @media (min-width: 768px) {
-  .header {
+  .header-home {
     height: 56px;
-    width: calc(100vw);
+    width: 100%;
+    z-index: 1000;
     padding-left: 30px;
     top: 0px;
     background-color: #fff;
     position: fixed;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 1px solid rgb(228, 228, 228);
+    box-shadow: $shadow;
     ul {
       height: 100%;
       width: auto;
       display: flex;
       align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #2e2e2e;
 
-      .header-fixed {
+      .header-home-fixed {
         p {
           width: 46px;
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
-          font-size: 20px;
           cursor: pointer;
-          transition: color 0.2s;
+          transition: color 0.3s;
         }
 
         p:hover {
@@ -108,11 +114,10 @@
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
-          font-size: 20px;
           cursor: pointer;
         }
       }
-      .header-list {
+      .header-home-list {
         display: flex;
         align-items: center;
         li {
@@ -120,9 +125,8 @@
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
-          font-size: 20px;
           cursor: pointer;
-          transition: color 0.2s;
+          transition: color 0.3s;
         }
 
         li:hover {
@@ -131,26 +135,30 @@
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
-          font-size: 20px;
           cursor: pointer;
         }
 
         li:last-child {
+          box-sizing: border-box;
           width: 90px;
           background-color: #1b8ff4;
-          padding: 7px 12px;
+          padding: 7px 6px;
           border-radius: 20px;
-          margin: 0;
+          color: white;
 
           a {
-            text-decoration: none;
             color: white;
-            font-size: 20px;
-            transition: color 0.2s;
+            text-decoration: none;
+            transition: color 0.3s;
           }
 
-          a:hover {
-            color: black;
+          &:hover {
+            background-color: white;
+            border: solid 2px #1b8ff4;
+
+            a {
+              color: #1b8ff4;
+            }
           }
         }
       }
