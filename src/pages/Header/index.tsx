@@ -23,8 +23,8 @@ const Header: React.FC = () => {
   useEffect(() => {
     const onResize = () => {
       setIsMobile(window.outerWidth < 768);
-    }
-    window.addEventListener("resize", onResize)
+    };
+    window.addEventListener("resize", onResize);
     const listener = history.listen((item) => {
       const value = routes.findIndex((i) => i.url === item.pathname);
       setIndex(value);
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 
     return () => {
       listener();
-      window.removeEventListener("resize", onResize)
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
@@ -49,15 +49,23 @@ const Header: React.FC = () => {
       );
     }
 
-    return <p onClick={() => history.push("/")}>{routes[0].name}</p>;
+    return (
+      <p
+        className={index === 0 && "home-tab-active"}
+        onClick={() => history.push("/")}
+      >
+        {routes[0].name}
+      </p>
+    );
   };
 
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
         <div className="header-home-list">
-          {routes.slice(1).map((item) => (
+          {routes.slice(1).map((item, i) => (
             <li
+              className={i + 1 === index && "home-tab-active"}
               key={item.name}
               onClick={() =>
                 item.url.includes("http")
