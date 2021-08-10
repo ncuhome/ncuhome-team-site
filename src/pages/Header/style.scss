@@ -6,6 +6,10 @@ $text-color: #1f2329;
   color: $primary-color;
 }
 
+.header-logo {
+  height: 45px;
+}
+
 @media (max-width: 767px) {
   a {
     text-decoration: none;
@@ -87,17 +91,16 @@ $text-color: #1f2329;
 @media (min-width: 768px) {
   .header-home {
     height: 56px;
-    width: 100%;
+    width: calc(100vw - 198px);
     z-index: 1000;
-    padding-left: 30px;
+    padding: 0 98px;
     top: 0px;
-    background-color: #fff;
+    background-color: rgb(252, 252, 252);
     position: fixed;
     border-bottom: 1px solid rgb(228, 228, 228);
     box-shadow: $shadow;
     ul {
       height: 100%;
-      width: auto;
       display: flex;
       align-items: center;
       font-size: 16px;
@@ -105,7 +108,6 @@ $text-color: #1f2329;
 
       .header-home-fixed {
         p {
-          width: 46px;
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
@@ -115,7 +117,6 @@ $text-color: #1f2329;
 
         p:hover {
           color: $primary-color;
-          width: 46px;
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
@@ -125,8 +126,8 @@ $text-color: #1f2329;
       .header-home-list {
         display: flex;
         align-items: center;
+        flex: 1;
         li {
-          width: 46px;
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
@@ -136,7 +137,6 @@ $text-color: #1f2329;
 
         li:hover {
           color: $primary-color;
-          width: 46px;
           padding: 0 4px;
           text-align: center;
           margin-right: 53px;
@@ -147,6 +147,7 @@ $text-color: #1f2329;
           box-sizing: border-box;
           width: 90px;
           background-color: $primary-color;
+          margin: 0;
           padding: 7px 6px;
           border-radius: 20px;
           color: white;

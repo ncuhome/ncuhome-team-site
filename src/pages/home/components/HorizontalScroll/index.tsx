@@ -1,41 +1,12 @@
-import React, { createRef } from "react";
+import React, { useRef } from "react";
 import './style.scss';
 
-let resizeTimeout: NodeJS.Timeout | null;
-
-const throttle = (
-  e: React.WheelEvent<HTMLDivElement>,
-  fb: React.WheelEventHandler<HTMLDivElement>
-) => {
-  if (!resizeTimeout) {
-    resizeTimeout = setTimeout(() => {
-      resizeTimeout = null;
-      fb(e);
-    }, 20);
-  }
-};
-
 const HorizontalScroll: React.FC = ({ children }) => {
-  const hsContent = createRef<HTMLDivElement>();
+  const hsContent = useRef<HTMLDivElement>();
 
   const handleWheel: React.WheelEventHandler<HTMLDivElement> = (e) => {
-    console.log("wheel");
     const { deltaY } = e;
-    const { scrollWidth, offsetWidth, scrollLeft } = hsContent.current;
-    const maxScroll = scrollWidth - offsetWidth;
-
-    //TODO: 修改滚动方案，让让滚动更丝滑
-    if (deltaY > 0) {
-      /* 向下滚动 */
-      if (scrollLeft < maxScroll) {
-        hsContent.current.scrollLeft += 100;
-      }
-    } else {
-      /* 向上滚动 */
-      if (scrollLeft > 0) {
-        hsContent.current.scrollLeft -= 100;
-      }
-    }
+    hsContent.current.scrollLeft += Math.floor(deltaY) * 1.2
   }
 
   return (
@@ -44,7 +15,7 @@ const HorizontalScroll: React.FC = ({ children }) => {
         <div
           className="hs-horizontal-content"
           ref={hsContent}
-          onWheel={e => throttle(e, handleWheel)}
+          onWheel={handleWheel}
         >
           {children}
         </div>
