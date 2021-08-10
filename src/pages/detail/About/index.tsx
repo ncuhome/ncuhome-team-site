@@ -18,9 +18,9 @@ const About = () => {
           <p style={{ color: "white", fontSize: "20px" }}>Work & Play together </p>
           <div className="about-content-botton-area">
             <div onClick={() => history.push("./oldregister")}>
-              <BoldButton text="老生招聘" bgColor="#1B8FF4" />
+              <BoldButton text="🥳 老生招聘" bgColor="#1B8FF4" />
             </div>
-            <BoldButton text="新生招聘" bgColor="#1B8FF4" />
+            <BoldButton text="🥰 新生招聘" bgColor="#1B8FF4" />
           </div>
         </div>
       </div>

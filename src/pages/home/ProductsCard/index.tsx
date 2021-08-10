@@ -21,7 +21,7 @@ const Products: React.FC = () => {
           <p>云家园 —— 数字化南大，尽在掌握</p>
         </div>
         <div onClick={() => history.push("./product")}>
-            <BoldButton text="Join us" bgColor="#ABD9F8" />
+            <BoldButton text="JOIN US" bgColor="#ABD9F8" />
         </div>
       </div>
     </div>
