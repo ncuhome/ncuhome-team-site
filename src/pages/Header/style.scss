@@ -1,13 +1,16 @@
-$shadow: 0 1px 2px 0 rgba(35, 41, 51, 0.08), 0 2px 12px 0px rgba(0, 31, 71, 0.04);
+$shadow: 0 1px 2px 0 rgba(35, 41, 51, 0.08),
+  0 2px 12px 0px rgba(0, 31, 71, 0.04);
 $primary-color: #1b8ff4;
 $text-color: #1f2329;
+$right-m: 40px;
 
 .home-tab-active {
   color: $primary-color;
 }
 
 .header-logo {
-  height: 45px;
+  height: 40px;
+  margin-right: 48px;
 }
 
 @media (max-width: 767px) {
@@ -108,18 +111,15 @@ $text-color: #1f2329;
 
       .header-home-fixed {
         p {
-          padding: 0 4px;
           text-align: center;
-          margin-right: 53px;
+          margin-right: $right-m;
           cursor: pointer;
           transition: color 0.3s;
         }
 
         p:hover {
-          color: $primary-color;
-          padding: 0 4px;
           text-align: center;
-          margin-right: 53px;
+          margin-right: $right-m;
           cursor: pointer;
         }
       }
@@ -127,23 +127,29 @@ $text-color: #1f2329;
         display: flex;
         align-items: center;
         flex: 1;
+
         li {
-          padding: 0 4px;
+          height: 30px;
+          line-height: 30px;
           text-align: center;
-          margin-right: 53px;
+          margin-right: $right-m;
+          border-bottom: 2px solid transparent;
           cursor: pointer;
           transition: color 0.3s;
         }
 
         li:hover {
+          height: 30px;
+          line-height: 30px;
           color: $primary-color;
-          padding: 0 4px;
+          border-bottom: 2px solid $primary-color;
           text-align: center;
-          margin-right: 53px;
+          margin-right: $right-m;
           cursor: pointer;
         }
 
         li:last-child {
+          line-height: 18px;
           box-sizing: border-box;
           width: 90px;
           background-color: $primary-color;
@@ -159,6 +165,7 @@ $text-color: #1f2329;
           }
 
           &:hover {
+            line-height: 14px;
             background-color: white;
             border: solid 2px $primary-color;
 

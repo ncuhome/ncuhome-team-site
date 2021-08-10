@@ -6,10 +6,10 @@ import logo from "@/assets/img/new-logo.png";
 import "./style.scss";
 
 const routes = [
-  { name: "🏠 首页", url: "/" },
-  { name: "🎮 产品", url: "/product" },
-  { name: "🗺 博客", url: "https://ncuhome.yuque.com/ncuhome" },
-  { name: "🔫 团队", url: "/team" },
+  { name: "首页", url: "/" },
+  { name: "产品", url: "/product" },
+  { name: "团队博客", url: "https://ncuhome.yuque.com/ncuhome" },
+  { name: "关于我们", url: "/team" },
 ];
 
 const about = { name: "加入我们", url: "/about" };
@@ -49,24 +49,20 @@ const Header: React.FC = () => {
         </>
       );
     }
-
-    return (
-      <p
-        className={index === 0 && "home-tab-active"}
-        onClick={() => history.push("/")}
-      >
-        {routes[0].name}
-      </p>
-    );
   };
 
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
         <div className="header-home-list">
-          {routes.slice(1).map((item, i) => (
+          {routes.map((item, i) => (
             <li
-              className={i + 1 === index ? "home-tab-active" : undefined}
+              className={i === index ? "home-tab-active" : undefined}
+              style={{
+                borderBottom: `2px solid ${
+                  i === index ? "#1b8ff4" : "transparent"
+                }`,
+              }}
               key={item.name}
               onClick={() =>
                 item.url.includes("http")
@@ -77,7 +73,7 @@ const Header: React.FC = () => {
               {item.name}
             </li>
           ))}
-          <li style={{ flex: 1 }}></li>
+          <div style={{ flex: 1 }}></div>
           <li>
             <Link to={about.url}>{about.name}</Link>
           </li>
@@ -92,17 +88,6 @@ const Header: React.FC = () => {
     <div className="header-home">
       <ul>
         {!isMobile && <img className="header-logo" src={logo} />}
-        {!isMobile && (
-          <div
-            style={{
-              height: 30,
-              width: 1,
-              background: "#dbdbdb",
-              marginLeft: 20,
-              marginRight: 35,
-            }}
-          />
-        )}
         <div className="header-home-fixed">{renderFirstElement()}</div>
         {renderList()}
       </ul>
