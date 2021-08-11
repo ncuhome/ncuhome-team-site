@@ -1,7 +1,7 @@
 import React from "react";
-import clockIcon from "@/assets/img/clock-icon.png";
-import avatarIcon from "@/assets/img/avatar-icon.png";
-import trophyIcon from "@/assets/img/trophy-icon.png";
+import clockIcon from "@/assets/img/clock-icon.svg";
+import avatarIcon from "@/assets/img/avatar-icon.svg";
+import trophyIcon from "@/assets/img/trophy-icon.svg";
 import "./style.scss";
 
 interface achivementItem {

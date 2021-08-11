@@ -17,7 +17,7 @@ const Team: React.FC = () => {
             <p>全体大会上的我们</p>
           </div>
           <div onClick={() => history.push("./team")}>
-            <BoldButton text="Join us" bgColor="#ABD9F8" />
+            <BoldButton text="JOIN US" bgColor="#ABD9F8" />
           </div>
         </div>
         <div className="home-team-bottom">

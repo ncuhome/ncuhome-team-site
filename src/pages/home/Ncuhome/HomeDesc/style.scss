@@ -22,17 +22,19 @@
     .home-desc-intro {
       margin-top: 20px;
       width: 280px;
+      color: #494949;
       p {
         letter-spacing: 2px;
         margin-top: 8px;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 22px;
+        text-align: center;
       }
     }
   }
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .home-desc {
     display: flex;
     flex-direction: column;
@@ -49,15 +51,18 @@
       & > img {
         width: 500px;
         margin-top: 50px;
+        margin-bottom: 10px;
       }
     }
     .home-desc-intro {
       margin-top: 30px;
+      color: #494949;
+
       p {
         letter-spacing: 2px;
         margin-top: 8px;
+        line-height: 25px;
         font-size: 15px;
-        font-weight:530;
       }
     }
   }

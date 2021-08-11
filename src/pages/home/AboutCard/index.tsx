@@ -19,7 +19,7 @@ const About: React.FC = () => {
             家园欢迎每一位热爱互联网的的出色青年
           </p>
           <div onClick={() => history.push("./about")}>
-            <BoldButton text="Join us" bgColor="#ABD9F8" />
+            <BoldButton text="JOIN US" bgColor="#ABD9F8" />
           </div>
         </div>
       </div>

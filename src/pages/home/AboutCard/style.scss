@@ -55,9 +55,8 @@
     }
     .home-about-bottom {
       height: 22%;
-      width: 770px;
+      width: 100%;
       display: flex;
-      padding-left: 10%;
       flex-flow: column wrap;
       a {
         color: rgba(0, 0, 0, 0.7);
@@ -81,6 +80,7 @@
         display: flex;
         & > li {
           width: 40%;
+          padding-left: 40px;
         }
       }
     }
