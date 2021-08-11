@@ -21,6 +21,7 @@ const Header: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lineStyle, setLineStyle] = useState({ left: 271, width: 32 });
   const history = useHistory();
+  const tabContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onResize = () => {
@@ -52,34 +53,33 @@ const Header: React.FC = () => {
     }
   };
 
-  const handelTabRefChange = (ref: MutableRefObject<HTMLLIElement>) => {
-    const { offsetLeft: left, offsetWidth: width } = ref.current;
+  const handelTabChange = () => {
+    const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLLIElement;
     setLineStyle({
       width,
       left,
     });
-  }
+  };
+
+  useEffect(() => {
+    handelTabChange();
+  }, [index]);
 
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
-        <div className="header-home-list">
+        <div className="header-home-list" ref={tabContainerRef} >
           {
             routes.map((item, i) => {
-              const currentRef = useRef<HTMLLIElement>(null);
               return (
                 <li
                   className={i === index ? "home-tab-active" : undefined}
                   key={item.name}
-                  ref={currentRef}
-                  onClick={() => {
-                    if (item.url.includes("http")) {
-                      window.open(item.url);
-                    } else {
-                      history.push(item.url);
-                      handelTabRefChange(currentRef);
-                    }
-                  }}
+                  onClick={() =>
+                    item.url.includes("http") ?
+                      window.open(item.url) :
+                      history.push(item.url)
+                  }
                 >
                   {item.name}
                 </li>
