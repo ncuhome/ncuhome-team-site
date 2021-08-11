@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, MutableRefObject } from "react";
 import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
@@ -19,6 +19,7 @@ const Header: React.FC = () => {
   const [showControl, setShowControl] = useState(false);
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [lineStyle, setLineStyle] = useState({ left: 271, width: 32 });
   const history = useHistory();
 
   useEffect(() => {
@@ -51,28 +52,41 @@ const Header: React.FC = () => {
     }
   };
 
+  const handelTabRefChange = (ref: MutableRefObject<HTMLLIElement>) => {
+    const { offsetLeft: left, offsetWidth: width } = ref.current;
+    setLineStyle({
+      width,
+      left,
+    });
+  }
+
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
         <div className="header-home-list">
-          {routes.map((item, i) => (
-            <li
-              className={i === index ? "home-tab-active" : undefined}
-              style={{
-                borderBottom: `2px solid ${
-                  i === index ? "#1b8ff4" : "transparent"
-                }`,
-              }}
-              key={item.name}
-              onClick={() =>
-                item.url.includes("http")
-                  ? window.open(item.url)
-                  : history.push(item.url)
-              }
-            >
-              {item.name}
-            </li>
-          ))}
+          {
+            routes.map((item, i) => {
+              const currentRef = useRef<HTMLLIElement>(null);
+              return (
+                <li
+                  className={i === index ? "home-tab-active" : undefined}
+                  key={item.name}
+                  ref={currentRef}
+                  onClick={() => {
+                    if (item.url.includes("http")) {
+                      window.open(item.url);
+                    } else {
+                      history.push(item.url);
+                      handelTabRefChange(currentRef);
+                    }
+                  }}
+                >
+                  {item.name}
+                </li>
+              )
+            })
+          }
+          <div className="home-tab-underline" style={lineStyle} />
           <div style={{ flex: 1 }}></div>
           <li>
             <Link to={about.url}>{about.name}</Link>

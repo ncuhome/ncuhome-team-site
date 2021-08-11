@@ -127,7 +127,13 @@ $right-m: 40px;
         display: flex;
         align-items: center;
         flex: 1;
-
+        .home-tab-underline {
+          height: 2px;
+          background: $primary-color;
+          position: absolute;
+          bottom: 12px;
+          transition: all ease .2s;
+        }
         li {
           height: 30px;
           line-height: 30px;
@@ -142,7 +148,6 @@ $right-m: 40px;
           height: 30px;
           line-height: 30px;
           color: $primary-color;
-          border-bottom: 2px solid $primary-color;
           text-align: center;
           margin-right: $right-m;
           cursor: pointer;
