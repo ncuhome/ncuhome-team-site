@@ -15,12 +15,12 @@ const routes = [
 const about = { name: "加入我们", url: "/about" };
 
 const Header: React.FC = () => {
+  const history = useHistory();
   // 控制 menu 的下拉与上拉显示
   const [showControl, setShowControl] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState<number>(routes.findIndex((i) => i.url === history.location.pathname));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [lineStyle, setLineStyle] = useState({ left: 271, width: 32 });
-  const history = useHistory();
+  const [lineStyle, setLineStyle] = useState<React.CSSProperties>();
   const tabContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -53,16 +53,13 @@ const Header: React.FC = () => {
     }
   };
 
-  const handelTabChange = () => {
-    const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLLIElement;
+  //调整tab下面的线的位置和宽度
+  useEffect(() => {
+    const { offsetLeft: left,offsetWidth: width } = tabContainerRef.current.children[index] as HTMLLIElement;
     setLineStyle({
       width,
       left,
     });
-  };
-
-  useEffect(() => {
-    handelTabChange();
   }, [index]);
 
   const renderList = () => {
