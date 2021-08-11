@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
-import logo from "@/assets/img/new-logo.png";
+import logo from "@/assets/img/new-logo.svg";
 import "./style.scss";
 
 const routes = [
@@ -74,9 +74,9 @@ const Header: React.FC = () => {
             </li>
           ))}
           <div style={{ flex: 1 }}></div>
-          <li>
+          <div className={'header-join-us'}>
             <Link to={about.url}>{about.name}</Link>
-          </li>
+          </div>
         </div>
       );
     }
