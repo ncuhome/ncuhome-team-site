@@ -16,44 +16,40 @@ import ScrollTrigger from '@terwanerik/scrolltrigger'
 import BoldButton from "@/pages/home/components/BoldButton";
 import "./style.scss";
 
-const ProductBig: React.FC = () => {
+interface GameData {
+  gameImgSrc: string;
+  gameName: string;
+  gameDesc: string;
+  gameBgColor: string;
+}
 
-  const gameData_1 = {
+const gameData: GameData[] = [
+  {
     gameImgSrc: game_1,
     gameName: "你的2020校园轨迹",
     gameDesc: "2019年，那些或许被你忽视的，就会“砰”的涌现，月光下的足迹，教室里的身影，一些无意坚持下来的习惯。\n把它们收集起来，一起来拼出你的校园人设，惊喜在这里等你。",
     gameBgColor: "#141831"
-  }
-
-  const gameData_2 = {
+  },
+  {
     gameImgSrc: game_2,
     gameName: "听风",
     gameDesc: "用心听如风般的故事。看似波澜不惊的生活其实风起云涌，掺杂着甘甜苦楚。有时心酸，或许无处倾诉；有时喜悦，或许无人分享。而风一直未曾离开，它一直追随着我们。春风含着暖意，携着花的清芬，带着幸运、喜悦；秋风带着凌冽，藏着叶的苦涩，带着忧虑、难过。",
     gameBgColor: "#72AAB5"
-  }
-
-  const gameData_3 = {
+  },
+  {
     gameImgSrc: game_3,
     gameName: "拼图游戏",
     gameDesc: "介绍",
     gameBgColor: "#2E2E2E"
-  }
+  },
+]
 
-  const [gameData, setGameData] = useState(gameData_1)
+const ProductBig: React.FC = () => {
+  const [gameIndex, setGameIndex] = useState(0);
 
-  let changeGame = () => {
-
-    if (gameData.gameName === gameData_1.gameName) {
-      setGameData(gameData_2)
-      return;
-    } else if (gameData.gameName === gameData_2.gameName) {
-      setGameData(gameData_3)
-      return;
-    } else {
-      setGameData(gameData_1)
-      return;
-    }
-  }
+  const changeGame = () => {
+    setGameIndex(pre => (pre+1)%(gameData.length));
+  };
 
   useEffect(() => {
     const trigger = new ScrollTrigger();
@@ -124,13 +120,13 @@ const ProductBig: React.FC = () => {
         <img className="product-content-example-b" src={usExample} fade-in-up="" alt="" />
       </div>
 
-      <div className="product-content-wrapper5-b" style={{ "backgroundColor": gameData.gameBgColor }}>
+      <div className="product-content-wrapper5-b" style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}>
         <div className="product-content-left-wrapper-b">
           <div className="product-content-gameTitle-b">Our games</div>
-          <div className="product-content-gameName-b">{gameData.gameName}</div>
+          <div className="product-content-gameName-b">{gameData[gameIndex].gameName}</div>
           <div className="product-content-description-b">
             <p>
-              {gameData.gameDesc}
+              {gameData[gameIndex].gameDesc}
             </p>
           </div>
           <div className="product-content-buttonArea-b">
@@ -141,7 +137,7 @@ const ProductBig: React.FC = () => {
             </div>
           </div>
         </div>
-        <img className="product-content-example-b" src={gameData.gameImgSrc} alt="" />
+        <img className="product-content-example-b" src={gameData[gameIndex].gameImgSrc} alt="" />
       </div>
     </div>
   );
