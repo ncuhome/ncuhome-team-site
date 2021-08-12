@@ -322,4 +322,15 @@
       }
     }
   }
+
+  .visible, .invisible {
+    transition: all 0.8s ease-out;
+  }
+  [fade-in-up].visible {
+    opacity: 1.0;
+  }
+  [fade-in-up].invisible {
+    opacity: 0;
+    transform: translateY(80px);
+  }
 }

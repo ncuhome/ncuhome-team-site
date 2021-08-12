@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ncuhome from "@/assets/img/ncuhome.png";
 import ncuhomeExample from "@/assets/img/ncuhome-example.png";
 import ncov from "@/assets/img/ncov.png";
@@ -12,9 +12,9 @@ import apple from "@/assets/img/apple.png";
 import game_1 from "@/assets/img/game-1.png";
 import game_2 from "@/assets/img/game-2.png";
 import game_3 from "@/assets/img/game-3.png"
+import ScrollTrigger from '@terwanerik/scrolltrigger'
 import BoldButton from "@/pages/home/components/BoldButton";
 import "./style.scss";
-
 
 const ProductBig: React.FC = () => {
 
@@ -55,6 +55,11 @@ const ProductBig: React.FC = () => {
     }
   }
 
+  useEffect(() => {
+    const trigger = new ScrollTrigger();
+    trigger.add('[fade-in-up]');
+  }, []);
+
   return (
     <div className="product-wrapper-b">
       <div className="product-content-wrapper1-b">
@@ -79,7 +84,7 @@ const ProductBig: React.FC = () => {
             </div>
           </div>
         </div>
-        <img className="product-content-example-b" src={ncuhomeExample} alt="" />
+        <img className="product-content-example-b" fade-in-up="" src={ncuhomeExample} alt="" />
       </div>
       <div className="product-content-wrapper2-b">
         <div className="product-content-left-wrapper-b">
@@ -90,11 +95,11 @@ const ProductBig: React.FC = () => {
           />
           <div className="product-content-description-b">
             <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈草
             </p>
           </div>
         </div>
-        <img className="product-content-example-b" src={ncovExample} alt="" />
+        <img className="product-content-example-b" fade-in-up="" src={ncovExample} alt="" />
       </div>
       <div className="product-content-wrapper3-b">
         <div className="product-content-left-wrapper-b">
@@ -105,18 +110,18 @@ const ProductBig: React.FC = () => {
             </p>
           </div>
         </div>
-        <img className="product-content-example-b" src={ncuosExample} alt="" />
+        <img className="product-content-example-b" src={ncuosExample} fade-in-up="" alt="" />
       </div>
       <div className="product-content-wrapper4-b">
         <div className="product-content-left-wrapper-b">
           <img className="product-content-logo-b" src={us} alt="" />
           <div className="product-content-description-b">
             <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈cao
             </p>
           </div>
         </div>
-        <img className="product-content-example-b" src={usExample} alt="" />
+        <img className="product-content-example-b" src={usExample} fade-in-up="" alt="" />
       </div>
 
       <div className="product-content-wrapper5-b" style={{ "backgroundColor": gameData.gameBgColor }}>
