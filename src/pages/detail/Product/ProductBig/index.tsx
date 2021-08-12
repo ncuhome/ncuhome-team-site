@@ -48,11 +48,29 @@ const ProductBig: React.FC = () => {
   const [gameIndex, setGameIndex] = useState(0);
 
   const changeGame = () => {
-    setGameIndex(pre => (pre+1)%(gameData.length));
+    setGameIndex(pre => (pre + 1) % (gameData.length));
   };
 
   useEffect(() => {
-    const trigger = new ScrollTrigger();
+    const trigger = new ScrollTrigger({
+      trigger: {
+        offset: {
+          viewport: {
+            x: 0,
+            y: (_trigger, _frame, direction) => {
+              switch (direction) {
+                case "top":
+                  return 0.3;
+                case "bottom":
+                  return 0.7;
+                default:
+                  return 0.5;
+              }
+            }
+          }
+        }
+      }
+    });
     trigger.add('[fade-in-up]');
   }, []);
 
