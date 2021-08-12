@@ -3,6 +3,7 @@ $shadow: 0 1px 2px 0 rgba(35, 41, 51, 0.08),
 $primary-color: #1b8ff4;
 $text-color: #1f2329;
 $right-m: 40px;
+$margin-border: 98px;
 
 .home-tab-active {
   color: $primary-color;
@@ -94,9 +95,9 @@ $right-m: 40px;
 @media (min-width: 768px) {
   .header-home {
     height: 56px;
-    width: calc(100vw - 198px);
+    width: calc(100vw - 196px);
     z-index: 1000;
-    padding: 0 98px;
+    padding: 0 $margin-border;
     top: 0px;
     background-color: rgb(252, 252, 252);
     position: fixed;
@@ -111,6 +112,7 @@ $right-m: 40px;
 
       .header-home-fixed {
         p {
+          white-space: nowrap;
           text-align: center;
           margin-right: $right-m;
           cursor: pointer;
@@ -127,14 +129,10 @@ $right-m: 40px;
         display: flex;
         align-items: center;
         flex: 1;
-        .home-tab-underline {
-          height: 2px;
-          background: $primary-color;
-          position: absolute;
-          bottom: 12px;
-          transition: all ease .2s;
-        }
+        height: 100%;
+
         li {
+          white-space: nowrap;
           height: 30px;
           line-height: 30px;
           text-align: center;
@@ -152,32 +150,36 @@ $right-m: 40px;
           margin-right: $right-m;
           cursor: pointer;
         }
+        
+        .home-tab-underline {
+          height: 2px;
+          background: $primary-color;
+          position: absolute;
+          bottom: 12px;
+          transition: all ease .2s;
+        }
+      }
 
-        li:last-child {
-          line-height: 18px;
-          box-sizing: border-box;
-          width: 90px;
-          background-color: $primary-color;
-          margin: 0;
-          padding: 7px 6px;
-          border-radius: 20px;
+      .header-join-us {
+        width: 125px;
+        height: 100%;
+        background-color: $primary-color;
+        margin: 0;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        a {
           color: white;
+          text-decoration: none;
+          transition: color 0.3s;
+        }
 
-          a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-          }
-
-          &:hover {
-            line-height: 14px;
-            background-color: white;
-            border: solid 2px $primary-color;
-
-            a {
-              color: $primary-color;
-            }
-          }
+        &:hover {
+          background-color: lighten($primary-color, 8%);
         }
       }
     }
