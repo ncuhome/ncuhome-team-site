@@ -866,6 +866,13 @@
     webpack "^4.43.0"
     webpack-manifest-plugin "^2.2.0"
 
+"@terwanerik/scrolltrigger@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.nlark.com/@terwanerik/scrolltrigger/download/@terwanerik/scrolltrigger-1.0.5.tgz#4cc699e97b913c5769b8653aec84ea97ae797c9b"
+  integrity sha1-TMaZ6XuRPFdpuGU67ITql655fJs=
+  dependencies:
+    object-extend "^0.5.0"
+
 "@types/history@*":
   version "4.7.8"
   resolved "https://registry.npm.taobao.org/@types/history/download/@types/history-4.7.8.tgz"
@@ -3966,6 +3973,11 @@ object-copy@^0.1.0:
     copy-descriptor "^0.1.0"
     define-property "^0.2.5"
     kind-of "^3.0.3"
+
+object-extend@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.nlark.com/object-extend/download/object-extend-0.5.0.tgz#f73c5cad05d520d882ccb1ff4cde79fe9880e8bb"
+  integrity sha1-9zxcrQXVINiCzLH/TN55/piA6Ls=
 
 object-inspect@^1.8.0, object-inspect@^1.9.0:
   version "1.9.0"
