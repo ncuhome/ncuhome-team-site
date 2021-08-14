@@ -5,244 +5,68 @@
   .product-wrapper-b {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #fafcff;
-    .product-header-wrappe-b {
-      display: fixed;
-      margin-top: 0px;
+    .product-content-wrapper {
       width: 100%;
-      height: 70px;
-    }
-    .product-content-wrapper1-b {
-      overflow: hidden;
+      height: calc(100vh - 57px);
+      background-color: red;
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 900px;
+      flex-direction: row;
       background-color: #fafafa;
-      .product-content-left-wrapper-b {
+      .product-content-left {
+        flex: 14;
         display: flex;
-        width: 50%;
-        height: 900px;
-        padding-left: 5%;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        .product-content-logo-b {
+        align-items: center;
+        .product-content-logo {
+          width: 68%;
+          height: 400px;
           object-fit: contain;
           display: flex;
-          width: 80%;
-          height: 400px;
         }
-        .product-content-description-b {
-          display: flex;
-          height: 10%;
-          width: 70%;
+        .product-content-description {
           font-size: 25px;
-        }
-        .product-content-button1-b {
-          display: flex;
-          width: 300px;
-          padding-bottom: 200px;
-          .product-bold-btn-b {
-            height: 50px;
-            width: 200px;
-            border: 2px solid black;
-            border-radius: 18px;
-            letter-spacing: 3px;
-            color: #353535;
-            font-size: 20px;
-            font-weight: bold;
-            line-height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s;
-          }
-          .product-bold-btn-b:hover {
-            height: 50px;
-            width: 200px;
-            border: 2px solid #1b8ff4;
-            border-radius: 18px;
-            letter-spacing: 3px;
-            color: #1b8ff4;
-            font-size: 20px;
-            font-weight: bold;
-            line-height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s;
-          }
-        }
-        .product-content-button2-b {
-          display: flex;
-          width: 300px;
-          padding-bottom: 200px;
-          .product-bold-btn-b {
-            height: 50px;
-            width: 200px;
-            border: 2px solid black;
-            border-radius: 18px;
-            letter-spacing: 3px;
-            color: #353535;
-            font-size: 20px;
-            font-weight: bold;
-            line-height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s;
-          }
-          .product-bold-btn-b:hover {
-            height: 50px;
-            width: 200px;
-            border: 2px solid #1b8ff4;
-            border-radius: 18px;
-            letter-spacing: 3px;
-            color: #1b8ff4;
-            font-size: 20px;
-            font-weight: bold;
-            line-height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s;
-          }
-        }
-      }
-      .product-content-example-b {
-        object-fit:contain;
-        display: flex;
-        width: 50%;
-        height: 900px;
-      }
-    }
+          line-height: 30px;
 
-    .product-content-wrapper2-b {
-      display: flex;
-      width: 100%;
-      height: 900px;
-      padding-top: 5%;
-      background-color: #fafafa;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .product-content-left-wrapper-b {
-        padding-top: 100px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        width: 50%;
-        .product-content-logo-b {
-          object-fit:contain;
-          display: flex;
-          width: 60%;
-          height: 400px;
-          padding-bottom: 50px;
-        }
-        .product-content-description-b {
-          display: flex;
-          height: 30%;
-          width: 70%;
-          padding-left: 50px;
-          font-size: 25px;
-          padding-bottom: 300px;
-        }
-      }
-      .product-content-example-b {
-        object-fit:contain;
-        display: flex;
-        width: 40%;
-        height: 800px;
-      }
-    }
+          .description-incu-btn-container {
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            button {
+              width: 200px;
+              height: 50px;
+              margin: 0 35px;
+              border: 2px solid black;
+              border-radius: 18px;
+              background-color: #fff;
+              letter-spacing: 3px;
+              color: #353535;
+              font-size: 20px;
+              font-weight: bold;
+              line-height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: color 0.3s ease, border-color 0.2s ease;
+            }
 
-    .product-content-wrapper3-b {
-      display: flex;
-      width: 100%;
-      height: 900px;
-      background-color: #fafafa;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .product-content-left-wrapper-b {
-        flex-direction: column;
-        align-items: center;
+            button:hover {
+              color: #1b8ff4;
+              border-color: #1b8ff4;
+            }
+          }
+        }
+      }
+      .product-content-example-container {
+        object-fit: contain;
+        flex: 10;
+        display: flex;
         justify-content: center;
-        display: flex;
-        width: 50%;
-        padding-top: 200px;
-        .product-content-logo-b {
-          object-fit:contain;
-          display: flex;
-          width: 60%;
-          height: 450px;
-          padding-bottom: 50px;
-        }
-        .product-content-description-b {
-          display: flex;
-          height: 30%;
-          width: 70%;
-          padding-left: 50px;
-          font-size: 25px;
-          padding-bottom: 300px;
-        }
-      }
-      .product-content-example-b {
-        object-fit:contain;
-        display: flex;
-        width: 30%;
-        height: 500px;
-      }
-    }
-
-    .product-content-wrapper4-b {
-      display: flex;
-      width: 100%;
-      height: 900px;
-      background-color: #fafafa;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .product-content-left-wrapper-b {
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        display: flex;
-        width: 50%;
-        .product-content-logo-b {
-          object-fit:contain;
-          display: flex;
-          width: 60%;
-          height: 350px;
-          padding-bottom: 50px;
-        }
-        .product-content-description-b {
-          display: flex;
-          height: 30%;
-          width: 70%;
-          padding-left: 50px;
-          font-size: 25px;
-          padding-bottom: 100px;
-        }
-      }
-      .product-content-example-b {
-        object-fit:contain;
-        display: flex;
-        width: 35%;
-        height: 700px;
-        padding-bottom: 100px;
       }
     }
 
@@ -280,7 +104,6 @@
           margin-left: 70px;
         }
         .product-content-description-b {
-          display: flex;
           color: white;
           height: 40%;
           width: 70%;
@@ -323,11 +146,12 @@
     }
   }
 
-  .visible, .invisible {
+  .visible,
+  .invisible {
     transition: all 0.8s ease-out;
   }
   [fade-in-up].visible {
-    opacity: 1.0;
+    opacity: 1;
   }
   [fade-in-up].invisible {
     opacity: 0;

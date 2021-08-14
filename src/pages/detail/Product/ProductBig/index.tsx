@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import ncuhome from "@/assets/img/ncuhome.png";
 import ncuhomeExample from "@/assets/img/ncuhome-example.png";
 import ncov from "@/assets/img/ncov.png";
@@ -23,6 +23,14 @@ interface GameData {
   gameBgColor: string;
 }
 
+interface Product {
+  logo: string,
+  description: ReactNode;
+  example: string;
+  exampleWidth?: string | number;
+  exampleHeight?: string | number;
+}
+
 const gameData: GameData[] = [
   {
     gameImgSrc: game_1,
@@ -44,6 +52,64 @@ const gameData: GameData[] = [
   },
 ]
 
+const productList: Product[] = [
+  {
+    logo: ncuhome,
+    description: (
+      <>
+        <p>
+          习惯打卡，课表展示，空闲教室查询，寝室电量查询
+        </p>
+        <p>
+          在复杂的大学生活里，一个南大家园app就够了
+        </p>
+        <div className="description-incu-btn-container">
+          <button onClick={() => window.open("https://incu-download.ncuos.com/iNCU_latest.apk")}>
+            <img src={android} style={{ width: "20px", marginRight: "7px" }} />
+            Android下载
+          </button>
+          <button onClick={() => window.open("https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561")}>
+            <img src={apple} style={{ width: "25px", marginRight: "7px" }} />
+            App Store
+          </button>
+        </div>
+      </>
+    ),
+    example: ncuhomeExample,
+    exampleHeight: "100%"
+  },
+  {
+    logo: ncov,
+    example: ncovExample,
+    exampleWidth: "90%",
+    description: (
+      <div>
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+      </div>
+    )
+  },
+  {
+    logo: ncuos,
+    example: ncuosExample,
+    exampleWidth: "56%",
+    description: (
+      <div>
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+      </div>
+    )
+  },
+  {
+    logo: us,
+    example: usExample,
+    exampleWidth: "90%",
+    description: (
+      <div>
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+      </div>
+    )
+  },
+]
+
 const ProductBig: React.FC = () => {
   const [gameIndex, setGameIndex] = useState(0);
 
@@ -58,7 +124,7 @@ const ProductBig: React.FC = () => {
           viewport: {
             x: 0,
             y: (_trigger, _frame, direction) => {
-              console.log({direction});
+              console.log({ direction });
               switch (direction) {
                 case "top":
                   return 0.3;
@@ -77,67 +143,28 @@ const ProductBig: React.FC = () => {
 
   return (
     <div className="product-wrapper-b">
-      <div className="product-content-wrapper1-b">
-        <div className="product-content-left-wrapper-b">
-          <img className="product-content-logo-b" src={ncuhome} alt="" />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-            </p>
-          </div>
-          <div className="product-content-button1-b">
-            <div className="product-bold-btn-b" onClick={() => window.open("https://incu-download.ncuos.com/iNCU_latest.apk")}>
-              <img src={android} style={{ width: "20px", marginRight: "7px" }} />
-              Android下载
+      {
+        productList.map((product) => (
+          <div className="product-content-wrapper">
+            <div className="product-content-left">
+              <img className="product-content-logo" src={product.logo} />
+              <div className="product-content-description">
+                {product.description}
+              </div>
             </div>
-            {/* <BoldButton text="Android下载" bgColor="#FAFCFF" /> */}
-          </div>
-          <div className="product-content-button2-b">
-            <div className="product-bold-btn-b" onClick={() => window.open("https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561")}>
-              <img src={apple} style={{ width: "25px", marginRight: "7px" }} />
-              App Store
+            <div className="product-content-example-container" fade-in-up="">
+              <img
+                src={product.example}
+                className="product-content-example"
+                style={{
+                  width: product.exampleWidth,
+                  height: product.exampleHeight
+                }}
+              />
             </div>
           </div>
-        </div>
-        <img className="product-content-example-b" fade-in-up="" src={ncuhomeExample} alt="" />
-      </div>
-      <div className="product-content-wrapper2-b">
-        <div className="product-content-left-wrapper-b">
-          <img
-            className="product-content-logo-b"
-            src={ncov}
-            alt=""
-          />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈草
-            </p>
-          </div>
-        </div>
-        <img className="product-content-example-b" fade-in-up="" src={ncovExample} alt="" />
-      </div>
-      <div className="product-content-wrapper3-b">
-        <div className="product-content-left-wrapper-b">
-          <img className="product-content-logo-b" src={ncuos} alt="" />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-            </p>
-          </div>
-        </div>
-        <img className="product-content-example-b" src={ncuosExample} fade-in-up="" alt="" />
-      </div>
-      <div className="product-content-wrapper4-b">
-        <div className="product-content-left-wrapper-b">
-          <img className="product-content-logo-b" src={us} alt="" />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈cao
-            </p>
-          </div>
-        </div>
-        <img className="product-content-example-b" src={usExample} fade-in-up="" alt="" />
-      </div>
+        ))
+      }
 
       <div className="product-content-wrapper5-b" style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}>
         <div className="product-content-left-wrapper-b">
