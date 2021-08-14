@@ -82,31 +82,19 @@ const productList: Product[] = [
     logo: ncov,
     example: ncovExample,
     exampleWidth: "90%",
-    description: (
-      <div>
-        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-      </div>
-    )
+    description: "2020年3月1日，「香樟祺」应运而生并投入使用，透明公开实时跟进校园疫情数据。这份报告也成为疫情之下校园安全的保障，连接起息息相关的你我他，为大家带来安全感。",
   },
   {
     logo: ncuos,
     example: ncuosExample,
     exampleWidth: "56%",
-    description: (
-      <div>
-        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-      </div>
-    )
+    description: "云家园是服务于南昌大学辅导员与本科生的一个信息服务平台，主要功能分为两大类：学生事务与信息查询。",
   },
   {
     logo: us,
     example: usExample,
     exampleWidth: "90%",
-    description: (
-      <div>
-        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-      </div>
-    )
+    description: " US是专属于家园人的网络社区，为家园工作室的成员提供了一个互相交流的平台，内部人员可以通过论坛发帖的形式分享经验、交流心得，除此之外其中的一些办公功能也为日常工作提供了极大的便利。",
   },
 ]
 

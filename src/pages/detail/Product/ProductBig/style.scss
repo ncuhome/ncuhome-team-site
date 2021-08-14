@@ -23,14 +23,16 @@
         justify-content: center;
         align-items: center;
         .product-content-logo {
-          width: 68%;
-          height: 400px;
+          height: 350px;
           object-fit: contain;
           display: flex;
         }
         .product-content-description {
+          width: 60%;
+          margin-top: 85px;
+          text-justify: inter-ideograph;
           font-size: 25px;
-          line-height: 30px;
+          line-height: 35px;
 
           .description-incu-btn-container {
             margin-top: 80px;
