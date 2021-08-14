@@ -58,11 +58,12 @@ const ProductBig: React.FC = () => {
           viewport: {
             x: 0,
             y: (_trigger, _frame, direction) => {
+              console.log({direction});
               switch (direction) {
                 case "top":
                   return 0.3;
                 case "bottom":
-                  return 0.7;
+                  return 0.5;
                 default:
                   return 0.5;
               }
