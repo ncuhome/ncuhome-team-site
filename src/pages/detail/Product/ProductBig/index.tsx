@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect, useState } from "react";
-import ncuhome from "@/assets/img/ncuhome.png";
-import ncuhomeExample from "@/assets/img/ncuhome-example.png";
+import incu from "@/assets/img/incu.png";
+import incuExample from "@/assets/img/incu-example.png";
 import ncov from "@/assets/img/ncov.png";
 import ncovExample from "@/assets/img/ncov-example.png";
 import ncuos from "@/assets/img/ncuos.png";
@@ -54,7 +54,7 @@ const gameData: GameData[] = [
 
 const productList: Product[] = [
   {
-    logo: ncuhome,
+    logo: incu,
     description: (
       <>
         <p>
@@ -75,7 +75,7 @@ const productList: Product[] = [
         </div>
       </>
     ),
-    example: ncuhomeExample,
+    example: incuExample,
     exampleHeight: "100%"
   },
   {
