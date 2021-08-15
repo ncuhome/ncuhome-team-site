@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { CSSProperties, ReactNode, useEffect, useState } from "react";
 import incu from "@/assets/img/incu.png";
 import incuExample from "@/assets/img/incu-example.png";
 import ncov from "@/assets/img/ncov.png";
@@ -25,10 +25,12 @@ interface GameData {
 
 interface Product {
   logo: string,
+  logoWidth?: CSSProperties["width"];
+  logoHeight?: CSSProperties["height"];
   description: ReactNode;
   example: string;
-  exampleWidth?: string | number;
-  exampleHeight?: string | number;
+  exampleWidth?: CSSProperties["width"];
+  exampleHeight?: CSSProperties["height"];
 }
 
 const gameData: GameData[] = [
@@ -55,6 +57,7 @@ const gameData: GameData[] = [
 const productList: Product[] = [
   {
     logo: incu,
+    logoWidth: "50%",
     description: (
       <>
         <p>
@@ -80,18 +83,21 @@ const productList: Product[] = [
   },
   {
     logo: ncov,
+    logoWidth: "40%",
     example: ncovExample,
     exampleWidth: "90%",
     description: "2020年3月1日，「香樟祺」应运而生并投入使用，透明公开实时跟进校园疫情数据。这份报告也成为疫情之下校园安全的保障，连接起息息相关的你我他，为大家带来安全感。",
   },
   {
     logo: ncuos,
+    logoWidth: "40%",
     example: ncuosExample,
     exampleWidth: "56%",
     description: "云家园是服务于南昌大学辅导员与本科生的一个信息服务平台，主要功能分为两大类：学生事务与信息查询。",
   },
   {
     logo: us,
+    logoWidth: "40%",
     example: usExample,
     exampleWidth: "90%",
     description: " US是专属于家园人的网络社区，为家园工作室的成员提供了一个互相交流的平台，内部人员可以通过论坛发帖的形式分享经验、交流心得，除此之外其中的一些办公功能也为日常工作提供了极大的便利。",
@@ -135,7 +141,14 @@ const ProductBig: React.FC = () => {
         productList.map((product) => (
           <div className="product-content-wrapper">
             <div className="product-content-left">
-              <img className="product-content-logo" src={product.logo} />
+              <img
+                src={product.logo}
+                className="product-content-logo"
+                style={{
+                  width: product.logoWidth,
+                  height: product.logoHeight,
+                }}
+              />
               <div className="product-content-description">
                 {product.description}
               </div>

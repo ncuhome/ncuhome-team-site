@@ -11,7 +11,7 @@
     background-color: #fafcff;
     .product-content-wrapper {
       width: 100%;
-      height: calc(100vh - 57px);
+      min-height: calc(100vh - 57px);
       background-color: red;
       display: flex;
       flex-direction: row;
@@ -23,7 +23,6 @@
         justify-content: center;
         align-items: center;
         .product-content-logo {
-          height: 350px;
           object-fit: contain;
           display: flex;
         }
