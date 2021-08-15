@@ -13,7 +13,6 @@ import game_1 from "@/assets/img/game-1.png";
 import game_2 from "@/assets/img/game-2.png";
 import game_3 from "@/assets/img/game-3.png"
 import ScrollTrigger from '@terwanerik/scrolltrigger'
-import BoldButton from "@/pages/home/components/BoldButton";
 import "./style.scss";
 
 interface GameData {
@@ -93,7 +92,43 @@ const productList: Product[] = [
     logoWidth: "40%",
     example: ncuosExample,
     exampleWidth: "56%",
-    description: "云家园是服务于南昌大学辅导员与本科生的一个信息服务平台，主要功能分为两大类：学生事务与信息查询。",
+    description: (
+      <>
+        <p>
+          云家园是服务于南昌大学辅导员与本科生的一个信息服务平台，主要功能分为两大类：学生事务与信息查询。
+        </p>
+        <p>
+          <span className="bold" >学生事务: </span>
+          离/返校登记、
+          学生证补(换)、
+          安全教育、
+          学长小教员（星火使者）、
+          自助报到、
+          认定申请、
+          最美大学生投票、
+          新生入学教育、
+          错峰返校登记、
+          信贷志愿者报名、
+          在读证明打印、
+          毕业生离校、
+          学生活动、
+          班导评价、
+          辅导员评价、
+          ...
+        </p>
+        <p>
+          <span className="bold" >信息查询: </span>
+          成绩查询、
+          班级通讯录、
+          违纪处分、
+          微信平台、
+          综合素质、
+          晚查房记录、
+          寝室用电查询、
+          ...
+        </p>
+      </>
+    ),
   },
   {
     logo: us,
@@ -118,7 +153,6 @@ const ProductBig: React.FC = () => {
           viewport: {
             x: 0,
             y: (_trigger, _frame, direction) => {
-              console.log({ direction });
               switch (direction) {
                 case "top":
                   return 0.3;

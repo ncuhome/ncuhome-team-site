@@ -32,6 +32,13 @@
           text-justify: inter-ideograph;
           font-size: 25px;
           line-height: 35px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .bold {
+            font-weight: 450;
+          }
 
           .description-incu-btn-container {
             margin-top: 80px;
