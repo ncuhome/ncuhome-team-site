@@ -201,24 +201,19 @@ const ProductBig: React.FC = () => {
         ))
       }
 
-      <div className="product-content-wrapper5-b" style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}>
-        <div className="product-content-left-wrapper-b">
-          <div className="product-content-gameTitle-b">Our games</div>
-          <div className="product-content-gameName-b">{gameData[gameIndex].gameName}</div>
-          <div className="product-content-description-b">
-            <p>
-              {gameData[gameIndex].gameDesc}
-            </p>
-          </div>
-          <div className="product-content-buttonArea-b">
-            <div
-              onClick={changeGame}
-              className="product-content-changeButton-b">
-              换个看看
-            </div>
-          </div>
+      <div className="product-games" style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}>
+        <div className="product-games-title">
+          OUR GAMES
         </div>
-        <img className="product-content-example-b" src={gameData[gameIndex].gameImgSrc} alt="" />
+
+        <div className="game-description">
+          <h2 className="game-name">{gameData[gameIndex].gameName}</h2>
+          <p className="game-description-content">{gameData[gameIndex].gameDesc}</p>
+          <button className="game-change-btn" onClick={changeGame}>换个看看</button>
+        </div>
+        <div className="game-preview">
+          <img src={gameData[gameIndex].gameImgSrc} alt="" asd-sdsd />
+        </div>
       </div>
     </div>
   );

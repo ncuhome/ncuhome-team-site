@@ -78,78 +78,69 @@
       }
     }
 
-    .product-content-wrapper5-b {
-      display: flex;
+    .product-games {
       width: 100%;
-      height: 900px;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: space-between;
-      justify-content: center;
-      transition: all 1s;
-      .product-content-left-wrapper-b {
-        flex-direction: column;
-        align-items: baseline;
-        justify-content: center;
-        display: flex;
-        width: 50%;
-        height: 100%;
-        .product-content-gameTitle-b {
-          height: 10%;
-          font-size: 45px;
-          margin-left: 70px;
-          margin-top: 60px;
-          margin-bottom: 120px;
-          color: #707070;
-        }
-        .product-content-gameName-b {
-          display: flex;
-          font-size: 75px;
-          color: #fafafa;
-          width: 60%;
-          height: 20%;
+      height: calc(100vh - 57px);
+      display: flex;
+      position: relative;
+
+      .product-games-title {
+        font-size: 45px;
+        margin-bottom: 120px;
+        color: #707070;
+        position: absolute;
+        left: 70px;
+        top: 60px;
+      }
+
+      .game-description {
+        flex: 6;
+        padding: 225px 0 0 70px;
+        position: relative;
+
+        .game-name {
           margin-bottom: 30px;
-          margin-left: 70px;
+          color: #fafafa;
+          font-size: 75px;
         }
-        .product-content-description-b {
-          color: white;
-          height: 40%;
+
+        .game-description-content {
           width: 70%;
-          margin-left: 70px;
-          font-size: 20px;
           padding-bottom: 100px;
-        }
-        .product-content-buttonArea-b {
-          height: 30%;
-          padding-bottom: 270px;
-        }
-        .product-content-changeButton-b {
-          height: auto;
-          display: flex;
           color: white;
-          background-color: #1b8ff4;
-          margin-left: 360px;
-          padding: 17px 50px;
-          border-radius: 25px;
-          cursor: pointer;
-          transition: color 0.2s;
+          font-size: 20px;
+          text-align: justify;
+          line-height: 25px;
         }
-        .product-content-changeButton-b:hover {
+
+        .game-change-btn {
           height: auto;
-          display: flex;
-          color: black;
           background-color: #1b8ff4;
-          margin-left: 360px;
+          border: none;
+          color: white;
           padding: 17px 50px;
           border-radius: 25px;
-          cursor: pointer;
+          transition: color 0.2s ease;
+          transform: translateX(-50%);
+          position: absolute;
+          bottom: 15vh;
+          left: 50%;
+        }
+
+        .game-change-btn:hover {
+          color: black;
         }
       }
-      .product-content-example-b {
-        object-fit: cover;
-        display: flex;
-        width: auto;
-        height: 100%;
+
+      .game-preview {
+        flex: 4;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          right: 0;
+        }
       }
     }
   }
