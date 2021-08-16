@@ -55,7 +55,7 @@ const Header: React.FC = () => {
 
   //调整tab下面的线的位置和宽度
   useEffect(() => {
-    const { offsetLeft: left,offsetWidth: width } = tabContainerRef.current.children[index] as HTMLLIElement;
+    const { offsetLeft: left,offsetWidth: width } = tabContainerRef.current.children[index+1] as HTMLLIElement;
     setLineStyle({
       width,
       left,
@@ -66,6 +66,7 @@ const Header: React.FC = () => {
     if (showControl || !isMobile) {
       return (
         <div className="header-home-list" ref={tabContainerRef} >
+          <div style={{ flex: 1 }}></div>
           {
             routes.map((item, i) => {
               return (
@@ -84,7 +85,6 @@ const Header: React.FC = () => {
             })
           }
           <div className="home-tab-underline" style={lineStyle} />
-          <div style={{ flex: 1 }}></div>
           <div className={'header-join-us'}>
             <Link to={about.url}>{about.name}</Link>
           </div>
