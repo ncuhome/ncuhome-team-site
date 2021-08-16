@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import ncuhome from "@/assets/img/ncuhome.png";
-import ncuhomeExample from "@/assets/img/ncuhome-example.png";
+import React, { CSSProperties, ReactNode, useEffect, useState } from "react";
+import incu from "@/assets/img/incu.png";
+import incuExample from "@/assets/img/incu-example.png";
 import ncov from "@/assets/img/ncov.png";
 import ncovExample from "@/assets/img/ncov-example.png";
 import ncuos from "@/assets/img/ncuos.png";
@@ -13,7 +13,6 @@ import game_1 from "@/assets/img/game-1.png";
 import game_2 from "@/assets/img/game-2.png";
 import game_3 from "@/assets/img/game-3.png"
 import ScrollTrigger from '@terwanerik/scrolltrigger'
-import BoldButton from "@/pages/home/components/BoldButton";
 import "./style.scss";
 
 interface GameData {
@@ -21,6 +20,16 @@ interface GameData {
   gameName: string;
   gameDesc: string;
   gameBgColor: string;
+}
+
+interface Product {
+  logo: string,
+  logoWidth?: CSSProperties["width"];
+  logoHeight?: CSSProperties["height"];
+  description: ReactNode;
+  example: string;
+  exampleWidth?: CSSProperties["width"];
+  exampleHeight?: CSSProperties["height"];
 }
 
 const gameData: GameData[] = [
@@ -44,6 +53,92 @@ const gameData: GameData[] = [
   },
 ]
 
+const productList: Product[] = [
+  {
+    logo: incu,
+    logoWidth: "50%",
+    description: (
+      <>
+        <p>
+          习惯打卡，课表展示，空闲教室查询，寝室电量查询
+        </p>
+        <p>
+          在复杂的大学生活里，一个南大家园app就够了
+        </p>
+        <div className="description-incu-btn-container">
+          <button onClick={() => window.open("https://incu-download.ncuos.com/iNCU_latest.apk")}>
+            <img src={android} style={{ width: "20px", marginRight: "7px" }} />
+            Android下载
+          </button>
+          <button onClick={() => window.open("https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561")}>
+            <img src={apple} style={{ width: "25px", marginRight: "7px" }} />
+            App Store
+          </button>
+        </div>
+      </>
+    ),
+    example: incuExample,
+    exampleHeight: "100%"
+  },
+  {
+    logo: ncov,
+    logoWidth: "40%",
+    example: ncovExample,
+    exampleWidth: "90%",
+    description: "2020年3月1日，「香樟祺」应运而生并投入使用，透明公开实时跟进校园疫情数据。这份报告也成为疫情之下校园安全的保障，连接起息息相关的你我他，为大家带来安全感。",
+  },
+  {
+    logo: ncuos,
+    logoWidth: "40%",
+    example: ncuosExample,
+    exampleWidth: "56%",
+    description: (
+      <>
+        <p>
+          云家园是服务于南昌大学辅导员与本科生的一个信息服务平台，主要功能分为两大类：学生事务与信息查询。
+        </p>
+        <p>
+          <span className="bold" >学生事务: </span>
+          离/返校登记、
+          学生证补(换)、
+          安全教育、
+          学长小教员（星火使者）、
+          自助报到、
+          认定申请、
+          最美大学生投票、
+          新生入学教育、
+          错峰返校登记、
+          信贷志愿者报名、
+          在读证明打印、
+          毕业生离校、
+          学生活动、
+          班导评价、
+          辅导员评价、
+          ...
+        </p>
+        <p>
+          <span className="bold" >信息查询: </span>
+          成绩查询、
+          班级通讯录、
+          违纪处分、
+          微信平台、
+          综合素质、
+          晚查房记录、
+          寝室用电查询、
+          ...
+        </p>
+      </>
+    ),
+  },
+  {
+    logo: us,
+    logoWidth: "40%",
+    example: usExample,
+    exampleWidth: "90%",
+    description: " US是专属于家园人的网络社区，为家园工作室的成员提供了一个互相交流的平台，内部人员可以通过论坛发帖的形式分享经验、交流心得，除此之外其中的一些办公功能也为日常工作提供了极大的便利。",
+  },
+]
+
 const ProductBig: React.FC = () => {
   const [gameIndex, setGameIndex] = useState(0);
 
@@ -58,7 +153,6 @@ const ProductBig: React.FC = () => {
           viewport: {
             x: 0,
             y: (_trigger, _frame, direction) => {
-              console.log({direction});
               switch (direction) {
                 case "top":
                   return 0.3;
@@ -77,67 +171,35 @@ const ProductBig: React.FC = () => {
 
   return (
     <div className="product-wrapper-b">
-      <div className="product-content-wrapper1-b">
-        <div className="product-content-left-wrapper-b">
-          <img className="product-content-logo-b" src={ncuhome} alt="" />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-            </p>
-          </div>
-          <div className="product-content-button1-b">
-            <div className="product-bold-btn-b" onClick={() => window.open("https://incu-download.ncuos.com/iNCU_latest.apk")}>
-              <img src={android} style={{ width: "20px", marginRight: "7px" }} />
-              Android下载
+      {
+        productList.map((product) => (
+          <div className="product-content-wrapper">
+            <div className="product-content-left">
+              <img
+                src={product.logo}
+                className="product-content-logo"
+                style={{
+                  width: product.logoWidth,
+                  height: product.logoHeight,
+                }}
+              />
+              <div className="product-content-description">
+                {product.description}
+              </div>
             </div>
-            {/* <BoldButton text="Android下载" bgColor="#FAFCFF" /> */}
-          </div>
-          <div className="product-content-button2-b">
-            <div className="product-bold-btn-b" onClick={() => window.open("https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561")}>
-              <img src={apple} style={{ width: "25px", marginRight: "7px" }} />
-              App Store
+            <div className="product-content-example-container" fade-in-up="">
+              <img
+                src={product.example}
+                className="product-content-example"
+                style={{
+                  width: product.exampleWidth,
+                  height: product.exampleHeight
+                }}
+              />
             </div>
           </div>
-        </div>
-        <img className="product-content-example-b" fade-in-up="" src={ncuhomeExample} alt="" />
-      </div>
-      <div className="product-content-wrapper2-b">
-        <div className="product-content-left-wrapper-b">
-          <img
-            className="product-content-logo-b"
-            src={ncov}
-            alt=""
-          />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈草
-            </p>
-          </div>
-        </div>
-        <img className="product-content-example-b" fade-in-up="" src={ncovExample} alt="" />
-      </div>
-      <div className="product-content-wrapper3-b">
-        <div className="product-content-left-wrapper-b">
-          <img className="product-content-logo-b" src={ncuos} alt="" />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-            </p>
-          </div>
-        </div>
-        <img className="product-content-example-b" src={ncuosExample} fade-in-up="" alt="" />
-      </div>
-      <div className="product-content-wrapper4-b">
-        <div className="product-content-left-wrapper-b">
-          <img className="product-content-logo-b" src={us} alt="" />
-          <div className="product-content-description-b">
-            <p>
-              哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈cao
-            </p>
-          </div>
-        </div>
-        <img className="product-content-example-b" src={usExample} fade-in-up="" alt="" />
-      </div>
+        ))
+      }
 
       <div className="product-content-wrapper5-b" style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}>
         <div className="product-content-left-wrapper-b">
