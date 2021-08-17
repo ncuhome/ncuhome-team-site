@@ -239,7 +239,7 @@ const ProductBig: React.FC = () => {
       <div
         ref={gameContainerRef}
         className="product-games"
-        style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}
+        style={{ "backgroundColor": gameData[gameIndex].gameBgColor, display: "none" }}
       >
         <div className="product-games-title">
           OUR GAMES
