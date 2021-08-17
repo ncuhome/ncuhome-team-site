@@ -1,4 +1,6 @@
-import React, { CSSProperties, ReactNode, useEffect, useState } from "react";
+import React, { CSSProperties, ReactNode, useEffect, useState, useRef } from "react";
+import { animate } from 'popmotion';
+
 import incu from "@/assets/img/incu.png";
 import incuExample from "@/assets/img/incu-example.png";
 import ncov from "@/assets/img/ncov.png";
@@ -139,11 +141,44 @@ const productList: Product[] = [
   },
 ]
 
+const sleep = (ms: number) => new Promise(resolve => {
+  setTimeout(resolve, ms);
+})
+
 const ProductBig: React.FC = () => {
   const [gameIndex, setGameIndex] = useState(0);
+  const gameContainerRef = useRef<HTMLDivElement>(null);
+  const gameDescriptionRef = useRef<HTMLDivElement>(null);
+  const gamePreviewRef = useRef<HTMLDivElement>(null);
 
-  const changeGame = () => {
-    setGameIndex(pre => (pre + 1) % (gameData.length));
+  const changeGame = async () => {
+    animate({
+      from: { opacity: 1 },
+      to: { opacity: 0 },
+      duration: 600,
+      onUpdate: ({ opacity }) => {
+        gamePreviewRef.current.style.opacity = String(opacity);
+        gameDescriptionRef.current.style.opacity = String(opacity);
+      }
+    });
+
+    await sleep(600);
+
+    animate({
+      from: { background: gameContainerRef.current.style.backgroundColor, opacity: 0  },
+      to: { background: gameData[(gameIndex + 1) % (gameData.length)].gameBgColor, opacity: 1 },
+      duration: 600,
+      onPlay: () => {
+        setGameIndex(pre => (pre + 1) % (gameData.length));
+      },
+      onUpdate: ({ background, opacity }) => {
+        console.log({ background });
+        gameContainerRef.current.style.backgroundColor = background;
+        gamePreviewRef.current.style.opacity = String(opacity);
+        gameDescriptionRef.current.style.opacity = String(opacity);
+      }
+    });
+
   };
 
   useEffect(() => {
@@ -201,17 +236,21 @@ const ProductBig: React.FC = () => {
         ))
       }
 
-      <div className="product-games" style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}>
+      <div
+        ref={gameContainerRef}
+        className="product-games"
+        style={{ "backgroundColor": gameData[gameIndex].gameBgColor }}
+      >
         <div className="product-games-title">
           OUR GAMES
         </div>
 
-        <div className="game-description">
+        <div className="game-description" ref={gameDescriptionRef} >
           <h2 className="game-name">{gameData[gameIndex].gameName}</h2>
           <p className="game-description-content">{gameData[gameIndex].gameDesc}</p>
           <button className="game-change-btn" onClick={changeGame}>换个看看</button>
         </div>
-        <div className="game-preview">
+        <div className="game-preview" ref={gamePreviewRef}>
           <img src={gameData[gameIndex].gameImgSrc} alt="" asd-sdsd />
         </div>
       </div>
