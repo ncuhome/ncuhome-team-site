@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   const [index, setIndex] = useState<number>(routes.findIndex((i) => i.url === history.location.pathname));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lineStyle, setLineStyle] = useState<React.CSSProperties>();
-  const tabContainerRef = useRef<HTMLDivElement>(null);
+  const tabContainerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const onResize = () => {
@@ -55,35 +55,39 @@ const Header: React.FC = () => {
 
   //调整tab下面的线的位置和宽度
   useEffect(() => {
-    const { offsetLeft: left,offsetWidth: width } = tabContainerRef.current.children[index+1] as HTMLLIElement;
-    setLineStyle({
-      width,
-      left,
-    });
-  }, [index]);
+    if (tabContainerRef.current.children[index]) {
+      const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLUListElement;
+      setLineStyle({
+        width,
+        left,
+      });
+    }
+  }, [index, tabContainerRef]);
 
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
-        <div className="header-home-list" ref={tabContainerRef} >
+        <div className="header-home-list" >
           <div style={{ flex: 1 }}></div>
-          {
-            routes.map((item, i) => {
-              return (
-                <li
-                  className={i === index ? "home-tab-active" : undefined}
-                  key={item.name}
-                  onClick={() =>
-                    item.url.includes("http") ?
-                      window.open(item.url) :
-                      history.push(item.url)
-                  }
-                >
-                  {item.name}
-                </li>
-              )
-            })
-          }
+          <ul ref={tabContainerRef}>
+            {
+              routes.map((item, i) => {
+                return (
+                  <li
+                    className={i === index ? "home-tab-active" : undefined}
+                    key={item.name}
+                    onClick={() =>
+                      item.url.includes("http") ?
+                        window.open(item.url) :
+                        history.push(item.url)
+                    }
+                  >
+                    {item.name}
+                  </li>
+                )
+              })
+            }
+          </ul>
           <div className="home-tab-underline" style={lineStyle} />
           <div className={'header-join-us'}>
             <Link to={about.url}>{about.name}</Link>
