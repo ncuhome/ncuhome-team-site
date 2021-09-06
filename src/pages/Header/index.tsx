@@ -19,6 +19,8 @@ const Header: React.FC = () => {
   // 控制 menu 的下拉与上拉显示
   const [showControl, setShowControl] = useState(false);
   // 控制上下箭头的改变
+  const [underlineShow, setUnderlineShow] = useState(true);
+  // 控制在点击"加入我们"时隐藏下划线
   const [index, setIndex] = useState<number>(routes.findIndex((i) => i.url === history.location.pathname));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lineStyle, setLineStyle] = useState<React.CSSProperties>();
@@ -55,17 +57,19 @@ const Header: React.FC = () => {
   };
 
   // 调整tab下面的线的位置和宽度
-  if (!isMobile) {
-    useEffect(() => {
+  useEffect(() => {
+    if (!isMobile) {
       if (tabContainerRef.current.children[index]) {
+        setUnderlineShow(true);
         const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLUListElement;
         setLineStyle({
           width,
           left,
         });
       }
-    }, [index, tabContainerRef]);
-  }
+    }
+  }, [index, tabContainerRef]);
+
 
   const renderList = () => {
     if (showControl || !isMobile) {
@@ -91,8 +95,17 @@ const Header: React.FC = () => {
               })
             }
           </ul>
-          <div className="home-tab-underline" style={lineStyle} />
-          <div className={'header-join-us'}>
+          {underlineShow ?
+            <div className="home-tab-underline" style={lineStyle} /> :
+            null
+          }
+          <div
+            className={'header-join-us'}
+            onClick={() => {
+              setUnderlineShow(false)
+              history.push(about.url)
+            }}
+          >
             <Link to={about.url}>{about.name}</Link>
           </div>
         </div>
