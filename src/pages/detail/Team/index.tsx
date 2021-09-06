@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-// import TeamSmall from "./TeamSmall";
+import TeamSmall from "./TeamSmall";
 import TeamBig from './TeamBig';
 
 const Team: React.FC = () => {
