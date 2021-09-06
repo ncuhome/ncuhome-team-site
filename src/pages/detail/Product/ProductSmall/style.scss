@@ -31,6 +31,7 @@ $primary-color: #1b8ff4;
     }
     .product-content-description {
       color: #fff;
+      text-shadow: rgb(43, 43, 43) 0.1em 0.1em 0.2em;
       text-justify: inter-ideograph;
       font-size:15px;
       line-height: 20px;
@@ -43,6 +44,7 @@ $primary-color: #1b8ff4;
     }
     .product-content-button {
       display: flex;
+      
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -55,7 +57,9 @@ $primary-color: #1b8ff4;
         background-color: #fafafa;
         border-radius: 18px;
         letter-spacing: 3px;
+        box-shadow: rgb(80, 80, 80) 4px 4px 6px;
         color: #353535;
+        text-shadow: grey 1px 1px 1px;
         font-size: 15px;
         line-height: 40px;
         display: flex;
@@ -83,6 +87,7 @@ $primary-color: #1b8ff4;
     }
     .product-content-description {
       color: white;
+      text-shadow: rgb(43, 43, 43) 1px 1px 1px;
       text-justify: inter-ideograph;
       font-size:15px;
       line-height: 20px;
@@ -120,14 +125,16 @@ $primary-color: #1b8ff4;
       display: flex;
       width: 25%;
       height: 25%;
-      padding-left: 20px;
-      padding-top: 50px;
+      margin-left: 20px;
+      margin-top: 20px;
     }
     .product-content-description {
       color: white;
+      text-shadow: rgb(43, 43, 43) 1px 1px 1px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: -20px;
       height: 30%;
       width: 80%;
       font-size: 15px;
@@ -146,23 +153,17 @@ $primary-color: #1b8ff4;
     }
   
     .product-content-changeButton {
-      height: auto;
+      height: 1%;
       display: flex;
+      justify-content: center;
+      align-items: center;
       color: white;
+      border: none;
       background-color: $primary-color;
       padding: 17px 50px;
       border-radius: 25px;
       cursor: pointer;
       transition: color 0.2s;
-    }
-    .product-content-changeButton:hover {
-      height: auto;
-      display: flex;
-      color: black;
-      background-color: $primary-color;
-      padding: 17px 50px;
-      border-radius: 25px;
-      cursor: pointer;
     }
   }
 }

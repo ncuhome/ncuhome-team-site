@@ -191,7 +191,7 @@ const ProductBig: React.FC = () => {
             <div className="product-content-example-container" fade-in-up="">
               <img
                 src={product.example}
-                
+
                 style={{
                   objectFit: "contain",
                   width: product.exampleWidth,
@@ -208,20 +208,18 @@ const ProductBig: React.FC = () => {
           <div className="product-content-gameTitle-b">Our games</div>
           <div className="product-content-gameName-b">{gameData[gameIndex].gameName}</div>
           <div className="product-content-description-b">
-            
-              {gameData[gameIndex].gameDesc}
-            
+
+            {gameData[gameIndex].gameDesc}
+
           </div>
-          <div className="product-content-buttonArea-b">
-            <div
-              onClick={changeGame}
-              className="product-content-changeButton-b">
-              换个看看
-            </div>
+          <div
+            onClick={changeGame}
+            className="product-content-changeButton-b">
+            换个看看
           </div>
         </div>
         <div className="product-content-example-container-b">
-          <img  src={gameData[gameIndex].gameImgSrc} alt="" />
+          <img src={gameData[gameIndex].gameImgSrc} alt="" />
         </div>
       </div>
     </div>

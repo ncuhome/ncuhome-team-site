@@ -23,7 +23,6 @@
         justify-content: center;
         align-items: center;
         .product-content-logo {
-          
           object-fit: contain;
           display: flex;
         }
@@ -107,7 +106,7 @@
         .product-content-gameName-b {
           display: flex;
           flex-wrap: nowrap;
-          font-size: 75px;
+          font-size: 65px;
           color: #fafafa;
           width: 90%;
           height: 20%;
@@ -119,20 +118,24 @@
           height: 40%;
           width: 70%;
           margin-left: 70px;
+          text-justify: inter-ideograph;
           font-size: 20px;
+          line-height: 30px;
           margin-bottom: 100px;
         }
         .product-content-buttonArea-b {
-          height: 30%;
+          height: 8%;
           padding-bottom: 10%;
         }
         .product-content-changeButton-b {
           width: 100px;
-          height: auto;
+          height: 22px;
           text-align: center;
+          align-content: center;
           color: white;
           background-color: #1b8ff4;
-          margin-left: 100%;
+          margin-left: 30%;
+          margin-bottom: 10%;
           padding: 15px 15px;
           border-radius: 25px;
           cursor: pointer;
@@ -140,12 +143,12 @@
         }
         .product-content-changeButton-b:hover {
           width: 100px;
-          height: auto;
+          height: 22px;
           display: flex;
           flex-direction: column;
           color: black;
           background-color: #1b8ff4;
-          margin-left: 100%;
+          margin-left: 30%;
           padding: 15px 15px;
           border-radius: 25px;
           cursor: pointer;
@@ -158,13 +161,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+        img {
           object-fit: contain;
           max-width: 100%;
           max-height: 100%;
         }
       }
-      
     }
   }
 

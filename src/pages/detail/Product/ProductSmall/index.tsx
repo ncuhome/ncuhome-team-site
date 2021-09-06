@@ -78,7 +78,7 @@ const productList: Product[] = [
     logo: ncuos_logo,
     description: (
       <>
-        <h2>香樟祺</h2>
+        <h2>云家园</h2>
         <p>
           云家园是服务于南昌大学辅导员与本科生的一个信息服务平台，主要功能分为两大类：学生事务与信息查询。
         </p>
