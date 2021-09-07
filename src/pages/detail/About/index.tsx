@@ -27,20 +27,24 @@ const About: React.FC = () => {
         <div className="about-content-text">
           <p style={{ color: "white", fontSize: "50px", margin: "50px" }}>JOIN US</p>
           <p style={{ color: "white", fontSize: "20px" }}>Work & Play together </p>
-          <div className="about-content-botton-area">
-            <div onClick={openDialog}>
-              <BoldButton text="🥳 老生招聘" bgColor="#1B8FF4" />
+          <div className="about-content-button-area">
+            <div className="about-content-button">
+              <div onClick={openDialog}>
+                <BoldButton text="🥳 老生招聘" bgColor="#1B8FF4" />
+              </div>
             </div>
             {
               isShowDialog ?
-                <Dialog 
+                <Dialog
                   onOk={closeDialog}
                 />
                 :
                 null
             }
-            <div onClick={()=>{window.open("https://2021hr.ncuos.com")}}>
-              <BoldButton text="🥰 新生招聘" bgColor="#1B8FF4" />
+            <div className="about-content-button">
+              <div onClick={() => { window.open("https://2021hr.ncuos.com") }}>
+                <BoldButton text="🥰 新生招聘" bgColor="#1B8FF4" />
+              </div>
             </div>
           </div>
         </div>

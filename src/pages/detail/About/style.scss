@@ -29,19 +29,24 @@ $theme: #1B8FF4;
       }
     }
     .about-content-text{
+      position: absolute;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: -600px;
-      .about-content-botton-area{
+      margin-top: -calc(50vh);
+      .about-content-button-area{
         display: flex;
+        .about-content-button{
+          margin-top: 40px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
         .bold-btn{
-          margin: 50px;
           background-color: $theme;
           border: $theme;
           color: #FFFFFF;
-          font-size: 20px;
+          font-size: calc(1.3vw);
           font-weight: normal;
         }
         .bold-btn:hover{

@@ -1,49 +1,102 @@
 $theme: #1b8ff4;
-.full-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.dialog-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  border-radius: 30px;
-  width: 35%;
-  height: 30%;
-  .dialog-box-descrpition {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p {
-      text-shadow: rgb(209, 209, 209) 1px 1px 1px;
-      font-size: 15px;
-      line-height: 20px;
-    }
-  }
-  .dialog-box-button {
-    cursor: pointer;
-    border-radius: 16px;
-    color: #fff;
+@media (min-width: 768px) {
+  .full-screen {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $theme;
-    margin-top: 5%;
-    width: 20%;
-    height: 15%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
-  .dialog-box-button:hover {
-    transition: color 0.2s;
-    color: black;
+  .dialog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 30px;
+    width: 35%;
+    height: 30%;
+    .dialog-box-descrpition {
+      margin: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        text-shadow: rgb(209, 209, 209) 1px 1px 1px;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+    .dialog-box-button {
+      cursor: pointer;
+      border-radius: 16px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $theme;
+
+      width: 20%;
+      min-height: 15%;
+    }
+    .dialog-box-button:hover {
+      transition: color 0.2s;
+      color: black;
+    }
+  }
+}
+@media (max-width:767px){
+  .full-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .dialog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 30px;
+    width: 80%;
+    height: 40%;
+    .dialog-box-descrpition {
+      margin: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        text-shadow: rgb(209, 209, 209) 1px 1px 1px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    .dialog-box-button {
+      cursor: pointer;
+      border-radius: 16px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $theme;
+      width: 25%;
+      height: 30px;
+    }
+    .dialog-box-button:hover {
+      transition: color 0.2s;
+      color: black;
+    }
   }
 }
