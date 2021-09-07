@@ -20,9 +20,7 @@ const About: React.FC = () => {
         <p className="team-footer-top-text1">Ncu Homers </p>
         <p className="team-footer-top-text2"> travel</p>
         <p className="team-footer-top-text3"> around the world</p>
-        <div className="team-footer-top-img">
-          <img src={CompanyLogo} alt="company" />
-        </div>
+        <img className="team-footer-top-img" src={CompanyLogo} alt="company" />
       </div>
       <div className="team-footer-middle">
         <p className="team-footer-middle-text1">Let's make something great</p><br />

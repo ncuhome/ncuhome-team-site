@@ -1,4 +1,4 @@
-.team-act-wrapper{
+.team-act-wrapper_s{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,14 +6,14 @@
   flex-wrap: nowrap;
   width: 80%;
   height: 320px;
-  .team-act-img{
+  .team-act-img_s{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
   
-  .team-act-text{
+  .team-act-text_s{
     display: flex;
     width: 100%;
     height: 240px;

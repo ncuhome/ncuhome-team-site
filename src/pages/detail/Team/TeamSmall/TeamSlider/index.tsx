@@ -20,21 +20,19 @@ const TeamSlider: React.FC = () => {
   return (
     <div className="slider-wrapper">
       <Slider {...settings}>
-        <div>
-          <img className="slider-img" src={TeamBG1} />
-        </div>
-        <div>
-          <img className="slider-img" src={TeamBG2} />
-        </div>
-        <div>
-          <img className="slider-img" src={TeamBG3} />
-        </div>
-        <div>
-          <img className="slider-img" src={TeamBG4} />
-        </div>
-        <div>
-          <img className="slider-img" src={TeamBG5} />
-        </div>
+
+        <img className="slider-img" src={TeamBG1} />
+
+
+        <img className="slider-img" src={TeamBG2} />
+
+
+        <img className="slider-img" src={TeamBG3} />
+
+        <img className="slider-img" src={TeamBG4} />
+
+        <img className="slider-img" src={TeamBG5} />
+
       </Slider>
     </div>
 

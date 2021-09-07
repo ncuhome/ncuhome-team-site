@@ -12,10 +12,10 @@ interface childProps {
 
 const TeamAct: React.FC<childProps> = (props) => {
   return (
-    <div className="team-act-wrapper">
-      <img src={props.imgName} className="team-act-img" />
-      <div className="team-act-text">
-        <div className="team-act-text-area">
+    <div className="team-act-wrapper_s">
+      <img src={props.imgName} className="team-act-img_s" />
+      <div className="team-act-text_s">
+        <div className="team-act-text-area_s">
           <h1 style={{ fontSize: "27px", color:"white", marginTop:"-27px" }}>{props.ActTitle_EN}</h1><br />
           <span style={{ fontSize: "27px" }}>{props.ActTitle_CN} </span>
           <span style={{ fontSize: "12px", marginLeft: "8px" }}>{props.ActTime}</span>

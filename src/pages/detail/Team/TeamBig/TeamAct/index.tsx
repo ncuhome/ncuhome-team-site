@@ -19,11 +19,11 @@ const TeamAct: React.FC<childProps> = (props) => {
       <img src={teamActTrail} className="team-act-trail" />
       <div className="team-act-text">
         <div>
-          <h1 style={{fontSize:"30px"}}>{props.ActTitle_EN}</h1><br />
-          <span style={{fontSize:"30px"}}>{props.ActTitle_CN} </span>
-          <span style={{fontSize:"15px",marginLeft:"8px"}}>{props.ActTime}</span>
+          <h1 className="team-act-text-1" >{props.ActTitle_EN}</h1><br />
+          <span className="team-act-text-2" >{props.ActTitle_CN} </span>
+          <span className="team-act-text-3" >{props.ActTime}</span>
         </div>
-        <div style={{fontSize:"17px",marginTop:"20px",whiteSpace:"pre"}}>
+        <div className="team-act-text-4" >
           {props.ActDes}
         </div>
       </div>
