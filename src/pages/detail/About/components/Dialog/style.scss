@@ -44,15 +44,6 @@ $theme: #1b8ff4;
   }
   .dialog-box-button:hover {
     transition: color 0.2s;
-    cursor: pointer;
-    border-radius: 16px;
     color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $theme;
-    margin-top: 5%;
-    width: 20%;
-    height: 15%;
   }
 }

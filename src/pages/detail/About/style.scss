@@ -1,3 +1,4 @@
+$theme: #1B8FF4;
 .about-wrapper{
   height: calc(100vh);
   width: calc(100vw);
@@ -37,19 +38,14 @@
         display: flex;
         .bold-btn{
           margin: 50px;
-          background-color: #1B8FF4;
-          border: #1B8FF4;
+          background-color: $theme;
+          border: $theme;
           color: #FFFFFF;
           font-size: 20px;
           font-weight: normal;
         }
         .bold-btn:hover{
-          margin: 50px;
-          background-color: #1B8FF4;
-          border: #1B8FF4;
           color: black;
-          font-size: 20px;
-          font-weight: normal;
         }
       }
      
