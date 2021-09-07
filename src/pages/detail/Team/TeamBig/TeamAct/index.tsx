@@ -12,7 +12,6 @@ interface childProps {
 }
 
 const TeamAct: React.FC<childProps> = (props) => {
-  console.log(props.imgName)
   return (
     <div className="team-act-wrapper">
       <img src={props.imgName} className="team-act-img" />

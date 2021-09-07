@@ -14,8 +14,7 @@ const Team: React.FC = () => {
   return (
     <div>
       {isMobile ?
-        // <TeamSmall/>
-        null
+        <TeamSmall/>
         :
         <TeamBig />
       }
