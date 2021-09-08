@@ -1,0 +1,102 @@
+$theme: #1b8ff4;
+@media (min-width: 768px) {
+  .fullScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .dialogBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 30px;
+    width: 35%;
+    height: 30%;
+    .dialogBox_descrpition {
+      margin: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        text-shadow: rgb(209, 209, 209) 1px 1px 1px;
+        font-size: 15px;
+        line-height: 0px;
+      }
+    }
+    .dialogBox_button {
+      cursor: pointer;
+      border-radius: 16px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $theme;
+      height: 20px;
+      width: 20%;
+      min-height: 15%;
+    }
+    .dialogBox_button:hover {
+      transition: color 0.2s;
+      color: black;
+    }
+  }
+}
+@media (max-width:767px){
+  .fullScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .dialogBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 30px;
+    width: 80%;
+    height: 40%;
+    .dialogBox_descrpition {
+      margin: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        text-shadow: rgb(209, 209, 209) 1px 1px 1px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    .dialogBox_button {
+      cursor: pointer;
+      border-radius: 16px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $theme;
+      width: 25%;
+      height: 30px;
+    }
+    .dialogBox_button:hover {
+      transition: color 0.2s;
+      color: black;
+    }
+  }
+}

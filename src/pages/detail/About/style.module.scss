@@ -1,0 +1,60 @@
+$theme: #1B8FF4;
+.aboutWrapper{
+  height: calc(100vh);
+  width: calc(100vw);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #FAFCFF;
+  .about_header_wrapper {
+    display: fixed;
+    margin-top: 0px;
+    width: 100%;
+  }
+  .about_content_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    .about_content_img_area{
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .about_content_text{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -calc(50vh);
+      .about_content_button_area{
+        display: flex;
+        .about_content_button{
+          margin-top: 40px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        .bold-btn{
+          background-color: $theme;
+          border: $theme;
+          color: #FFFFFF;
+          font-size: calc(1.3vw);
+          font-weight: normal;
+        }
+        .bold-btn:hover{
+          color: black;
+        }
+      }
+     
+    }
+    
+  }
+}

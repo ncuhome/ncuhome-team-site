@@ -1,40 +1,27 @@
 {
-  "name": "ncuhome-team-site",
-  "version": "1.0.0",
-  "description": "Brand new Ncuhome site",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ncuhome/ncuhome-team-site.git"
-  },
+  "name": "ncuhome_new_site",
+  "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "postbuild": "cd scripts && sh clean.sh"
-  },
-  "devDependencies": {
-    "@snowpack/plugin-dotenv": "^2.0.5",
-    "@snowpack/plugin-react-refresh": "^2.4.0",
-    "@snowpack/plugin-sass": "^1.3.0",
-    "@snowpack/plugin-typescript": "^1.2.1",
-    "@snowpack/plugin-webpack": "2.1.1",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "@types/react-router-dom": "^5.1.3",
-    "@types/react-slick": "^0.23.4",
-    "@types/snowpack-env": "^2.3.3",
-    "prettier": "^2.2.1",
-    "snowpack": "^3.0.11"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
     "@terwanerik/scrolltrigger": "^1.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.1.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0",
     "react-slick": "^0.28.1",
-    "react-use": "^17.1.1",
-    "reset.css": "^2.0.2",
-    "typescript": "^4.1.5"
+    "react-use": "^17.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.8",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "sass": "^1.39.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.5.4"
   }
 }

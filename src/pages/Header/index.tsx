@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
 import logo from "@/assets/img/new-logo.svg";
-import "./style.scss";
+import styles from "./style.module.scss";
 
 const routes = [
   { name: "首页", url: "/" },
@@ -18,10 +18,13 @@ const Header: React.FC = () => {
   const history = useHistory();
   // 控制 menu 的下拉与上拉显示
   const [showControl, setShowControl] = useState(false);
+  // 控制上下箭头的改变
+  const [underlineShow, setUnderlineShow] = useState(true);
+  // 控制在点击"加入我们"时隐藏下划线
   const [index, setIndex] = useState<number>(routes.findIndex((i) => i.url === history.location.pathname));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lineStyle, setLineStyle] = useState<React.CSSProperties>();
-  const tabContainerRef = useRef<HTMLUListElement>(null);
+  const tabContainerRef: any = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const onResize = () => {
@@ -53,28 +56,32 @@ const Header: React.FC = () => {
     }
   };
 
-  //调整tab下面的线的位置和宽度
+  // 调整tab下面的线的位置和宽度
   useEffect(() => {
-    if (tabContainerRef.current.children[index]) {
-      const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLUListElement;
-      setLineStyle({
-        width,
-        left,
-      });
+    if (!isMobile) {
+      if (tabContainerRef.current.children[index]) {
+        setUnderlineShow(true);
+        const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLUListElement;
+        setLineStyle({
+          width,
+          left,
+        });
+      }
     }
   }, [index, tabContainerRef]);
+
 
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
-        <div className="header-home-list" >
+        <div className={styles.header_home_list} >
           <div style={{ flex: 1 }}></div>
           <ul ref={tabContainerRef}>
             {
               routes.map((item, i) => {
                 return (
                   <li
-                    className={i === index ? "home-tab-active" : undefined}
+                    className={i === index ? styles.home_tab_active : undefined}
                     key={item.name}
                     onClick={() =>
                       item.url.includes("http") ?
@@ -88,8 +95,17 @@ const Header: React.FC = () => {
               })
             }
           </ul>
-          <div className="home-tab-underline" style={lineStyle} />
-          <div className={'header-join-us'}>
+          {underlineShow ?
+            <div className={styles.home_tab_underline} style={lineStyle} /> :
+            null
+          }
+          <div
+            className={styles.header_join_us}
+            onClick={() => {
+              setUnderlineShow(false)
+              history.push(about.url)
+            }}
+          >
             <Link to={about.url}>{about.name}</Link>
           </div>
         </div>
@@ -100,10 +116,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="header-home">
+    <div className={styles.header_home}>
       <ul>
-        {!isMobile && <img className="header-logo" src={logo} />}
-        <div className="header-home-fixed">{renderFirstElement()}</div>
+        {!isMobile && <img className={styles.header_logo} src={logo} />}
+        <div className={styles.header_home_fixed}>{renderFirstElement()}</div>
         {renderList()}
       </ul>
     </div>
