@@ -854,6 +854,11 @@ regenerator-runtime@^0.13.4:
   resolved "https://registry.nlark.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz?cache=0&sync_timestamp=1626993001371&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fregenerator-runtime%2Fdownload%2Fregenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
 
+reset.css@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npm.taobao.org/reset.css/download/reset.css-2.0.2.tgz#9c01309c820b72e8f219ebcc8e1411949604f7d7"
+  integrity sha1-nAEwnIILcujyGevMjhQRlJYE99c=
+
 resize-observer-polyfill@^1.5.0, resize-observer-polyfill@^1.5.1:
   version "1.5.1"
   resolved "https://registry.npm.taobao.org/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
