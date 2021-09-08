@@ -19,9 +19,9 @@ const About: React.FC = () => {
   }
 
   return (
-    <div className={styles.aboutWrapper}>
+    <div className={styles.about_wrapper}>
       <div className={styles.about_content_wrapper}>
-        <div className={styles.about_content_img_area}>
+        <div className={styles.about_conten_img_area}>
           <img src={about_bg} />
         </div>
         <div className={styles.about_content_text}>

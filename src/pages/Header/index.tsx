@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef, MutableRefObject } from "react";
 import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
-import logo from "@/assets/img/new-logo.svg";
-import styles from "./style.module.scss";
+import logo from "@/assets/img/new-logo.png";
+import "./style.scss";
 
 const routes = [
   { name: "首页", url: "/" },
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
   const [index, setIndex] = useState<number>(routes.findIndex((i) => i.url === history.location.pathname));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lineStyle, setLineStyle] = useState<React.CSSProperties>();
-  const tabContainerRef: any = useRef<HTMLUListElement>(null);
+  const tabContainerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     const onResize = () => {
@@ -74,14 +74,14 @@ const Header: React.FC = () => {
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
-        <div className={styles.header_home_list} >
+        <div className="header-home-list" >
           <div style={{ flex: 1 }}></div>
           <ul ref={tabContainerRef}>
             {
               routes.map((item, i) => {
                 return (
                   <li
-                    className={i === index ? styles.home_tab_active : undefined}
+                    className={i === index ? "home-tab-active" : undefined}
                     key={item.name}
                     onClick={() =>
                       item.url.includes("http") ?
@@ -96,11 +96,11 @@ const Header: React.FC = () => {
             }
           </ul>
           {underlineShow ?
-            <div className={styles.home_tab_underline} style={lineStyle} /> :
+            <div className="home-tab-underline" style={lineStyle} /> :
             null
           }
           <div
-            className={styles.header_join_us}
+            className={'header-join-us'}
             onClick={() => {
               setUnderlineShow(false)
               history.push(about.url)
@@ -116,10 +116,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className={styles.header_home}>
+    <div className="header-home">
       <ul>
-        {!isMobile && <img className={styles.header_logo} src={logo} />}
-        <div className={styles.header_home_fixed}>{renderFirstElement()}</div>
+        {!isMobile && <img className="header-logo" src={logo} />}
+        <div className="header-home-fixed">{renderFirstElement()}</div>
         {renderList()}
       </ul>
     </div>

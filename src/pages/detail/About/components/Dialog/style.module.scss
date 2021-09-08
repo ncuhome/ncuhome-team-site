@@ -1,6 +1,6 @@
 $theme: #1b8ff4;
 @media (min-width: 768px) {
-  .fullScreen {
+  .full_screen {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ $theme: #1b8ff4;
     top: 0;
     left: 0;
   }
-  .dialogBox {
+  .dialog_box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@ $theme: #1b8ff4;
     border-radius: 30px;
     width: 35%;
     height: 30%;
-    .dialogBox_descrpition {
+    .dialog_box_descrpition {
       margin: 5%;
       display: flex;
       flex-direction: column;
@@ -29,10 +29,10 @@ $theme: #1b8ff4;
       p {
         text-shadow: rgb(209, 209, 209) 1px 1px 1px;
         font-size: 15px;
-        line-height: 0px;
+        line-height: 20px;
       }
     }
-    .dialogBox_button {
+    .dialog_box_button {
       cursor: pointer;
       border-radius: 16px;
       color: #fff;
@@ -40,18 +40,18 @@ $theme: #1b8ff4;
       justify-content: center;
       align-items: center;
       background-color: $theme;
-      height: 20px;
+
       width: 20%;
       min-height: 15%;
     }
-    .dialogBox_button:hover {
+    .dialog_box_button:hover {
       transition: color 0.2s;
       color: black;
     }
   }
 }
 @media (max-width:767px){
-  .fullScreen {
+  .full_screen {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@ $theme: #1b8ff4;
     top: 0;
     left: 0;
   }
-  .dialogBox {
+  .dialog_box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +72,7 @@ $theme: #1b8ff4;
     border-radius: 30px;
     width: 80%;
     height: 40%;
-    .dialogBox_descrpition {
+    .dialog_box_descrpition {
       margin: 10%;
       display: flex;
       flex-direction: column;
@@ -83,7 +83,7 @@ $theme: #1b8ff4;
         line-height: 18px;
       }
     }
-    .dialogBox_button {
+    .dialog_box_button {
       cursor: pointer;
       border-radius: 16px;
       color: #fff;
@@ -94,7 +94,7 @@ $theme: #1b8ff4;
       width: 25%;
       height: 30px;
     }
-    .dialogBox_button:hover {
+    .dialog_box_button:hover {
       transition: color 0.2s;
       color: black;
     }
