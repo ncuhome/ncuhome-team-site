@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import HorizontalScroll from "./components/HorizontalScroll";
+import VideoPlayer from "./components/video-player";
 import { useMedia } from "react-use";
 import "./index.scss";
 
@@ -13,6 +14,7 @@ const About = lazy(() => import("./AboutCard"));
 const Pages: React.FC = () => {
   return (
     <>
+      <VideoPlayer height="100%" />
       <Ncuhome />
       <Products />
       <Blog />
