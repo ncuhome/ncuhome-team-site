@@ -1,5 +1,5 @@
 @media (max-width: 767px) {
-  .bold-btn {
+  .bold_btn {
     height: 36px;
     width: 120px;
     border: 2px solid black;
@@ -12,7 +12,7 @@
     transition: color 0.2s;
   }
 
-  .bold-btn:hover{
+  .bold_btn:hover{
     height: 36px;
     width: 120px;
     border: 2px solid #1B8FF4;
@@ -28,7 +28,7 @@
 }
 
 @media (min-width: 768px) {
-  .bold-btn {
+  .bold_btn {
     height: 40px;
     width: 160px;
     border: 2px solid black;
@@ -41,7 +41,7 @@
     transition: color 0.2s;
   }
 
-  .bold-btn:hover{
+  .bold_btn:hover{
     cursor: pointer;
     height: 40px;
     width: 160px;
