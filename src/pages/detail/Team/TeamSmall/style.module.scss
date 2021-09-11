@@ -1,0 +1,96 @@
+.team_wrapper {
+  height: auto;
+  width: 100%;
+  display: flex;
+  // flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: center;
+  background-color: #fff;
+  .team_header_wrapper {
+    display: fixed;
+    z-index: 100;
+    margin-top: 0px;
+    width: 100%;
+    height: 56px;
+  }
+  .team_slider_wrapper {
+    display: relative;
+    margin-top: 5%;
+    width: calc(1);
+    height: calc(80vh);
+  }
+  .team_content_rectangle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .team_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(95vh);
+    background-color: #ffffff;
+    .team_content_actcard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      padding-bottom: 20px;
+      background-color: #f4f4f5;
+      width: 90%;
+      height: 60%;
+      img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+      }
+      .actcard_title {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .actcard_desc {
+        font-size: 9px;
+        line-height: 14px;
+        width: 90%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  
+
+  .c_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(30vh);
+
+    height: calc(60vh);
+    background-color: #f4f4f5;
+    .c_content_act {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+.team_content_actcard_rectangle {
+    width: 100%;
+    height: calc(20vh);
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

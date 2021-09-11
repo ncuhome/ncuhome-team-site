@@ -1,11 +1,11 @@
-.team-footer-wrapper {
+.team_footer_wrapper {
   width: 100%;
   height: calc(vh);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  .team-footer-top {
+  .team_footer_top {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -13,25 +13,25 @@
     height: calc(100vh);
     width: 100%;
     background-color: #191919;
-    .team-footer-top-text1 {
+    .team_footer_top_text1 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team-footer-top-text2 {
+    .team_footer_top_text2 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team-footer-top-text3 {
+    .team_footer_top_text3 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team-footer-top-img {
+    .team_footer_top_img {
       padding-top: 20px;
       display: flex;
       justify-content: center;
@@ -40,7 +40,7 @@
       height: 100px;
     }
   }
-  .team-footer-middle {
+  .team_footer_middle {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,38 +48,129 @@
     background-color: #1b8ff4;
     height: calc(70vh);
     width: 100%;
-    .team-footer-middle-text1 {
+    .team_footer_middle_text1 {
       padding-top: 5%;
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team-footer-middle-text2 {
+    .team_footer_middle_text2 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team-footer-middle-btn {
+    .team_footer_middle_btn {
       padding-top: 20px;
       display: flex;
       height: 100px;
-      .bold-btn {
+      .bold_btn {
+        height: 36px;
+        width: 120px;
+        border-radius: 16px;
+        letter-spacing: 2px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 36px;
         background-color: #ffffff;
         border: #ffffff;
         color: #1b8ff4;
       }
     }
   }
-  .team-footer-bottom {
+  // .bubble1 {
+  //   background-color: #ffffff54;
+  //   width: 40px;
+  //   height: 40px;
+  //   position: absolute;
+  //   left: 3%;
+  //   border-radius: 50%;
+  //   // animation: flying_right 5s infinite ease-in;
+  // }
+  // .bubble2 {
+  //   background-color: #ffffff54;
+  //   width: 20px;
+  //   height: 20px;
+  //   position: absolute;
+  //   left: 10%;
+  //   border-radius: 50%;
+  //   // animation: flying_right 5s infinite ease-in;
+  //   animation-delay: 2s;
+  // }
+  // .bubble3 {
+  //   width: 30px;
+  //   height: 30px;
+  //   position: absolute;
+  //   left: 25%;
+  //   border: 2px solid #fff;
+  //   border-radius: 50%;
+  //   // animation: flying_left 3s infinite ease-in;
+  // }
+  // .bubble4 {
+  //   background-color: #ffffff54;
+  //   width: 50px;
+  //   height: 50px;
+  //   position: absolute;
+  //   right: 20%;
+  //   border-radius: 50%;
+  //   // animation: flying_left 4s infinite ease-in;
+  //   animation-delay: 1s;
+  // }
+  // .bubble5 {
+  //   width: 35px;
+  //   height: 35px;
+  //   position: absolute;
+  //   right: 5%;
+  //   border: 2px solid #fff;
+  //   border-radius: 50%;
+  //   // animation: flying_right 3.5s infinite ease-in;
+  // }
+
+  // @keyframes flying_right {
+  //   0% {
+  //     opacity: 1;
+  //     // bottom: -40px;
+
+  //     transform: translateX(0);
+  //   }
+
+  //   50% {
+  //     transform: translateX(40px);
+  //   }
+
+  //   100% {
+  //     opacity: 0;
+  //     // bottom: 70%;
+  //     transform: translateX(0);
+  //   }
+  // }
+  // @keyframes flying_left {
+  //   0% {
+  //     opacity: 1;
+  //     bottom: -40px;
+  //     transform: translateX(0);
+  //   }
+
+  //   50% {
+  //     transform: translateX(-40px);
+  //   }
+
+  //   100% {
+  //     opacity: 0;
+  //     bottom: 80%;
+  //     transform: translateX(0);
+  //   }
+  // }
+  .team_footer_bottom {
     height: calc(30vh);
     width: 100%;
     display: flex;
     box-sizing: border-box;
     padding-left: 8%;
     flex-flow: column nowrap;
-    .team-footer-list {
+    .team_footer_list {
       margin-top: 15%;
       height: calc(30vh);
       overflow: hidden;

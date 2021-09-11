@@ -1,30 +1,44 @@
-import React from "react";
+import React, {ReactNode} from "react";
 import BoldButton from "../../../../home/components/BoldButton"
 import CompanyLogo from "@/assets/img/company-logo-s.svg"
-import "./style.scss";
+import styles from "./style.module.scss";
+import { useHistory } from "react-router";
+
+// const Bubbles: ReactNode = (
+//   <>
+//     <div className={styles.bubble1}> </div>
+//     <div className={styles.bubble2}> </div>
+//     <div className={styles.bubble3}> </div>
+//     <div className={styles.bubble4}> </div>
+//     <div className={styles.bubble5}> </div>
+//   </>
+// )
 
 const About: React.FC = () => {
+  const history = useHistory();
+
   return (
-    <div className="team-footer-wrapper">
-      <div className="team-footer-top">
-        <p className="team-footer-top-text1">Ncu Homers </p>
-        <p className="team-footer-top-text2"> travel</p>
-        <p className="team-footer-top-text3"> around the world</p>
-        <div className="team-footer-top-img">
+    <div className={styles.team_footer_wrapper}>
+      <div className={styles.team_footer_top}>
+        <p className={styles.team_footer_top_text1}>Ncu Homers </p>
+        <p className={styles.team_footer_top_text2}> travel</p>
+        <p className={styles.team_footer_top_text3}> around the world</p>
+        <div className={styles.team_footer_top_img}>
           <img src={CompanyLogo} alt="company" />
         </div>
       </div>
-      <div className="team-footer-middle">
-        <p className="team-footer-middle-text1">Let's<br />make something<br /> great together</p><br />
+      <div className={styles.team_footer_middle}>
+        <p className={styles.team_footer_middle_text1}>Let's<br />make something<br /> great together</p><br />
 
-        <div className="team-footer-middle-btn">
-          <BoldButton text="Jion us" bgColor="#FAFCFF" />
+        <div className={styles.team_footer_middle_btn}>
+          <div onClick={() => history.push("/about")} className={styles.bold_btn}>Join us</div>
         </div>
+        {/* {Bubbles} */}
       </div>
-      <div className="team-footer-bottom">
-        <ul className="team-footer-list">
+      <div className={styles.team_footer_bottom}>
+        <ul className={styles.team_footer_list}>
           <li>
-            <ul className="team-footer-ul-about">
+            <ul className={styles.team_footer_ul_about}>
               <li>
                 <p>关注我们</p>
               </li>
@@ -49,7 +63,7 @@ const About: React.FC = () => {
             </ul>
           </li>
           <li>
-            <ul className="team-footer-ul-contact">
+            <ul className={styles.team_footer_ul_contact}>
               <li>
                 <p>联系我们</p>
               </li>
@@ -70,11 +84,11 @@ const About: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="tel:0791-83969124"
-                  title="电话：0791-83969124"
+                  href="tel:0791_83969124"
+                  title="电话：0791_83969124"
                   className="tel"
                 >
-                  电话：0791-83969124
+                  电话：0791_83969124
                 </a>
               </li>
             </ul>
