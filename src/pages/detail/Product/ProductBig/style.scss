@@ -30,7 +30,7 @@
           width: 60%;
           margin-top: 85px;
           text-justify: inter-ideograph;
-          font-size: 25px;
+          font-size: 22px;
           line-height: 35px;
           display: flex;
           flex-direction: column;
@@ -42,6 +42,7 @@
 
           .description-incu-btn-container {
             margin-top: 80px;
+            margin-bottom: 5%;
             display: flex;
             justify-content: center;
             button {
@@ -61,8 +62,8 @@
               justify-content: center;
               transition: color 0.3s ease, border-color 0.2s ease;
             }
-
             button:hover {
+              cursor: pointer;
               color: #1b8ff4;
               border-color: #1b8ff4;
             }
@@ -81,7 +82,7 @@
     .product-content-wrapper5-b {
       display: flex;
       width: 100%;
-      height: 900px;
+      height: calc(80vh);
       flex-wrap: wrap;
       flex-direction: column;
       align-items: space-between;
@@ -93,20 +94,21 @@
         justify-content: center;
         display: flex;
         width: 50%;
-        height: 100%;
+        height: calc(80vh);
         .product-content-gameTitle-b {
           height: 10%;
           font-size: 45px;
           margin-left: 70px;
-          margin-top: 60px;
-          margin-bottom: 120px;
+          margin-top: 9%;
+          margin-bottom: 3%;
           color: #707070;
         }
         .product-content-gameName-b {
           display: flex;
-          font-size: 75px;
+          flex-wrap: nowrap;
+          font-size: 65px;
           color: #fafafa;
-          width: 60%;
+          width: 90%;
           height: 20%;
           margin-bottom: 30px;
           margin-left: 70px;
@@ -116,40 +118,54 @@
           height: 40%;
           width: 70%;
           margin-left: 70px;
+          text-justify: inter-ideograph;
           font-size: 20px;
-          padding-bottom: 100px;
+          line-height: 30px;
+          margin-bottom: 100px;
         }
         .product-content-buttonArea-b {
-          height: 30%;
-          padding-bottom: 270px;
+          height: 8%;
+          padding-bottom: 10%;
         }
         .product-content-changeButton-b {
-          height: auto;
-          display: flex;
+          width: 100px;
+          height: 22px;
+          text-align: center;
+          align-content: center;
           color: white;
           background-color: #1b8ff4;
-          margin-left: 360px;
-          padding: 17px 50px;
+          margin-left: 30%;
+          margin-bottom: 10%;
+          padding: 15px 15px;
           border-radius: 25px;
           cursor: pointer;
           transition: color 0.2s;
         }
         .product-content-changeButton-b:hover {
-          height: auto;
+          width: 100px;
+          height: 22px;
           display: flex;
+          flex-direction: column;
           color: black;
           background-color: #1b8ff4;
-          margin-left: 360px;
-          padding: 17px 50px;
+          margin-left: 30%;
+          padding: 15px 15px;
           border-radius: 25px;
           cursor: pointer;
         }
       }
-      .product-content-example-b {
-        object-fit: cover;
-        display: flex;
-        width: auto;
+      .product-content-example-container-b {
+        width: 50%;
         height: 100%;
+        flex: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          object-fit: contain;
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
     }
   }

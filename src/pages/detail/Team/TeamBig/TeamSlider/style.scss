@@ -1,0 +1,37 @@
+@media (min-width: 768px) {
+  .slider-wrapper{
+    margin: 0;
+    padding: 0;
+    width: calc(100vw);
+    position: relative;
+  }
+
+  .slick-initialized { overflow: hidden; }
+
+  .slider-img{
+    height: 80vh;
+  }
+
+  .team-slider-content {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-arrow {
+    width: 20px;
+    position: absolute;
+    top: 50%;
+  }
+
+  .slider-left-arrow {
+    right: 100px;
+    transform: translateY(-50%);
+  }
+
+  .slider-right-arrow {
+    left: 100px;
+    transform: translateY(-50%) rotateY(180deg);
+  }
+
+}

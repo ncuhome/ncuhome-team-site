@@ -1,12 +1,14 @@
-import About from "@/pages/detail/About";
-import Product from "@/pages/detail/Product";
-import Team from "@/pages/detail/Team";
-import NewRegister from "@/pages/detail/Register/NewRegister";
-import OldRegister from "@/pages/detail/Register/OldRegister";
 import React from "react";
-import HomeHeader from "@/pages/Header";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import About from "../pages/detail/About";
+import Product from "../pages/detail/Product";
+import Team from "../pages/detail/Team";
+import NewRegister from "../pages/detail/Register/NewRegister";
+import OldRegister from "../pages/detail/Register/OldRegister";
+import HomeHeader from "../pages/Header";
 import Home from "../pages/home";
+
+
 
 const Routes: React.FC = () => {
   return (
