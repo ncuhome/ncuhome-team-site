@@ -442,6 +442,13 @@ debug@^4.1.0:
   dependencies:
     ms "2.1.2"
 
+dom7@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.nlark.com/dom7/download/dom7-4.0.0.tgz#69c8fb9b170c92d64f385fdc37f81456e82b80a1"
+  integrity sha1-acj7mxcMktZPOF/cN/gUVugrgKE=
+  dependencies:
+    ssr-window "^4.0.0"
+
 electron-to-chromium@^1.3.830:
   version "1.3.832"
   resolved "https://registry.nlark.com/electron-to-chromium/download/electron-to-chromium-1.3.832.tgz?cache=0&sync_timestamp=1631052257734&other_urls=https%3A%2F%2Fregistry.nlark.com%2Felectron-to-chromium%2Fdownload%2Felectron-to-chromium-1.3.832.tgz#b947205525a7825eff9b39566140d5471241c244"
@@ -951,6 +958,11 @@ sourcemap-codec@^1.4.8:
   resolved "https://registry.npm.taobao.org/sourcemap-codec/download/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
   integrity sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=
 
+ssr-window@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.nlark.com/ssr-window/download/ssr-window-4.0.0.tgz?cache=0&sync_timestamp=1629879256060&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fssr-window%2Fdownload%2Fssr-window-4.0.0.tgz#4ee82fc360c5f88a022f321740bcfec59ada1a61"
+  integrity sha1-Tugvw2DF+IoCLzIXQLz+xZraGmE=
+
 stack-generator@^2.0.5:
   version "2.0.5"
   resolved "https://registry.npm.taobao.org/stack-generator/download/stack-generator-2.0.5.tgz#fb00e5b4ee97de603e0773ea78ce944d81596c36"
@@ -996,6 +1008,14 @@ supports-color@^5.3.0:
   integrity sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=
   dependencies:
     has-flag "^3.0.0"
+
+swiper@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.nlark.com/swiper/download/swiper-7.0.5.tgz?cache=0&sync_timestamp=1631189081293&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fswiper%2Fdownload%2Fswiper-7.0.5.tgz#80e7631798811e95c00aecab68d12a74e84896c0"
+  integrity sha1-gOdjF5iBHpXACuyraNEqdOhIlsA=
+  dependencies:
+    dom7 "^4.0.0"
+    ssr-window "^4.0.0"
 
 throttle-debounce@^3.0.1:
   version "3.0.1"
