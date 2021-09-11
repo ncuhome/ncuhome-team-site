@@ -28,7 +28,7 @@ const Home: React.FC = () => {
   const isWide = useMedia("(min-width: 768px)");
 
   return (
-    <>
+    <div className="home-pages-container">
       <Suspense fallback={''}>
         {isWide ? (
           <HorizontalScroll>
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
           <Pages />
         )}
       </Suspense>
-    </>
+    </div>
   );
 };
 
