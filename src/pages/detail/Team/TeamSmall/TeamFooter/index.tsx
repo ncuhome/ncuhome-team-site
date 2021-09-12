@@ -4,15 +4,6 @@ import CompanyLogo from "@/assets/img/company-logo-s.svg"
 import styles from "./style.module.scss";
 import { useHistory } from "react-router";
 
-// const Bubbles: ReactNode = (
-//   <>
-//     <div className={styles.bubble1}> </div>
-//     <div className={styles.bubble2}> </div>
-//     <div className={styles.bubble3}> </div>
-//     <div className={styles.bubble4}> </div>
-//     <div className={styles.bubble5}> </div>
-//   </>
-// )
 
 const About: React.FC = () => {
   const history = useHistory();

@@ -64,7 +64,7 @@ const TeamSmall: React.FC = () => {
         height: "400px",
         backgroundColor: "#f4f4f5"
       }} className={styles.c_wrapper}>
-        <p style={{ marginTop:"-40px", marginRight: "35%", marginBottom:"5%", fontSize: "35px", letterSpacing: "5px" }} >ACTIVITY</p>
+        <p style={{ marginTop: "-40px", marginRight: "35%", marginBottom: "5%", fontSize: "35px", letterSpacing: "5px" }} >ACTIVITY</p>
         <div style={{
           width: "90%"
         }}>
