@@ -69,9 +69,9 @@ const TeamBig: React.FC = () => {
 展望未来的初心与决心。"/>
             <TeamAct
               imgName={teamAct}
-              ActTitle_EN="CELEBRATION"
-              ActTitle_CN="周年庆"
-              ActTime="2020.5.23"
+              ActTitle_EN="CONFERENCE"
+              ActTitle_CN="全体大会"
+              ActTime="2020.9.30"
               ActDes="
 家园工作室成年的庆典
 是庆祝，是狂欢
@@ -79,9 +79,9 @@ const TeamBig: React.FC = () => {
 展望未来的初心与决心。"/>
             <TeamAct
               imgName={teamAct}
-              ActTitle_EN="CELEBRATION"
-              ActTitle_CN="周年庆"
-              ActTime="2020.5.23"
+              ActTitle_EN="PARTY"
+              ActTitle_CN="家园团建"
+              ActTime="2020.12.23"
               ActDes="
 家园工作室成年的庆典
 是庆祝，是狂欢

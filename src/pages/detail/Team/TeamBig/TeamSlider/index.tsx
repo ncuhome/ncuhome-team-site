@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import React from "react";
+import React, { useRef } from "react";
 import "./style.scss"
 import sliderArrow from "@/assets/img/team_banner_arrow.svg";
 import TeamBG1 from "@/assets/img/teamBG1.svg";
@@ -20,7 +20,7 @@ const settings = {
 
 const TeamSlider: React.FC = () => {
 
-  const slierRef = React.useRef<Slider>(null);
+  const slierRef: any = useRef();
 
   const goLastSlier = () => {
     slierRef.current.slickPrev();
