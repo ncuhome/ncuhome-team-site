@@ -26,7 +26,7 @@ const About: React.FC = () => {
         <p className="team-footer-middle-text1">Let's make something great</p><br />
         <p className="team-footer-middle-text2">together</p>
         <div className="team-footer-middle-btn">
-          <BoldButton text="Jion us" bgColor="#FAFCFF" />
+          <BoldButton text="Join us" bgColor="#FAFCFF" />
         </div>
         {Bubbles}
       </div>
