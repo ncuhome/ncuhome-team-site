@@ -1,0 +1,34 @@
+   
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+
+    - name: Build project
+      run: |
+        echo install dependencies
+        yarn
+        echo build project
+        yarn build
+    - name: Upload website to Aliyun OSS
+      uses: ncuhome/ali-oss-website-action@v1
+      id: upload
+      with:
+        folder: dist # 待上传的文件夹
+        accessKeyId: ${{ secrets.ACCESSKEYID }} ## 通过 secrets 注入 ak
+        accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
+        bucket: team-ncuhome # 要上传到的 bucket, 若不存在会自动新建
+        endpoint: oss-cn-hangzhou.aliyuncs.com # 指定区域的 oss endpoint
+        incremental: true # 开启增量上传，只上传 md5 值变化、新增、删除 的文件
