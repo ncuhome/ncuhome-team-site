@@ -24,7 +24,7 @@ jobs:
         echo build project
         yarn build
     - name: Upload website to Aliyun OSS
-      uses: ncuhome/ali-oss-website-action@v1
+      uses: ncuhome/ali-oss-website-action@v1.1.0
       id: upload
       with:
         folder: dist # 待上传的文件夹
