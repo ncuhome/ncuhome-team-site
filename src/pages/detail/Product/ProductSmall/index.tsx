@@ -29,8 +29,8 @@ interface Product {
 
 const gameData: GameData[] = [
   {
-    gameName: "你的2021校园轨迹",
-    gameDesc: "2019年，那些或许被你忽视的，就会“砰”的涌现，月光下的足迹，教室里的身影，一些无意坚持下来的习惯。\n把它们收集起来，一起来拼出你的校园人设，惊喜在这里等你。",
+    gameName: "你的 2021 校园轨迹",
+    gameDesc: "2019 年，那些或许被你忽视的，就会“砰”的涌现，月光下的足迹，教室里的身影，一些无意坚持下来的习惯。\n把它们收集起来，一起来拼出你的校园人设，惊喜在这里等你。",
     gameBgSrc: {
       backgroundImage: `url(${game_bg_1})`,
       backgroundRepeat: 'no-repeat',
@@ -48,7 +48,7 @@ const gameData: GameData[] = [
   },
   {
     gameName: "拼图游戏",
-    gameDesc: "介绍",
+    gameDesc: "多人在线协同拼图，Let's Pin",
     gameBgSrc: {
       backgroundImage: `url(${game_bg_3})`,
       backgroundRepeat: 'no-repeat',

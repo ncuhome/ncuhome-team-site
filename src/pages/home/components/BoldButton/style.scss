@@ -2,8 +2,9 @@
   .bold-btn {
     height: 36px;
     width: 120px;
-    border: 2px solid black;
-    border-radius: 16px;
+    border: 3px solid #2e2e2e;
+    color: #2e2e2e;
+    border-radius: 14px;
     letter-spacing: 2px;
     font-size: 18px;
     text-align: center;
@@ -12,18 +13,9 @@
     transition: color 0.2s;
   }
 
-  .bold-btn:hover{
-    height: 36px;
-    width: 120px;
-    border: 2px solid #1B8FF4;
-    border-radius: 16px;
-    letter-spacing: 2px;
-    font-size: 18px;
-    color:#1B8FF4;
-    text-align: center;
-    font-weight: bold;
-    line-height: 36px;
-    
+  .bold-btn:hover {
+    border: 3px solid #1b8ff4;
+    color: #1b8ff4;
   }
 }
 
@@ -31,8 +23,9 @@
   .bold-btn {
     height: 40px;
     width: 160px;
-    border: 2px solid black;
-    border-radius: 18px;
+    border: 3px solid #2e2e2e;
+    color: #2e2e2e;
+    border-radius: 14px;
     letter-spacing: 2px;
     font-size: 20px;
     text-align: center;
@@ -41,17 +34,9 @@
     transition: color 0.2s;
   }
 
-  .bold-btn:hover{
+  .bold-btn:hover {
     cursor: pointer;
-    height: 40px;
-    width: 160px;
-    border: 2px solid #1B8FF4;
-    border-radius: 18px;
-    letter-spacing: 2px;
-    font-size: 20px;
-    color:#1B8FF4;
-    text-align: center;
-    font-weight: bold;
-    line-height: 40px;
+    border: 3px solid #1b8ff4;
+    color: #1b8ff4;
   }
 }

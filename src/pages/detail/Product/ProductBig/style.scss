@@ -28,11 +28,12 @@
         }
         .product-content-description {
           width: 60%;
-          margin-top: 85px;
+          margin-top: 56px;
           text-justify: inter-ideograph;
-          font-size: 22px;
+          font-size: 19px;
           line-height: 35px;
           display: flex;
+          color: #2e2e2e;
           flex-direction: column;
           align-items: center;
 
@@ -41,21 +42,20 @@
           }
 
           .description-incu-btn-container {
-            margin-top: 80px;
+            margin-top: 72px;
             margin-bottom: 5%;
             display: flex;
             justify-content: center;
             button {
               width: 200px;
               height: 50px;
-              margin: 0 35px;
-              border: 2px solid black;
-              border-radius: 18px;
+              margin: 0 28px;
+              border: 3px solid #2e2e2e;
+              border-radius: 15px;
               background-color: #fff;
-              letter-spacing: 3px;
-              color: #353535;
+              color: #2e2e2e;
               font-size: 20px;
-              font-weight: bold;
+              font-weight: 600;
               line-height: 40px;
               display: flex;
               align-items: center;
@@ -82,7 +82,7 @@
     .product-content-wrapper5-b {
       display: flex;
       width: 100%;
-      height: calc(80vh);
+      height: calc(100vh);
       flex-wrap: wrap;
       flex-direction: column;
       align-items: space-between;
@@ -134,21 +134,20 @@
           align-content: center;
           color: white;
           background-color: #1b8ff4;
-          margin-left: 30%;
+          margin-left: 70px;
           margin-bottom: 10%;
-          padding: 15px 15px;
+          padding: 15px;
+          font-size: 17px;
           border-radius: 25px;
           cursor: pointer;
-          transition: color 0.2s;
+          transition: background-color 0.2s ease-in-out;
         }
         .product-content-changeButton-b:hover {
           width: 100px;
           height: 22px;
           display: flex;
           flex-direction: column;
-          color: black;
-          background-color: #1b8ff4;
-          margin-left: 30%;
+          background-color: rgb(51, 160, 255);
           padding: 15px 15px;
           border-radius: 25px;
           cursor: pointer;
