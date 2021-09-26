@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/pages/Header";
+import Header from "@/pages/components/header";
 import Slider from "react-slick";
 import admini from "@/assets/img/admini.png";
 import product from "@/assets/img/product.png";
