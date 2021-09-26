@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import AboutMobile from "./about_mobile";
 import AboutPC from './about_pc';
 
-const About: React.FC = () => {
+const AboutUs: React.FC = () => {
   const [isMobile,setIsMobile] = useState(window.innerWidth < 768)
 
   useEffect(() => {
@@ -22,4 +22,4 @@ const About: React.FC = () => {
   )
 }
 
-export default About;
+export default AboutUs;
