@@ -1,6 +1,6 @@
 import React from "react";
 import padHand from "@/assets/img/pad-hand.png";
-import BoldButton from "../components/BoldButton";
+import BoldButton from "@/pages/home/components/BoldButton";
 import "./style.scss";
 import { useHistory } from "react-router-dom";
 
