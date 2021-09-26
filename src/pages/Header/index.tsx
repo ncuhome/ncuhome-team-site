@@ -7,12 +7,12 @@ import "./style.scss";
 
 const routes = [
   { name: "首页", url: "/" },
-  { name: "产品", url: "/product" },
+  { name: "产品", url: "/products" },
   { name: "团队博客", url: "https://ncuhome.yuque.com/ncuhome" },
-  { name: "关于我们", url: "/team" },
+  { name: "关于我们", url: "/about" },
 ];
 
-const about = { name: "加入我们", url: "/about" };
+const about = { name: "加入我们", url: "/join-us" };
 
 const Header: React.FC = () => {
   const history = useHistory();
