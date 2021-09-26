@@ -1,0 +1,183 @@
+@media (min-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  .product-wrapper-b {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fafcff;
+    .product-content-wrapper {
+      width: 100%;
+      min-height: calc(100vh - 57px);
+      background-color: red;
+      display: flex;
+      flex-direction: row;
+      background-color: #fafafa;
+      .product-content-left {
+        flex: 14;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .product-content-logo {
+          object-fit: contain;
+          display: flex;
+        }
+        .product-content-description {
+          width: 60%;
+          margin-top: 56px;
+          text-justify: inter-ideograph;
+          font-size: 19px;
+          line-height: 35px;
+          display: flex;
+          color: #2e2e2e;
+          flex-direction: column;
+          align-items: center;
+
+          .bold {
+            font-weight: 450;
+          }
+
+          .description-incu-btn-container {
+            margin-top: 72px;
+            margin-bottom: 5%;
+            display: flex;
+            justify-content: center;
+            button {
+              width: 200px;
+              height: 50px;
+              margin: 0 28px;
+              border: 3px solid #2e2e2e;
+              border-radius: 15px;
+              background-color: #fff;
+              color: #2e2e2e;
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: color 0.3s ease, border-color 0.2s ease;
+            }
+            button:hover {
+              cursor: pointer;
+              color: #1b8ff4;
+              border-color: #1b8ff4;
+            }
+          }
+        }
+      }
+      .product-content-example-container {
+        object-fit: contain;
+        flex: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .product-content-wrapper5-b {
+      display: flex;
+      width: 100%;
+      height: calc(100vh);
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: center;
+      transition: all 1s;
+      .product-content-left-wrapper-b {
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        display: flex;
+        width: 50%;
+        height: calc(80vh);
+        .product-content-gameTitle-b {
+          height: 10%;
+          font-size: 45px;
+          margin-left: 70px;
+          margin-top: 9%;
+          margin-bottom: 3%;
+          color: #707070;
+        }
+        .product-content-gameName-b {
+          display: flex;
+          flex-wrap: nowrap;
+          font-size: 65px;
+          color: #fafafa;
+          width: 90%;
+          height: 20%;
+          margin-bottom: 30px;
+          margin-left: 70px;
+        }
+        .product-content-description-b {
+          color: white;
+          height: 40%;
+          width: 70%;
+          margin-left: 70px;
+          text-justify: inter-ideograph;
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: 100px;
+        }
+        .product-content-buttonArea-b {
+          height: 8%;
+          padding-bottom: 10%;
+        }
+        .product-content-changeButton-b {
+          width: 100px;
+          height: 22px;
+          text-align: center;
+          align-content: center;
+          color: white;
+          background-color: #1b8ff4;
+          margin-left: 70px;
+          margin-bottom: 10%;
+          padding: 15px;
+          font-size: 17px;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out;
+        }
+        .product-content-changeButton-b:hover {
+          width: 100px;
+          height: 22px;
+          display: flex;
+          flex-direction: column;
+          background-color: rgb(51, 160, 255);
+          padding: 15px 15px;
+          border-radius: 25px;
+          cursor: pointer;
+        }
+      }
+      .product-content-example-container-b {
+        width: 50%;
+        height: 100%;
+        flex: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          object-fit: contain;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  .visible,
+  .invisible {
+    transition: all 0.8s ease-out;
+  }
+  [fade-in-up].visible {
+    opacity: 1;
+  }
+  [fade-in-up].invisible {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+}
