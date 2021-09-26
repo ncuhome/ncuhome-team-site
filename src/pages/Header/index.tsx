@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, MutableRefObject } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
   // 调整tab下面的线的位置和宽度
   useEffect(() => {
     if (!isMobile) {
-      if (tabContainerRef.current.children[index]) {
+      if (tabContainerRef.current?.children[index]) {
         setUnderlineShow(true);
         const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLUListElement;
         setLineStyle({
