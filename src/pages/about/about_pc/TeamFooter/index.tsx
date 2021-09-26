@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import BoldButton from "../../../../home/components/BoldButton"
+import BoldButton from "@/pages/home/components/BoldButton"
 import CompanyLogo from "@/assets/img/CompanyLogo.png"
 import "./style.scss";
 
