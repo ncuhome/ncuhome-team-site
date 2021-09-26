@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Dialog from "./components/Dialog";
 import about_bg from "@/assets/img/about-bg.svg";
-import BoldButton from "@/pages/home/components/BoldButton";
+import BoldButton from "@/pages/components/bold_button";
 import "./style.scss";
 
 const About: React.FC = () => {
