@@ -4,8 +4,8 @@ import Home from '@/pages/home';
 import Products from '@/pages/products';
 import AboutUs from '@/pages/about_us';
 import JoinUs from '@/pages/join_us';
-import OldRegister from '@/pages/register/OldRegister';
-import NewRegister from '@/pages/register/NewRegister';
+import OldRegister from '@/pages/register/old_register';
+import NewRegister from '@/pages/register/new_register';
 
 const config: RouteProps[] = [
   {

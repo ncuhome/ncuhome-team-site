@@ -1,6 +1,6 @@
 import React from "react";
-import NewRegister from "./NewRegister";
-import OldRegister from "./OldRegister";
+import NewRegister from "./new_register";
+import OldRegister from "./old_register";
 
 const Register = (choice: boolean) => {
   return (
