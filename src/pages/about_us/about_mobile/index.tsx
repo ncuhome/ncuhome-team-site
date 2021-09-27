@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 // import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./style.module.scss";
-import Header from "../../../Header";
+import Header from "@/pages/components/header";
 import TeamAct from "./TeamAct";
 import TeamSlider from "./TeamSlider";
 import TeamFooter from "./TeamFooter";

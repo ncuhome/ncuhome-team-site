@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../../Header";
+import Header from "@/pages/components/header";
 import Slider from "react-slick";
 import admini from "@/assets/img/admini.png";
 import product from "@/assets/img/product.png";
@@ -16,12 +16,15 @@ const settings = {
   speed: 500,
 };
 
-const OldRegister = () => {
+const NewRegister = () => {
   return (
     <div>
       <Header />
       <div>
         <Slider {...settings}>
+          <div>
+            <img src={admini} />
+          </div>
           <div>
             <img src={product} />
           </div>
@@ -40,4 +43,4 @@ const OldRegister = () => {
   );
 };
 
-export default OldRegister;
+export default NewRegister;

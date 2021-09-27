@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, MutableRefObject } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
@@ -7,12 +7,12 @@ import "./style.scss";
 
 const routes = [
   { name: "首页", url: "/" },
-  { name: "产品", url: "/product" },
+  { name: "产品", url: "/products" },
   { name: "团队博客", url: "https://ncuhome.yuque.com/ncuhome" },
-  { name: "关于我们", url: "/team" },
+  { name: "关于我们", url: "/about" },
 ];
 
-const about = { name: "加入我们", url: "/about" };
+const about = { name: "加入我们", url: "/join-us" };
 
 const Header: React.FC = () => {
   const history = useHistory();
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
   // 调整tab下面的线的位置和宽度
   useEffect(() => {
     if (!isMobile) {
-      if (tabContainerRef.current.children[index]) {
+      if (tabContainerRef.current?.children[index]) {
         setUnderlineShow(true);
         const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLUListElement;
         setLineStyle({

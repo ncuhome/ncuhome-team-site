@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react';
-import TeamSmall from "./TeamSmall";
-import TeamBig from './TeamBig';
+import AboutMobile from "./about_mobile";
+import AboutPC from './about_pc';
 
-const Team: React.FC = () => {
+const AboutUs: React.FC = () => {
   const [isMobile,setIsMobile] = useState(window.innerWidth < 768)
 
   useEffect(() => {
@@ -14,12 +14,12 @@ const Team: React.FC = () => {
   return (
     <div>
       {isMobile ?
-        <TeamSmall/>
+        <AboutMobile/>
         :
-        <TeamBig />
+        <AboutPC />
       }
     </div>
   )
 }
 
-export default Team;
+export default AboutUs;

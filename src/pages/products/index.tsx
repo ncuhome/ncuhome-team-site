@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
-import ProductSmall from "./ProductSmall";
-import ProductBig from './ProductBig';
+import ProductSmall from "./products_mobile";
+import ProductBig from './products_pc';
 
 const Product: React.FC = () => {
   const [isMobile,setIsMobile] = useState(window.innerWidth < 768)
