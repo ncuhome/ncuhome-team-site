@@ -4,18 +4,18 @@ import avatarIcon from "@/assets/img/avatar-icon.svg";
 import trophyIcon from "@/assets/img/trophy-icon.svg";
 import "./style.scss";
 
-interface achivementItem {
+interface AchivementItem {
   title: string;
   iconPath: string;
 }
 
-const achivements: achivementItem[] = [
+const achivements: AchivementItem[] = [
   { title: "成立时间", iconPath: clockIcon },
   { title: "用户量", iconPath: avatarIcon },
   { title: "获奖情况", iconPath: trophyIcon },
 ];
 
-const HomeAchievementItem: React.FC<achivementItem> = ({ title, iconPath }) => {
+const HomeAchievementItem: React.FC<AchivementItem> = ({ title, iconPath }) => {
   return (
     <div className="home-ach-item">
       <img className="home-ach-item-icon" src={iconPath} />
