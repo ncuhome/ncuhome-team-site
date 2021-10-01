@@ -8,7 +8,10 @@ import "./style.scss";
 const routes = [
   { name: "首页", url: "/" },
   { name: "产品", url: "/products" },
-  { name: "团队博客", url: "https://ncuhome.yuque.com/books/share/3039ec5a-9809-4776-be71-b8f7cbea51c1" },
+  {
+    name: "团队博客",
+    url: "https://ncuhome.yuque.com/books/share/3039ec5a-9809-4776-be71-b8f7cbea51c1",
+  },
   { name: "关于我们", url: "/about" },
 ];
 
@@ -21,7 +24,9 @@ const Header: React.FC = () => {
   // 控制上下箭头的改变
   const [underlineShow, setUnderlineShow] = useState(true);
   // 控制在点击"加入我们"时隐藏下划线
-  const [index, setIndex] = useState<number>(routes.findIndex((i) => i.url === history.location.pathname));
+  const [index, setIndex] = useState<number>(
+    routes.findIndex((i) => i.url === history.location.pathname)
+  );
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lineStyle, setLineStyle] = useState<React.CSSProperties>();
   const tabContainerRef = useRef<HTMLUListElement>(null);
@@ -61,7 +66,8 @@ const Header: React.FC = () => {
     if (!isMobile) {
       if (tabContainerRef.current?.children[index]) {
         setUnderlineShow(true);
-        const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current.children[index] as HTMLUListElement;
+        const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current
+          .children[index] as HTMLUListElement;
         setLineStyle({
           width,
           left,
@@ -70,40 +76,36 @@ const Header: React.FC = () => {
     }
   }, [index, tabContainerRef]);
 
-
   const renderList = () => {
     if (showControl || !isMobile) {
       return (
-        <div className="header-home-list" >
+        <div className="header-home-list">
           <div style={{ flex: 1 }}></div>
           <ul ref={tabContainerRef}>
-            {
-              routes.map((item, i) => {
-                return (
-                  <li
-                    className={i === index ? "home-tab-active" : undefined}
-                    key={item.name}
-                    onClick={() =>
-                      item.url.includes("http") ?
-                        window.open(item.url) :
-                        history.push(item.url)
-                    }
-                  >
-                    {item.name}
-                  </li>
-                )
-              })
-            }
+            {routes.map((item, i) => {
+              return (
+                <li
+                  className={i === index ? "home-tab-active" : undefined}
+                  key={item.name}
+                  onClick={() =>
+                    item.url.includes("http")
+                      ? window.open(item.url)
+                      : history.push(item.url)
+                  }
+                >
+                  {item.name}
+                </li>
+              );
+            })}
           </ul>
-          {underlineShow ?
-            <div className="home-tab-underline" style={lineStyle} /> :
-            null
-          }
+          {underlineShow ? (
+            <div className="home-tab-underline" style={lineStyle} />
+          ) : null}
           <div
-            className={'header-join-us'}
+            className={"header-join-us"}
             onClick={() => {
-              setUnderlineShow(false)
-              history.push(about.url)
+              setUnderlineShow(false);
+              history.push(about.url);
             }}
           >
             <Link to={about.url}>{about.name}</Link>

@@ -55,7 +55,7 @@ $margin-border: 98px;
         align-items: center;
       }
 
-      .header-join-us{
+      .header-join-us {
         width: 100%;
         height: 40px;
         margin: 0 0 -1px -1px;
@@ -72,7 +72,7 @@ $margin-border: 98px;
           border-radius: 20px;
         }
       }
-      
+
       li {
         width: 100%;
         height: 40px;
@@ -157,13 +157,13 @@ $margin-border: 98px;
           margin-right: $right-m;
           cursor: pointer;
         }
-        
+
         .home-tab-underline {
           height: 2px;
           background: $primary-color;
           position: absolute;
           bottom: 12px;
-          transition: all ease .2s;
+          transition: all ease 0.2s;
         }
       }
 
