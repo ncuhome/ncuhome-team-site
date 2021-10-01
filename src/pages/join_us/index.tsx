@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import Dialog from "./components/dialog";
+import Dialog from "./components/Dialog-1";
 import about_bg from "@/assets/img/about-bg.svg";
 import BoldButton from "@/pages/components/bold_button";
 import "./style.scss";
