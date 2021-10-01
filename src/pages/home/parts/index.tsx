@@ -1,7 +1,7 @@
 import React, { lazy } from 'react';
 import type { FC } from 'react';
 
-const Ncuhome = lazy(() => import("./ncuhome"));
+const Ncuhome = lazy(() => import("./ncuhomers"));
 const Products = lazy(() => import("./products"));
 const Blog = lazy(() => import("./blog"));
 const Team = lazy(() => import("./team"));
