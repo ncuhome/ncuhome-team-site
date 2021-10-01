@@ -1,21 +1,25 @@
 @media (min-width: 768px) {
-  .slider-wrapper{
+  .slider-wrapper {
     margin: 0;
     padding: 0;
     width: calc(100vw);
     position: relative;
   }
 
-  .slick-initialized { overflow: hidden; }
+  .slick-initialized {
+    overflow: hidden;
+  }
 
-  .slider-img{
-    height: 80vh;
+  .slider-img {
+    height: 85vh;
   }
 
   .team-slider-content {
     display: flex !important;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: rgb(250, 252, 255);
   }
 
   .slider-arrow {
@@ -33,5 +37,4 @@
     left: 100px;
     transform: translateY(-50%) rotateY(180deg);
   }
-
 }

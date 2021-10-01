@@ -22,7 +22,7 @@ const Blog: React.FC = () => {
           <p>南大家园的从0到1</p>
         </div>
         <div onClick={() => {
-          window.location.replace(`https://ncuhome.yuque.com/ncuhome`)
+          window.location.replace(`https://ncuhome.yuque.com/books/share/3039ec5a-9809-4776-be71-b8f7cbea51c1`)
         }
         }>
           <BoldButton text="MORE" bgColor="#fff" />

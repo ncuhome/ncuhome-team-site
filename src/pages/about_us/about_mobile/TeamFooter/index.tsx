@@ -1,5 +1,4 @@
-import React, {ReactNode} from "react";
-import BoldButton from "../../../../home/components/BoldButton"
+import React from "react";
 import CompanyLogo from "@/assets/img/company-logo-s.svg"
 import styles from "./style.module.scss";
 import { useHistory } from "react-router";

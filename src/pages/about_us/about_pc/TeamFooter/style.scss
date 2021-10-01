@@ -7,35 +7,35 @@
     flex-direction: row;
     justify-content: center;
     .team-footer-top {
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       display: flex;
       height: calc(100vh);
       width: 100%;
       background-color: #191919;
-      .team-footer-top-text1{
+      .team-footer-top-text1 {
         display: flex;
         font-size: 30px;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         padding-bottom: 20px;
       }
-      .team-footer-top-text2{
+      .team-footer-top-text2 {
         display: flex;
         font-size: 30px;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         padding-bottom: 20px;
       }
-      .team-footer-top-text3{
+      .team-footer-top-text3 {
         display: flex;
         font-size: 30px;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #ffffff;
         padding-bottom: 20px;
       }
-      .team-footer-top-img{
+      .team-footer-top-img {
         object-fit: contain;
         padding-top: 20px;
         display: flex;
@@ -46,112 +46,112 @@
     .team-footer-middle {
       position: relative;
       display: flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       background-color: #1b8ff4;
-      height: calc(70vh);
+      min-height: 100vh;
       width: 100%;
-      .team-footer-middle-text1{
+      .team-footer-middle-text1 {
         padding-top: 5%;
         display: flex;
         font-size: 30px;
-        color: #FFFFFF;
+        color: #ffffff;
         padding-bottom: 20px;
       }
-      .team-footer-middle-text2{
+      .team-footer-middle-text2 {
         display: flex;
         font-size: 30px;
-        color: #FFFFFF;
+        color: #ffffff;
         padding-bottom: 20px;
       }
-      .team-footer-middle-btn{
+      .team-footer-middle-btn {
         padding-top: 20px;
         display: flex;
         height: 100px;
-        .bold-btn{
-          background-color: #FFFFFF;
-          border: #FFFFFF;
+        .bold-btn {
+          background-color: #ffffff;
+          border: #ffffff;
           color: #1b8ff4;
         }
       }
-      .bubble1{
-        background-color:#ffffff54;
+      .bubble1 {
+        background-color: #ffffff54;
         width: 40px;
         height: 40px;
         position: absolute;
-        left:3%;
+        left: 3%;
         border-radius: 50%;
         animation: flying_right 5s infinite ease-in;
-      } 
-      .bubble2{
-        background-color:#ffffff54;
+      }
+      .bubble2 {
+        background-color: #ffffff54;
         width: 20px;
         height: 20px;
         position: absolute;
-        left:10%;
+        left: 10%;
         border-radius: 50%;
         animation: flying_right 5s infinite ease-in;
         animation-delay: 2s;
       }
-      .bubble3{
+      .bubble3 {
         width: 30px;
         height: 30px;
         position: absolute;
-        left:25%;
-        border: 2px solid #fff ;
+        left: 25%;
+        border: 2px solid #fff;
         border-radius: 50%;
         animation: flying_left 3s infinite ease-in;
       }
-      .bubble4{
-        background-color:#ffffff54;
+      .bubble4 {
+        background-color: #ffffff54;
         width: 50px;
         height: 50px;
         position: absolute;
-        right:20%;
+        right: 20%;
         border-radius: 50%;
         animation: flying_left 4s infinite ease-in;
         animation-delay: 1s;
       }
-      .bubble5{
+      .bubble5 {
         width: 35px;
         height: 35px;
         position: absolute;
-        right:5%;
-        border: 2px solid #fff ;
+        right: 5%;
+        border: 2px solid #fff;
         border-radius: 50%;
         animation: flying_right 3.5s infinite ease-in;
       }
-      
+
       @keyframes flying_right {
-        0%{
+        0% {
           opacity: 1;
           bottom: -40px;
           transform: translateX(0);
         }
 
-        50%{
+        50% {
           transform: translateX(40px);
         }
 
-        100%{
+        100% {
           opacity: 0;
           bottom: 70%;
           transform: translateX(0);
         }
       }
       @keyframes flying_left {
-        0%{
+        0% {
           opacity: 1;
           bottom: -40px;
           transform: translateX(0);
         }
 
-        50%{
+        50% {
           transform: translateX(-40px);
         }
 
-        100%{
+        100% {
           opacity: 0;
           bottom: 80%;
           transform: translateX(0);
@@ -160,14 +160,19 @@
     }
     .team-footer-bottom {
       z-index: 2;
-      height: calc(30vh);
       width: 100%;
-      display: flex;
-      padding-left: 30%;
       background-color: #f5f5f5;
-      flex-flow: column wrap;
-      .team-footer-list{
-        height: calc(30vh);
+      .team-footer-list {
+        padding: 24px 0 100px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+          max-width: calc(40vw - 32px);
+          padding: 0 32px;
+        }
       }
       a {
         color: rgba(0, 0, 0, 0.7);

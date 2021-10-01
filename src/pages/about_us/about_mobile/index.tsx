@@ -1,12 +1,9 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-// import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./style.module.scss";
-import Header from "@/pages/components/header";
 import TeamAct from "./TeamAct";
 import TeamSlider from "./TeamSlider";
 import TeamFooter from "./TeamFooter";
-import teamAct from "@/assets/img/team-act-img.png";
 import ArrowLeft from "@/assets/img/arrow-left.png";
 import ArrowRight from "@/assets/img/arrow-right.png";
 import team_play from "@/assets/img/team-act-play.svg";
@@ -27,9 +24,6 @@ const TeamSmall: React.FC = () => {
   return (
     <div>
       <div className={styles.team_wrapper}>
-        <div className={styles.team_header_wrapper}>
-          <Header />
-        </div>
         <div className={styles.team_slider_wrapper}>
           <TeamSlider />
         </div>
@@ -70,17 +64,17 @@ const TeamSmall: React.FC = () => {
         }}>
           <Slider ref={sliderRef} {...settings}>
             <TeamAct
-              imgName={teamAct}
+              imgName={"https://incu-orbit.ncuos.com/18.jpg"}
               ActTitle_EN="CELEBRATION"
               ActTitle_CN="周年庆"
               ActTime="2020.5.23"
               ActDes="
 家园工作室成年的庆典
 是庆祝，是狂欢
-更是回首过去
+更是回首过去r s
 展望未来的初心与决心。"/>
             <TeamAct
-              imgName={teamAct}
+              imgName={"https://incu-orbit.ncuos.com/18.jpg"}
               ActTitle_EN="CELEBRATION"
               ActTitle_CN="周年庆"
               ActTime="2020.5.23"

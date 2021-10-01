@@ -7,33 +7,32 @@
   align-items: center;
   flex-wrap: nowrap;
   .team-act-img {
-    width: calc(25vw);
-  }
-  .team-act-trail {
-    margin-left: 10px;
+    height: 270px;
+    border-radius: 8px;
     margin-right: 20px;
-    height: calc(17vw);
   }
   .team-act-text {
     display: flex;
     height: calc(17vw);
     flex-direction: column;
-    .team-act-text-1 {
-      font-size: calc(1.5vw);
+    .team-act-time {
+      letter-spacing: 1.2px;
+      margin-bottom: 10px;
+      font-size: calc(1.1vw);
+      color: #808388
     }
-    .team-act-text-2 {
-      font-size: calc(2.1vw);
+    .team-act-title {
+      font-size: calc(2vw);
+      font-weight: 500;
+      letter-spacing: 1px;
     }
-    .team-act-text-3 {
-      font-size: calc(1vw);
-      margin-left: 8px;
-      white-space: nowrap;
-    }
-    .team-act-text-4 {
+    .team-act-decs {
       margin-top: 10px;
-      font-size: calc(1.2vw);
+      font-size: calc(1vw);
+      letter-spacing: .8px;
       line-height: calc(1.5vw);
       white-space: pre;
+      color: #3e4042
     }
   }
 }

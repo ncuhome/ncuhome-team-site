@@ -8,7 +8,7 @@ import "./style.scss";
 const routes = [
   { name: "首页", url: "/" },
   { name: "产品", url: "/products" },
-  { name: "团队博客", url: "https://ncuhome.yuque.com/ncuhome" },
+  { name: "团队博客", url: "https://ncuhome.yuque.com/books/share/3039ec5a-9809-4776-be71-b8f7cbea51c1" },
   { name: "关于我们", url: "/about" },
 ];
 
