@@ -168,7 +168,12 @@ const ProductSmall: React.FC = () => {
         }
       </div>
 
-      <div className="product-wrapper">
+      {
+      /*
+       * 游戏产品展示部分，待优化
+       */
+      }
+      {/* <div className="product-wrapper">
         <div style={gameData[gameIndex].gameBgSrc} className="product-content-wrapper5">
           <img className="product-content-logo" src={game_logo} alt='' />
           <div className="product-content-description">
@@ -184,7 +189,7 @@ const ProductSmall: React.FC = () => {
               换个看看
             </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

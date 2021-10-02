@@ -192,7 +192,12 @@ const ProductBig: React.FC = () => {
         </div>
       ))}
 
-      <div
+      {
+      /*
+       * 游戏产品展示部分，待优化
+       */
+      }
+      {/* <div
         className="product-content-wrapper5-b"
         style={{ backgroundColor: gameData[gameIndex].gameBgColor }}
       >
@@ -211,7 +216,7 @@ const ProductBig: React.FC = () => {
         <div className="product-content-example-container-b">
           <img src={gameData[gameIndex].gameImgSrc} alt="" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
