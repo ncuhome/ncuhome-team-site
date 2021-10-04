@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useHistory } from "react-router-dom";
-import upHandle from "@/assets/img/up-handle.png";
-import downHandle from "@/assets/img/down-handle.png";
-import logo from "@/assets/img/new-logo.png";
-import "./style.scss";
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import upHandle from '@/assets/img/up-handle.png';
+import downHandle from '@/assets/img/down-handle.png';
+import logo from '@/assets/img/new-logo.png';
+import './style.scss';
 
 const routes = [
-  { name: "首页", url: "/" },
-  { name: "产品", url: "/products" },
+  { name: '首页', url: '/' },
+  { name: '产品', url: '/products' },
   {
-    name: "团队博客",
-    url: "https://ncuhome.yuque.com/books/share/3039ec5a-9809-4776-be71-b8f7cbea51c1",
+    name: '团队博客',
+    url: 'https://ncuhome.yuque.com/books/share/3039ec5a-9809-4776-be71-b8f7cbea51c1',
   },
-  { name: "关于我们", url: "/about" },
+  { name: '关于我们', url: '/about' },
 ];
 
-const about = { name: "加入我们", url: "/join-us" };
+const about = { name: '加入我们', url: '/join-us' };
 
 const Header: React.FC = () => {
   const history = useHistory();
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
   const [underlineShow, setUnderlineShow] = useState(true);
   // 控制在点击"加入我们"时隐藏下划线
   const [index, setIndex] = useState<number>(
-    routes.findIndex((i) => i.url === history.location.pathname)
+    routes.findIndex((i) => i.url === history.location.pathname),
   );
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [lineStyle, setLineStyle] = useState<React.CSSProperties>();
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
     const onResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    window.addEventListener("resize", onResize);
+    window.addEventListener('resize', onResize);
     const listener = history.listen((item) => {
       const value = routes.findIndex((i) => i.url === item.pathname);
       setIndex(value);
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
 
     return () => {
       listener();
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 
@@ -80,29 +80,25 @@ const Header: React.FC = () => {
     if (showControl || !isMobile) {
       return (
         <div className="header-home-list">
-          <div style={{ flex: 1 }}></div>
+          <div style={{ flex: 1 }} />
           <ul ref={tabContainerRef}>
-            {routes.map((item, i) => {
-              return (
-                <li
-                  className={i === index ? "home-tab-active" : undefined}
-                  key={item.name}
-                  onClick={() =>
-                    item.url.includes("http")
-                      ? window.open(item.url)
-                      : history.push(item.url)
-                  }
-                >
-                  {item.name}
-                </li>
-              );
-            })}
+            {routes.map((item, i) => (
+              <li
+                className={i === index ? 'home-tab-active' : undefined}
+                key={item.name}
+                onClick={() => (item.url.includes('http')
+                  ? window.open(item.url)
+                  : history.push(item.url))}
+              >
+                {item.name}
+              </li>
+            ))}
           </ul>
           {underlineShow ? (
             <div className="home-tab-underline" style={lineStyle} />
           ) : null}
           <div
-            className={"header-join-us"}
+            className="header-join-us"
             onClick={() => {
               setUnderlineShow(false);
               history.push(about.url);

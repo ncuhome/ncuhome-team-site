@@ -1,9 +1,9 @@
-import React from "react";
-import "./style.scss";
-import BoldButton from "@/pages/components/bold_button";
-import circle from "@/assets/img/circle.png"
-import line from "@/assets/img/line.png"
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import './style.scss';
+import { useHistory } from 'react-router-dom';
+import BoldButton from '@/pages/components/bold_button';
+import circle from '@/assets/img/circle.png';
+import line from '@/assets/img/line.png';
 
 const About: React.FC = () => {
   const history = useHistory();
@@ -18,7 +18,7 @@ const About: React.FC = () => {
           <p className="home-about-text2">
             家园欢迎每一位热爱互联网的的出色青年
           </p>
-          <div onClick={() => history.push("./about")}>
+          <div onClick={() => history.push('./about')}>
             <BoldButton text="JOIN US" bgColor="#ABD9F8" />
           </div>
         </div>

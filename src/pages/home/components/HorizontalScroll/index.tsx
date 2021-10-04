@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 import './style.scss';
 
 const HorizontalScroll: React.FC = ({ children }) => {
@@ -6,12 +6,12 @@ const HorizontalScroll: React.FC = ({ children }) => {
 
   const handleWheel: React.WheelEventHandler<HTMLDivElement> = (e) => {
     const { deltaY } = e;
-    hsContent.current.scrollLeft += Math.floor(deltaY) * 1.2
-  }
+    hsContent.current.scrollLeft += Math.floor(deltaY) * 1.2;
+  };
 
   return (
     <div className="hs-body">
-      <div className="hs-content-limit" style={{ position: "fixed" }}>
+      <div className="hs-content-limit" style={{ position: 'fixed' }}>
         <div
           className="hs-horizontal-content"
           ref={hsContent}

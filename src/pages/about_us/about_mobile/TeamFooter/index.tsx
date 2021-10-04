@@ -1,8 +1,7 @@
-import React from "react";
-import CompanyLogo from "@/assets/img/company-logo-s.svg"
-import styles from "./style.module.scss";
-import { useHistory } from "react-router";
-
+import React from 'react';
+import { useHistory } from 'react-router';
+import CompanyLogo from '@/assets/img/company-logo-s.svg';
+import styles from './style.module.scss';
 
 const About: React.FC = () => {
   const history = useHistory();
@@ -18,10 +17,18 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className={styles.team_footer_middle}>
-        <p className={styles.team_footer_middle_text1}>Let's<br />make something<br /> great together</p><br />
+        <p className={styles.team_footer_middle_text1}>
+          Let's
+          <br />
+          make something
+          <br />
+          {' '}
+          great together
+        </p>
+        <br />
 
         <div className={styles.team_footer_middle_btn}>
-          <div onClick={() => history.push("/about")} className={styles.bold_btn}>Join us</div>
+          <div onClick={() => history.push('/about')} className={styles.bold_btn}>Join us</div>
         </div>
         {/* {Bubbles} */}
       </div>

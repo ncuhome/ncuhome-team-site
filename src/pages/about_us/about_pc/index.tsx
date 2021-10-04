@@ -1,15 +1,15 @@
-import React, { useRef } from "react";
-import Slider from "react-slick";
-import TeamAct from "./TeamAct";
-import TeamSlider from "./TeamSlider";
-import TeamFooter from "./TeamFooter";
-import ArrowLeft from "@/assets/img/arrow-left.png";
-import ArrowRight from "@/assets/img/arrow-right.png";
-import team_play from "@/assets/img/team-act-play.svg";
-import team_share from "@/assets/img/team-act-share.svg";
-import downHandle from "@/assets/img/down-handle.png";
-import line3 from "@/assets/img/line3.png";
-import "./style.scss";
+import React, { useRef } from 'react';
+import Slider from 'react-slick';
+import TeamAct from './TeamAct';
+import TeamSlider from './TeamSlider';
+import TeamFooter from './TeamFooter';
+import ArrowLeft from '@/assets/img/arrow-left.png';
+import ArrowRight from '@/assets/img/arrow-right.png';
+import team_play from '@/assets/img/team-act-play.svg';
+import team_share from '@/assets/img/team-act-share.svg';
+import downHandle from '@/assets/img/down-handle.png';
+import line3 from '@/assets/img/line3.png';
+import './style.scss';
 
 const settings = {
   infinite: true,
@@ -28,22 +28,24 @@ const TeamBig: React.FC = () => {
         <TeamSlider />
       </div>
       <div className="team-content-rectangle">
-        <img style={{ width: "25px" }} src={downHandle} />
+        <img style={{ width: '25px' }} src={downHandle} />
       </div>
       <div className="team-content-wrapper">
         <div className="team-content-title">
-          <img style={{ height: "1px" }} src={line3} />
+          <img style={{ height: '1px' }} src={line3} />
           <div>
-            <p style={{ fontSize: "22px", margin: "0 12px" }}>
+            <p style={{ fontSize: '22px', margin: '0 12px' }}>
               WE ARE NCUHOMERS
             </p>
           </div>
-          <img style={{ height: "1px" }} src={line3} />
+          <img style={{ height: '1px' }} src={line3} />
         </div>
         <div className="team-content-actcard-left">
           <img src={team_play} />
           <div>
-            To do <br />
+            To do
+            {' '}
+            <br />
             Things
           </div>
         </div>
@@ -55,17 +57,17 @@ const TeamBig: React.FC = () => {
           <img src={team_share} />
         </div>
         <div className="team-content-rectangle">
-          <img style={{ width: "25px" }} src={downHandle} />
+          <img style={{ width: '25px' }} src={downHandle} />
         </div>
       </div>
 
       <div className="c-wrapper">
         <p
           style={{
-            marginTop: "-20px",
-            marginLeft: "40px",
-            fontSize: "40px",
-            letterSpacing: "5px",
+            marginTop: '-20px',
+            marginLeft: '40px',
+            fontSize: '40px',
+            letterSpacing: '5px',
           }}
         >
           ACTIVITY
@@ -73,7 +75,7 @@ const TeamBig: React.FC = () => {
         <div className="c-content-act">
           <Slider ref={sliderRef} {...settings}>
             <TeamAct
-              imgName={"https://incu-orbit.ncuos.com/18.jpg"}
+              imgName="https://incu-orbit.ncuos.com/18.jpg"
               ActTitle_CN="周年庆"
               ActTime="2021.5.23"
               ActDes="
@@ -83,7 +85,7 @@ const TeamBig: React.FC = () => {
 展望未来的初心与决心。"
             />
             <TeamAct
-              imgName={"https://incu-orbit.ncuos.com/19.png"}
+              imgName="https://incu-orbit.ncuos.com/19.png"
               ActTitle_CN="全体大会"
               ActTime="2021.3.28"
               ActDes="
@@ -93,7 +95,7 @@ const TeamBig: React.FC = () => {
 展望未来的初心与决心。"
             />
             <TeamAct
-              imgName={"https://incu-orbit.ncuos.com/20.jpg"}
+              imgName="https://incu-orbit.ncuos.com/20.jpg"
               ActTitle_CN="家园团建"
               ActTime="2020.12.23"
               ActDes="
@@ -110,14 +112,14 @@ const TeamBig: React.FC = () => {
             className="team-slider-bottom-item"
             onClick={() => sliderRef.current.slickPrev()}
           >
-            <img style={{ width: "30px" }} src={ArrowLeft} />
+            <img style={{ width: '30px' }} src={ArrowLeft} />
           </div>
-          <div style={{ width: "32px" }}></div>
+          <div style={{ width: '32px' }} />
           <div
             className="team-slider-bottom-item"
             onClick={() => sliderRef.current.slickNext()}
           >
-            <img style={{ width: "30px" }} src={ArrowRight} />
+            <img style={{ width: '30px' }} src={ArrowRight} />
           </div>
         </div>
       </div>

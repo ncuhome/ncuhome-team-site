@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import Dialog from "./components/dialog";
-import about_bg from "@/assets/img/about-bg.svg";
-import BoldButton from "@/pages/components/bold_button";
-import "./style.scss";
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import Dialog from './components/dialog';
+import about_bg from '@/assets/img/about-bg.svg';
+import BoldButton from '@/pages/components/bold_button';
+import './style.scss';
 
 const About: React.FC = () => {
   const history = useHistory();
@@ -11,12 +11,12 @@ const About: React.FC = () => {
   const [isShowDialog, setIsShowDialog] = useState(false);
 
   const openDialog = () => {
-    setIsShowDialog(true)
-  }
+    setIsShowDialog(true);
+  };
 
   const closeDialog = () => {
-    setIsShowDialog(false)
-  }
+    setIsShowDialog(false);
+  };
 
   return (
     <div className="about_wrapper">
@@ -25,8 +25,8 @@ const About: React.FC = () => {
           <img src={about_bg} />
         </div>
         <div className="about_content_text">
-          <p style={{ color: "white", fontSize: "50px", margin: "50px" }}>JOIN US</p>
-          <p style={{ color: "white", fontSize: "20px" }}>Work & Play together </p>
+          <p style={{ color: 'white', fontSize: '50px', margin: '50px' }}>JOIN US</p>
+          <p style={{ color: 'white', fontSize: '20px' }}>Work & Play together </p>
           <div className="about_content_button_area">
             <div className="about_content_button">
               <div onClick={openDialog}>
@@ -34,15 +34,16 @@ const About: React.FC = () => {
               </div>
             </div>
             {
-              isShowDialog ?
-                <Dialog
-                  onOk={closeDialog}
-                />
-                :
-                null
+              isShowDialog
+                ? (
+                  <Dialog
+                    onOk={closeDialog}
+                  />
+                )
+                : null
             }
             <div className="about_content_button">
-              <div onClick={() => { window.open("https://2021hr.ncuos.com") }}>
+              <div onClick={() => { window.open('https://2021hr.ncuos.com'); }}>
                 <BoldButton text="🥰 新生招聘" bgColor="#1B8FF4" />
               </div>
             </div>

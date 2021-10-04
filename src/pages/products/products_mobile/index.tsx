@@ -1,19 +1,19 @@
-import React, { CSSProperties, ReactNode, useState } from "react";
-import ncuhome_logo from "@/assets/img/ncuhome-logo.svg"
-import ncuhome_bg from "@/assets/img/ncuhome-bg.svg";
-import ncov_bg from "@/assets/img/ncov-bg.svg";
-import ncov_logo from "@/assets/img/ncov-logo.svg"
-import ncuos_logo from "@/assets/img/ncuos-logo.svg";
-import ncuos_bg from "@/assets/img/ncuos-bg.svg";
-import us_bg from "@/assets/img/us-bg.svg";
-import us_logo from "@/assets/img/us-logo.svg";
-import android from "@/assets/img/android.png";
-import apple from "@/assets/img/apple.png";
-import game_logo from "@/assets/img/game-logo.svg";
-import game_bg_1 from "@/assets/img/game-bg-1.svg";
-import game_bg_2 from "@/assets/img/game-bg-2.svg";
-import game_bg_3 from "@/assets/img/game-bg-3.svg";
-import "./style.scss";
+import React, { CSSProperties, ReactNode, useState } from 'react';
+import ncuhome_logo from '@/assets/img/ncuhome-logo.svg';
+import ncuhome_bg from '@/assets/img/ncuhome-bg.svg';
+import ncov_bg from '@/assets/img/ncov-bg.svg';
+import ncov_logo from '@/assets/img/ncov-logo.svg';
+import ncuos_logo from '@/assets/img/ncuos-logo.svg';
+import ncuos_bg from '@/assets/img/ncuos-bg.svg';
+import us_bg from '@/assets/img/us-bg.svg';
+import us_logo from '@/assets/img/us-logo.svg';
+import android from '@/assets/img/android.png';
+import apple from '@/assets/img/apple.png';
+import game_logo from '@/assets/img/game-logo.svg';
+import game_bg_1 from '@/assets/img/game-bg-1.svg';
+import game_bg_2 from '@/assets/img/game-bg-2.svg';
+import game_bg_3 from '@/assets/img/game-bg-3.svg';
+import './style.scss';
 
 interface GameData {
   gameName: string;
@@ -29,33 +29,33 @@ interface Product {
 
 const gameData: GameData[] = [
   {
-    gameName: "你的 2021 校园轨迹",
-    gameDesc: "2019 年，那些或许被你忽视的，就会“砰”的涌现，月光下的足迹，教室里的身影，一些无意坚持下来的习惯。\n把它们收集起来，一起来拼出你的校园人设，惊喜在这里等你。",
+    gameName: '你的 2021 校园轨迹',
+    gameDesc: '2019 年，那些或许被你忽视的，就会“砰”的涌现，月光下的足迹，教室里的身影，一些无意坚持下来的习惯。\n把它们收集起来，一起来拼出你的校园人设，惊喜在这里等你。',
     gameBgSrc: {
       backgroundImage: `url(${game_bg_1})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '120%,120%'
-    }
+      backgroundSize: '120%,120%',
+    },
   },
   {
-    gameName: "听风",
-    gameDesc: "用心听如风般的故事。看似波澜不惊的生活其实风起云涌，掺杂着甘甜苦楚。有时心酸，或许无处倾诉；有时喜悦，或许无人分享。而风一直未曾离开，它一直追随着我们。春风含着暖意，携着花的清芬，带着幸运、喜悦；秋风带着凌冽，藏着叶的苦涩，带着忧虑、难过。",
+    gameName: '听风',
+    gameDesc: '用心听如风般的故事。看似波澜不惊的生活其实风起云涌，掺杂着甘甜苦楚。有时心酸，或许无处倾诉；有时喜悦，或许无人分享。而风一直未曾离开，它一直追随着我们。春风含着暖意，携着花的清芬，带着幸运、喜悦；秋风带着凌冽，藏着叶的苦涩，带着忧虑、难过。',
     gameBgSrc: {
       backgroundImage: `url(${game_bg_2})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '120%,120%'
-    }
+      backgroundSize: '120%,120%',
+    },
   },
   {
-    gameName: "拼图游戏",
+    gameName: '拼图游戏',
     gameDesc: "多人在线协同拼图，Let's Pin",
     gameBgSrc: {
       backgroundImage: `url(${game_bg_3})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '120%,120%'
-    }
-  }
-]
+      backgroundSize: '120%,120%',
+    },
+  },
+];
 
 const productList: Product[] = [
   {
@@ -71,8 +71,8 @@ const productList: Product[] = [
     backgroundImg: {
       backgroundImage: `url(${ncov_bg})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '200%,200%'
-    }
+      backgroundSize: '200%,200%',
+    },
   },
   {
     logo: ncuos_logo,
@@ -87,8 +87,8 @@ const productList: Product[] = [
     backgroundImg: {
       backgroundImage: `url(${ncuos_bg})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '200%,200%'
-    }
+      backgroundSize: '200%,200%',
+    },
   },
   {
     logo: us_logo,
@@ -103,22 +103,22 @@ const productList: Product[] = [
     backgroundImg: {
       backgroundImage: `url(${us_bg})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '200%,200%'
-    }
-  }
-]
+      backgroundSize: '200%,200%',
+    },
+  },
+];
 
 const ProductSmall: React.FC = () => {
   const bgImage_ncuhome = {
     backgroundImage: `url(${ncuhome_bg})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '200%,200%',
-  }
+  };
 
   const [gameIndex, setGameIndex] = useState(0);
 
   const changeGame = () => {
-    setGameIndex(pre => (pre + 1) % (gameData.length));
+    setGameIndex((pre) => (pre + 1) % (gameData.length));
   };
 
   return (
@@ -126,7 +126,7 @@ const ProductSmall: React.FC = () => {
       <div className="product-wrapper">
         <div style={bgImage_ncuhome} className="product-content-wrapper0">
           <img
-            style={{ marginTop: "54px", width: "60%" }}
+            style={{ marginTop: '54px', width: '60%' }}
             src={ncuhome_logo}
             alt=""
           />
@@ -139,12 +139,12 @@ const ProductSmall: React.FC = () => {
             </p>
           </div>
           <div className="product-content-button">
-            <div className="product-bold-btn" onClick={() => window.open("https://incu-download.ncuos.com/iNCU_latest.apk")}>
-              <img src={android} style={{ width: "20px" }} />
+            <div className="product-bold-btn" onClick={() => window.open('https://incu-download.ncuos.com/iNCU_latest.apk')}>
+              <img src={android} style={{ width: '20px' }} />
               &nbsp;Android下载
             </div>
-            <div className="product-bold-btn" onClick={() => window.open("https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561")}>
-              <img src={apple} style={{ width: "25px" }} />
+            <div className="product-bold-btn" onClick={() => window.open('https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561')}>
+              <img src={apple} style={{ width: '25px' }} />
               &nbsp;App Store
             </div>
           </div>
@@ -191,7 +191,7 @@ const ProductSmall: React.FC = () => {
         </div>
       </div> */}
     </>
-  )
-}
+  );
+};
 
 export default ProductSmall;

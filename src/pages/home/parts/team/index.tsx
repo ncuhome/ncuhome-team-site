@@ -1,8 +1,8 @@
-import React from "react";
-import teamBg from "@/assets/img/team-bg.png";
-import BoldButton from "@/pages/components/bold_button";
-import "./style.scss";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import teamBg from '@/assets/img/team-bg.png';
+import BoldButton from '@/pages/components/bold_button';
+import './style.scss';
+import { useHistory } from 'react-router-dom';
 
 const Team: React.FC = () => {
   const history = useHistory();
@@ -16,7 +16,7 @@ const Team: React.FC = () => {
             <p>家园人在工作</p>
             <p>全体大会上的我们</p>
           </div>
-          <div onClick={() => history.push("./team")}>
+          <div onClick={() => history.push('./team')}>
             <BoldButton text="JOIN US" bgColor="#ABD9F8" />
           </div>
         </div>

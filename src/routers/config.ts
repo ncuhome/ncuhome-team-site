@@ -1,4 +1,4 @@
-import { RouteProps } from "react-router-dom";
+import { RouteProps } from 'react-router-dom';
 
 import Home from '@/pages/home';
 import Products from '@/pages/products';
@@ -11,7 +11,7 @@ const config: RouteProps[] = [
   {
     path: '/',
     component: Home,
-    exact: true
+    exact: true,
   },
   {
     path: '/products',
@@ -33,6 +33,6 @@ const config: RouteProps[] = [
     path: '/new-register',
     component: NewRegister,
   },
-]
+];
 
 export default config;
