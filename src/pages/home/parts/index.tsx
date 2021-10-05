@@ -9,14 +9,14 @@ const About = lazy(() => import('./about'));
 const IntroduceVideo = lazy(() => import('./introduce_video'));
 
 const Parts: FC = () => (
-  <>
-    <IntroduceVideo height="100%" />
-    <Ncuhome />
-    <Products />
-    <Blog />
-    <Team />
-    <About />
-  </>
+	<>
+		<IntroduceVideo height="100%" />
+		<Ncuhome />
+		<Products />
+		<Blog />
+		<Team />
+		<About />
+	</>
 );
 
 export default Parts;

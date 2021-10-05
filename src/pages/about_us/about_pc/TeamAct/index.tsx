@@ -9,16 +9,16 @@ interface childProps {
 }
 
 const TeamAct: React.FC<childProps> = (props) => (
-  <div className="team-act-wrapper">
-    <img src={props.imgName} className="team-act-img" />
-    <div className="team-act-text">
-      <div>
-        <div className="team-act-time">{props.ActTime}</div>
-        <div className="team-act-title">{props.ActTitle_CN}</div>
-      </div>
-      <div className="team-act-decs">{props.ActDes}</div>
-    </div>
-  </div>
+	<div className="team-act-wrapper">
+		<img src={props.imgName} className="team-act-img" />
+		<div className="team-act-text">
+			<div>
+				<div className="team-act-time">{props.ActTime}</div>
+				<div className="team-act-title">{props.ActTitle_CN}</div>
+			</div>
+			<div className="team-act-decs">{props.ActDes}</div>
+		</div>
+	</div>
 );
 
 export default TeamAct;

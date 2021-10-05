@@ -7,32 +7,32 @@ import research from '@/assets/img/research.png';
 import operation from '@/assets/img/operation.png';
 
 const settings = {
-  className: 'center',
-  centerMode: true,
-  infinite: true,
-  centerPadding: '10px',
-  slidesToShow: 3,
-  speed: 500,
+	className: 'center',
+	centerMode: true,
+	infinite: true,
+	centerPadding: '10px',
+	slidesToShow: 3,
+	speed: 500,
 };
 
 const RegisterSlider = () => (
-  <Slider {...settings}>
-    <div>
-      <img src={admini} />
-    </div>
-    <div>
-      <img src={product} />
-    </div>
-    <div>
-      <img src={design} />
-    </div>
-    <div>
-      <img src={research} />
-    </div>
-    <div>
-      <img src={operation} />
-    </div>
-  </Slider>
+	<Slider {...settings}>
+		<div>
+			<img src={admini} />
+		</div>
+		<div>
+			<img src={product} />
+		</div>
+		<div>
+			<img src={design} />
+		</div>
+		<div>
+			<img src={research} />
+		</div>
+		<div>
+			<img src={operation} />
+		</div>
+	</Slider>
 );
 
 export default RegisterSlider;
