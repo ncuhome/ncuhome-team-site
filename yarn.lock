@@ -251,7 +251,7 @@
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
-  resolved "https://registry.npmmirror.com/@humanwhocodes/config-array/download/@humanwhocodes/config-array-0.5.0.tgz?cache=0&sync_timestamp=1633121328733&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40humanwhocodes%2Fconfig-array%2Fdownload%2F%40humanwhocodes%2Fconfig-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
+  resolved "https://registry.npmmirror.com/@humanwhocodes/config-array/download/@humanwhocodes/config-array-0.5.0.tgz?cache=0&sync_timestamp=1633371967133&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40humanwhocodes%2Fconfig-array%2Fdownload%2F%40humanwhocodes%2Fconfig-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
   integrity sha1-FAeWfUxu7Nc4j4Os8er00Mbljvk=
   dependencies:
     "@humanwhocodes/object-schema" "^1.2.0"
@@ -1210,7 +1210,7 @@ optionator@^0.9.1:
 
 parent-module@^1.0.0:
   version "1.0.1"
-  resolved "https://registry.nlark.com/parent-module/download/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
+  resolved "https://registry.npmmirror.com/parent-module/download/parent-module-1.0.1.tgz?cache=0&sync_timestamp=1633337474992&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fparent-module%2Fdownload%2Fparent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
   integrity sha1-aR0nCeeMefrjoVZiJFLQB2LKqqI=
   dependencies:
     callsites "^3.0.0"
