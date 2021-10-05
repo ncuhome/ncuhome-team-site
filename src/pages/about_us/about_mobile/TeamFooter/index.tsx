@@ -18,7 +18,7 @@ const About: React.FC = () => {
 			</div>
 			<div className={styles.team_footer_middle}>
 				<p className={styles.team_footer_middle_text1}>
-          Let's
+          Let&apos;s
 					<br />
           make something
 					<br />

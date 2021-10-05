@@ -16,7 +16,7 @@ const settings = {
 	speed: 500,
 };
 
-const NewRegister = () => (
+const NewRegister: React.FC = () => (
 	<div>
 		<Header />
 		<div>

@@ -22,7 +22,7 @@ const About: React.FC = () => (
 			<img className="team-footer-top-img" src={CompanyLogo} alt="company" />
 		</div>
 		<div className="team-footer-middle">
-			<p className="team-footer-middle-text1">Let's make something great</p>
+			<p className="team-footer-middle-text1">Let&apos;s make something great</p>
 			<br />
 			<p className="team-footer-middle-text2">together</p>
 			<div className="team-footer-middle-btn">

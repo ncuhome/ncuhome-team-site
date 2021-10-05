@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.scss';
-import { useHistory } from 'react-router-dom';
 import BoldButton from '@/pages/components/bold_button';
 import homeBlog from '@/assets/img/home-blog.png';
 

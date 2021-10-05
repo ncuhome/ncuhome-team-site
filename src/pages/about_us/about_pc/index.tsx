@@ -20,7 +20,7 @@ const settings = {
 };
 
 const TeamBig: React.FC = () => {
-	const sliderRef = useRef<any>();
+	const sliderRef = useRef<Slider>(null);
 
 	return (
 		<div className="team-wrapper">
@@ -110,14 +110,14 @@ const TeamBig: React.FC = () => {
 				<div className="team-slider-bottom-container">
 					<div
 						className="team-slider-bottom-item"
-						onClick={() => sliderRef.current.slickPrev()}
+						onClick={() => sliderRef.current?.slickPrev()}
 					>
 						<img style={{ width: '30px' }} src={ArrowLeft} />
 					</div>
 					<div style={{ width: '32px' }} />
 					<div
 						className="team-slider-bottom-item"
-						onClick={() => sliderRef.current.slickNext()}
+						onClick={() => sliderRef.current?.slickNext()}
 					>
 						<img style={{ width: '30px' }} src={ArrowRight} />
 					</div>

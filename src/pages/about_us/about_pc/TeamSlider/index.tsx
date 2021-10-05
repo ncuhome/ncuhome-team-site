@@ -18,14 +18,14 @@ const settings = {
 };
 
 const TeamSlider: React.FC = () => {
-	const slierRef: any = useRef();
+	const slierRef = useRef<Slider>(null);
 
 	const goLastSlier = () => {
-		slierRef.current.slickNext();
+		slierRef.current?.slickNext();
 	};
 
 	const goNextSlider = () => {
-		slierRef.current.slickPrev();
+		slierRef.current?.slickPrev();
 	};
 
 	return (

@@ -19,7 +19,7 @@ const TeamSmall: React.FC = () => {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	};
-	const sliderRef: any = useRef();
+	const sliderRef = useRef<Slider>(null);
 
 	return (
 		<div>
@@ -98,8 +98,8 @@ const TeamSmall: React.FC = () => {
 					</Slider>
 				</div>
 				<div style={{ marginBottom: '5%' }}>
-					<img onClick={() => sliderRef.current.slickPrev()} style={{ width: '30px', marginLeft: '100px' }} src={ArrowLeft} />
-					<img onClick={() => sliderRef.current.slickNext()} style={{ width: '30px', marginLeft: '60px' }} src={ArrowRight} />
+					<img onClick={() => sliderRef.current?.slickPrev()} style={{ width: '30px', marginLeft: '100px' }} src={ArrowLeft} />
+					<img onClick={() => sliderRef.current?.slickNext()} style={{ width: '30px', marginLeft: '60px' }} src={ArrowRight} />
 				</div>
 			</div>
 			<div className={styles.team_footer_wrapper}>

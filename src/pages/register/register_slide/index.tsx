@@ -15,7 +15,7 @@ const settings = {
 	speed: 500,
 };
 
-const RegisterSlider = () => (
+const RegisterSlider: React.FC = () => (
 	<Slider {...settings}>
 		<div>
 			<img src={admini} />

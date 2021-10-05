@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, MouseEventHandler } from 'react';
 import { createPortal } from 'react-dom';
 import './style.scss';
 
 interface DialogData {
-  onOk: any
+  onOk: MouseEventHandler<HTMLDivElement>;
 }
 
 const Dialog: React.FC<DialogData> = (props) => {

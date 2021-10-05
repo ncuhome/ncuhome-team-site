@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import Dialog from './components/dialog';
 import about_bg from '@/assets/img/about-bg.svg';
 import BoldButton from '@/pages/components/bold_button';
 import './style.scss';
 
 const About: React.FC = () => {
-	const history = useHistory();
-
 	const [isShowDialog, setIsShowDialog] = useState(false);
 
 	const openDialog = () => {

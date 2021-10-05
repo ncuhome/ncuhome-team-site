@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode, useState } from 'react';
+import React, { CSSProperties, ReactNode } from 'react';
 import ncuhome_logo from '@/assets/img/ncuhome-logo.svg';
 import ncuhome_bg from '@/assets/img/ncuhome-bg.svg';
 import ncov_bg from '@/assets/img/ncov-bg.svg';
@@ -9,53 +9,64 @@ import us_bg from '@/assets/img/us-bg.svg';
 import us_logo from '@/assets/img/us-logo.svg';
 import android from '@/assets/img/android.png';
 import apple from '@/assets/img/apple.png';
-import game_logo from '@/assets/img/game-logo.svg';
-import game_bg_1 from '@/assets/img/game-bg-1.svg';
-import game_bg_2 from '@/assets/img/game-bg-2.svg';
-import game_bg_3 from '@/assets/img/game-bg-3.svg';
+// import game_bg_1 from '@/assets/img/game-bg-1.svg';
+// import game_bg_2 from '@/assets/img/game-bg-2.svg';
+// import game_bg_3 from '@/assets/img/game-bg-3.svg';
 import './style.scss';
 
-interface GameData {
-  gameName: string;
-  gameDesc: string;
-  gameBgSrc: object;
-}
+
+/*
+ * TODO: 优化游戏产品展示部分
+ * 游戏产品信息
+ * 游戏产品介绍文案
+ * 游戏产品demo
+*/
+
+// interface GameData {
+//   gameName: string;
+//   gameDesc: string;
+//   gameBgSrc: {
+// 		backgroundImage: string;
+// 		backgroundRepeat:string;
+// 		backgroundSize: string;
+// 	};
+// }
 
 interface Product {
-  logo: string,
-  description: ReactNode;
-  backgroundImg: CSSProperties;
+	logo: string,
+	description: ReactNode;
+	backgroundImg: CSSProperties;
 }
 
-const gameData: GameData[] = [
-	{
-		gameName: '你的 2021 校园轨迹',
-		gameDesc: '2019 年，那些或许被你忽视的，就会“砰”的涌现，月光下的足迹，教室里的身影，一些无意坚持下来的习惯。\n把它们收集起来，一起来拼出你的校园人设，惊喜在这里等你。',
-		gameBgSrc: {
-			backgroundImage: `url(${game_bg_1})`,
-			backgroundRepeat: 'no-repeat',
-			backgroundSize: '120%,120%',
-		},
-	},
-	{
-		gameName: '听风',
-		gameDesc: '用心听如风般的故事。看似波澜不惊的生活其实风起云涌，掺杂着甘甜苦楚。有时心酸，或许无处倾诉；有时喜悦，或许无人分享。而风一直未曾离开，它一直追随着我们。春风含着暖意，携着花的清芬，带着幸运、喜悦；秋风带着凌冽，藏着叶的苦涩，带着忧虑、难过。',
-		gameBgSrc: {
-			backgroundImage: `url(${game_bg_2})`,
-			backgroundRepeat: 'no-repeat',
-			backgroundSize: '120%,120%',
-		},
-	},
-	{
-		gameName: '拼图游戏',
-		gameDesc: '多人在线协同拼图，Let\'s Pin',
-		gameBgSrc: {
-			backgroundImage: `url(${game_bg_3})`,
-			backgroundRepeat: 'no-repeat',
-			backgroundSize: '120%,120%',
-		},
-	},
-];
+// const gameData: GameData[] = [
+// 	{
+// 		gameName: '你的 2021 校园轨迹',
+// 		gameDesc: '2019 年，那些或许被你忽视的，就会“砰”的涌现，月光下的足迹，教室里的身影，一些无意坚持下来的习惯。\n把它们收集起来，一起来拼出你的校园人设，惊喜在这里等你。',
+// 		gameBgSrc: {
+// 			backgroundImage: `url(${game_bg_1})`,
+// 			backgroundRepeat: 'no-repeat',
+// 			backgroundSize: '120%,120%',
+// 		},
+// 	},
+// 	{
+// 		gameName: '听风',
+// 		gameDesc: '用心听如风般的故事。看似波澜不惊的生活其实风起云涌，掺杂着甘甜苦楚。有时心酸，或许无处倾诉；有时喜悦，或许无人分享。而风一直未曾离开，它一直追随着我们。春风含着暖意，携着花的清芬，带着幸运、喜悦；秋风带着凌冽，藏着叶的苦涩，带着忧虑、难过。',
+// 		gameBgSrc: {
+// 			backgroundImage: `url(${game_bg_2})`,
+// 			backgroundRepeat: 'no-repeat',
+// 			backgroundSize: '120%,120%',
+// 		},
+// 	},
+// 	{
+// 		gameName: '拼图游戏',
+// 		gameDesc: '多人在线协同拼图，Let\'s Pin',
+// 		gameBgSrc: {
+// 			backgroundImage: `url(${game_bg_3})`,
+// 			backgroundRepeat: 'no-repeat',
+// 			backgroundSize: '120%,120%',
+// 		},
+// 	},
+// ];
 
 const productList: Product[] = [
 	{
@@ -115,11 +126,11 @@ const ProductSmall: React.FC = () => {
 		backgroundSize: '200%,200%',
 	};
 
-	const [gameIndex, setGameIndex] = useState(0);
+	// const [gameIndex, setGameIndex] = useState(0);
 
-	const changeGame = () => {
-		setGameIndex((pre) => (pre + 1) % (gameData.length));
-	};
+	// const changeGame = () => {
+	// 	setGameIndex((pre) => (pre + 1) % (gameData.length));
+	// };
 
 	return (
 		<>
@@ -153,8 +164,8 @@ const ProductSmall: React.FC = () => {
 
 			<div className="product-wrapper">
 				{
-					productList.map((product) => (
-						<div style={product.backgroundImg} className="product-content-wrapper">
+					productList.map((product, index) => (
+						<div style={product.backgroundImg} key={index} className="product-content-wrapper">
 							<img
 								className="product-content-logo"
 								src={product.logo}
@@ -169,7 +180,7 @@ const ProductSmall: React.FC = () => {
 			</div>
 
 			{
-				/*
+			/*
        * 游戏产品展示部分，待优化
        */
 			}

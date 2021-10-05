@@ -8,8 +8,8 @@ const Routes: React.FC = () => (
 		<HomeHeader />
 		<Switch>
 			{
-				routesConfig.map((props) => (
-					<Route {...props} />
+				routesConfig.map((props, index) => (
+					<Route key={String(new Date) + index} {...props} />
 				))
 			}
 		</Switch>
