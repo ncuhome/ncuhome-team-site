@@ -1,5 +1,6 @@
-import React, { Ref, useRef } from 'react';
-import CountUp, { useCountUp } from "react-countup";
+import React from 'react';
+import CountUp from "react-countup";
+import VisibilitySensor from 'react-visibility-sensor';
 import clockIcon from '@/assets/img/clock-icon.svg';
 import avatarIcon from '@/assets/img/avatar-icon.svg';
 import trophyIcon from '@/assets/img/trophy-icon.svg';
@@ -31,41 +32,45 @@ const achivements: AchivementItemProps[] = [
   {
     title: "获奖情况",
     iconPath: trophyIcon,
-    startVal: 0,
-    endVal: 10,
+    startVal: 0, endVal: 10,
     descWord: "余项"
   },
 ];
 
-const HomeAchievementItem: React.FC<achivementItem> = ({ title, iconPath, startVal, endVal, descWord }) => {
-  const actionNum = useRef(null);
-  // let numberAction = new CountUp("actionNum", targetVal, options)
-  const { start } = useCountUp({
-    ref: actionNum,
-    start: startVal,
-    end: endVal,
-    duration: 3,
-    useEasing: true
-  })
+const HomeAchievementItem: React.FC<AchivementItemProps> = ({ title, iconPath, startVal, endVal, descWord }) => {
 
   return (
-    <div className="home-ach-item">
-      <img className="home-ach-item-icon" src={iconPath} />
-      <div className="home-ach-item-title">{title}</div>
-      <p style={{ margin: "5px" }}>
-        <span ref={actionNum}></span>
-        <span>{descWord}</span>
-      </p>
-    </div>
+    <VisibilitySensor partialVisibility >
+      {({ isVisible }) => (
+        <div className="home-ach-item">
+          <img className="home-ach-item-icon" src={iconPath} />
+          <div className="home-ach-item-title">{title}</div>
+          <p style={{ margin: "5px" }}>
+            {isVisible ?
+              <CountUp
+                start={startVal}
+                end={endVal}
+                duration={3}
+                delay={.3}
+                useEasing
+              />
+              :
+              "xxx"
+            }
+            <span>{descWord}</span>
+          </p>
+        </div>
+      )}
+    </VisibilitySensor>
   );
 };
 
 const HomeAchievement: React.FC = () => {
   return (
     <div className="home-ach">
-      {achivements.map(({ title, iconPath, startVal, endVal, descWord }) => {
+      {achivements.map((props) => {
         return (
-          <HomeAchievementItem title={title} iconPath={iconPath} startVal={startVal} endVal={endVal} descWord={descWord} key={title} />
+          <HomeAchievementItem {...props} key={props.title} />
         );
       })}
     </div>
