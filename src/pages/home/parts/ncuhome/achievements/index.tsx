@@ -52,12 +52,12 @@ const HomeAchievementItem: React.FC<AchivementItemProps> = ({ title, iconPath, s
                 end={endVal}
                 duration={3}
                 delay={.3}
+                suffix={descWord}
                 useEasing
               />
               :
               "xxx"
             }
-            <span>{descWord}</span>
           </p>
         </div>
       )}
