@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint --fix --ext .ts,.tsx src/",
+    "lint:check": "eslint --ext .ts,.tsx src/"
   },
   "dependencies": {
     "@terwanerik/scrolltrigger": "^1.0.5",
+    "@types/react-slick": "^0.23.5",
     "react": "^17.0.0",
     "react-countup": "^6.0.0",
     "react-dom": "^17.0.0",
@@ -23,15 +26,11 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.32.0",
-    "@typescript-eslint/parser": "^4.32.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "sass": "^1.39.0",
     "typescript": "^4.3.2",
     "vite": "^2.5.4"

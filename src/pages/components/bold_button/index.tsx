@@ -7,9 +7,9 @@ interface Props {
 }
 
 const BoldButton: React.FC<Props> = ({ text }) => (
-  <div className="bold-btn">
-    {text}
-  </div>
+	<div className="bold-btn">
+		{text}
+	</div>
 );
 
 export default BoldButton;

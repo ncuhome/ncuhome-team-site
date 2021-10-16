@@ -38,7 +38,6 @@ const achivements: AchivementItemProps[] = [
 ];
 
 const HomeAchievementItem: React.FC<AchivementItemProps> = ({ title, iconPath, startVal, endVal, descWord }) => {
-
   return (
     <VisibilitySensor partialVisibility >
       {({ isVisible }) => (
