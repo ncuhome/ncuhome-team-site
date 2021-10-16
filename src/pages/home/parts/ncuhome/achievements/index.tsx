@@ -5,7 +5,7 @@ import avatarIcon from '@/assets/img/avatar-icon.svg';
 import trophyIcon from '@/assets/img/trophy-icon.svg';
 import './style.scss';
 
-interface achivementItem {
+interface AchivementItemProps {
   title: string;
   iconPath: string;
   startVal: number;
@@ -13,7 +13,7 @@ interface achivementItem {
   descWord: string;
 }
 
-const achivements: achivementItem[] = [
+const achivements: AchivementItemProps[] = [
   {
     title: "成立时间",
     iconPath: clockIcon,
