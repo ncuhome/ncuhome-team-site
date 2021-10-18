@@ -69,122 +69,122 @@ interface Product {
 // ];
 
 const productList: Product[] = [
-	{
-		logo: ncov_logo,
-		description: (
-			<>
-				<h2>香樟祺</h2>
-				<p>
+  {
+    logo: ncov_logo,
+    description: (
+      <>
+        <h2>香樟祺</h2>
+        <p>
           2020年3月1日，「香樟祺」应运而生并投入使用，透明公开实时跟进校园疫情数据。这份报告也成为疫情之下校园安全的保障，连接起息息相关的你我他，为大家带来安全感。
-				</p>
-			</>
-		),
-		backgroundImg: {
-			backgroundImage: `url(${ncov_bg})`,
-			backgroundRepeat: 'no-repeat',
-			backgroundSize: '200%,200%',
-		},
-	},
-	{
-		logo: ncuos_logo,
-		description: (
-			<>
-				<h2>云家园</h2>
-				<p>
+        </p>
+      </>
+    ),
+    backgroundImg: {
+      backgroundImage: `url(${ncov_bg})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '200%,200%',
+    },
+  },
+  {
+    logo: ncuos_logo,
+    description: (
+      <>
+        <h2>云家园</h2>
+        <p>
           云家园是服务于南昌大学辅导员与本科生的一个信息服务平台，主要功能分为两大类：学生事务与信息查询。
-				</p>
-			</>
-		),
-		backgroundImg: {
-			backgroundImage: `url(${ncuos_bg})`,
-			backgroundRepeat: 'no-repeat',
-			backgroundSize: '200%,200%',
-		},
-	},
-	{
-		logo: us_logo,
-		description: (
-			<>
-				<h2>US</h2>
-				<p>
+        </p>
+      </>
+    ),
+    backgroundImg: {
+      backgroundImage: `url(${ncuos_bg})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '200%,200%',
+    },
+  },
+  {
+    logo: us_logo,
+    description: (
+      <>
+        <h2>US</h2>
+        <p>
           US是专属于家园人的网络社区，为家园工作室的成员提供了一个互相交流的平台，内部人员可以通过论坛发帖的形式分享经验、交流心得，除此之外其中的一些办公功能也为日常工作提供了极大的便利。
-				</p>
-			</>
-		),
-		backgroundImg: {
-			backgroundImage: `url(${us_bg})`,
-			backgroundRepeat: 'no-repeat',
-			backgroundSize: '200%,200%',
-		},
-	},
+        </p>
+      </>
+    ),
+    backgroundImg: {
+      backgroundImage: `url(${us_bg})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '200%,200%',
+    },
+  },
 ];
 
 const ProductSmall: React.FC = () => {
-	const bgImage_ncuhome = {
-		backgroundImage: `url(${ncuhome_bg})`,
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: '200%,200%',
-	};
+  const bgImage_ncuhome = {
+    backgroundImage: `url(${ncuhome_bg})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '200%,200%',
+  };
 
-	// const [gameIndex, setGameIndex] = useState(0);
+  // const [gameIndex, setGameIndex] = useState(0);
 
-	// const changeGame = () => {
-	// 	setGameIndex((pre) => (pre + 1) % (gameData.length));
-	// };
+  // const changeGame = () => {
+  // 	setGameIndex((pre) => (pre + 1) % (gameData.length));
+  // };
 
-	return (
-		<>
-			<div className="product-wrapper">
-				<div style={bgImage_ncuhome} className="product-content-wrapper0">
-					<img
-						style={{ marginTop: '54px', width: '60%' }}
-						src={ncuhome_logo}
-						alt=""
-					/>
-					<div className="product-content-description">
-						<p>
+  return (
+    <>
+      <div className="product-wrapper">
+        <div style={bgImage_ncuhome} className="product-content-wrapper0">
+          <img
+            style={{ marginTop: '54px', width: '60%' }}
+            src={ncuhome_logo}
+            alt=""
+          />
+          <div className="product-content-description">
+            <p>
               习惯打卡，课表展示，空闲教室查询，寝室电量查询
-						</p>
-						<p>
+            </p>
+            <p>
               在复杂的大学生活里，一个南大家园app就够了
-						</p>
-					</div>
-					<div className="product-content-button">
-						<div className="product-bold-btn" onClick={() => window.open('https://incu-download.ncuos.com/iNCU_latest.apk')}>
-							<img src={android} style={{ width: '20px' }} />
+            </p>
+          </div>
+          <div className="product-content-button">
+            <div className="product-bold-btn" onClick={() => window.open('https://incu-download.ncuos.com/iNCU_latest.apk')}>
+              <img src={android} style={{ width: '20px' }} />
               &nbsp;Android下载
-						</div>
-						<div className="product-bold-btn" onClick={() => window.open('https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561')}>
-							<img src={apple} style={{ width: '25px' }} />
+            </div>
+            <div className="product-bold-btn" onClick={() => window.open('https://apps.apple.com/cn/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561')}>
+              <img src={apple} style={{ width: '25px' }} />
               &nbsp;App Store
-						</div>
-					</div>
-				</div>
-			</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div className="product-wrapper">
-				{
-					productList.map((product, index) => (
-						<div style={product.backgroundImg} key={index} className="product-content-wrapper">
-							<img
-								className="product-content-logo"
-								src={product.logo}
-								alt=""
-							/>
-							<div className="product-content-description">
-								{product.description}
-							</div>
-						</div>
-					))
-				}
-			</div>
+      <div className="product-wrapper">
+        {
+          productList.map((product, index) => (
+            <div style={product.backgroundImg} key={index} className="product-content-wrapper">
+              <img
+                className="product-content-logo"
+                src={product.logo}
+                alt=""
+              />
+              <div className="product-content-description">
+                {product.description}
+              </div>
+            </div>
+          ))
+        }
+      </div>
 
-			{
-			/*
+      {
+        /*
        * 游戏产品展示部分，待优化
        */
-			}
-			{/* <div className="product-wrapper">
+      }
+      {/* <div className="product-wrapper">
         <div style={gameData[gameIndex].gameBgSrc} className="product-content-wrapper5">
           <img className="product-content-logo" src={game_logo} alt='' />
           <div className="product-content-description">
@@ -201,8 +201,8 @@ const ProductSmall: React.FC = () => {
             </div>
         </div>
       </div> */}
-		</>
-	);
+    </>
+  );
 };
 
 export default ProductSmall;

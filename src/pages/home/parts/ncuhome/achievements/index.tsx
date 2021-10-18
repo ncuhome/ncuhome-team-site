@@ -1,5 +1,5 @@
 import React from 'react';
-import CountUp from "react-countup";
+import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import clockIcon from '@/assets/img/clock-icon.svg';
 import avatarIcon from '@/assets/img/avatar-icon.svg';
@@ -16,24 +16,24 @@ interface AchivementItemProps {
 
 const achivements: AchivementItemProps[] = [
   {
-    title: "成立时间",
+    title: '成立时间',
     iconPath: clockIcon,
     startVal: 1921,
     endVal: 2001,
-    descWord: "年"
+    descWord: '年'
   },
   {
-    title: "用户量",
+    title: '用户量',
     iconPath: avatarIcon,
     startVal: 0,
     endVal: 20,
-    descWord: "W+"
+    descWord: 'W+'
   },
   {
-    title: "获奖情况",
+    title: '获奖情况',
     iconPath: trophyIcon,
     startVal: 0, endVal: 10,
-    descWord: "余项"
+    descWord: '余项'
   },
 ];
 
@@ -44,7 +44,7 @@ const HomeAchievementItem: React.FC<AchivementItemProps> = ({ title, iconPath, s
         <div className="home-ach-item">
           <img className="home-ach-item-icon" src={iconPath} />
           <div className="home-ach-item-title">{title}</div>
-          <p style={{ margin: "5px" }}>
+          <p style={{ margin: '5px' }}>
             {isVisible ?
               <CountUp
                 start={startVal}
@@ -55,7 +55,7 @@ const HomeAchievementItem: React.FC<AchivementItemProps> = ({ title, iconPath, s
                 useEasing
               />
               :
-              "xxx"
+              'xxx'
             }
           </p>
         </div>
@@ -67,11 +67,13 @@ const HomeAchievementItem: React.FC<AchivementItemProps> = ({ title, iconPath, s
 const HomeAchievement: React.FC = () => {
   return (
     <div className="home-ach">
-      {achivements.map((props) => {
-        return (
-          <HomeAchievementItem {...props} key={props.title} />
-        );
-      })}
+      {
+        achivements.map((item) => {
+          return (
+            <HomeAchievementItem {...item} key={item.title} />
+          );
+        })
+      }
     </div>
   );
 };

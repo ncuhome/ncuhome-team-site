@@ -7,9 +7,9 @@ interface Props {
 }
 
 const Register: React.FC<Props> = ({ choice }) => (
-	<div>
-		<div>{choice ? <NewRegister /> : <OldRegister />}</div>
-	</div>
+  <div>
+    <div>{choice ? <NewRegister /> : <OldRegister />}</div>
+  </div>
 );
 
 export default Register;
