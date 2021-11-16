@@ -20,8 +20,8 @@ const Products: React.FC = () => {
           <p>南大家园APP —— 改变，从这里开始</p>
           <p>云家园 —— 数字化南大，尽在掌握</p>
         </div>
-        <div onClick={() => history.push('./product')}>
-          <BoldButton text="JOIN US" bgColor="#ABD9F8" />
+        <div onClick={() => history.push('./products')}>
+          <BoldButton text="MORE" bgColor="#ABD9F8" />
         </div>
       </div>
     </div>

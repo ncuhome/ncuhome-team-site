@@ -66,7 +66,7 @@ const About: React.FC = () => {
               </li>
 
               <li>
-                <a className="address" title="地址：前湖校区学生公寓7栋0层">
+                <a className="address" href="https://j.map.baidu.com/0d/Il6c" title="地址：前湖校区学生公寓7栋0层">
                   地址：前湖校区学生公寓7栋0层
                 </a>
               </li>

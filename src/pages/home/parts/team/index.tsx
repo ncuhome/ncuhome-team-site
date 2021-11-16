@@ -16,8 +16,8 @@ const Team: React.FC = () => {
             <p>家园人在工作</p>
             <p>全体大会上的我们</p>
           </div>
-          <div onClick={() => history.push('./team')}>
-            <BoldButton text="JOIN US" bgColor="#ABD9F8" />
+          <div onClick={() => history.push('/about')}>
+            <BoldButton text="MORE" bgColor="#ABD9F8" />
           </div>
         </div>
         <div className="home-team-bottom">

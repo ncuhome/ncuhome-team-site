@@ -18,7 +18,7 @@ const About: React.FC = () => {
           <p className="home-about-text2">
             家园欢迎每一位热爱互联网的的出色青年
           </p>
-          <div onClick={() => history.push('./about')}>
+          <div onClick={() => history.push('/join-us')}>
             <BoldButton text="JOIN US" bgColor="#ABD9F8" />
           </div>
         </div>
@@ -57,7 +57,7 @@ const About: React.FC = () => {
               </li>
 
               <li>
-                <a className="address" title="地址：前湖校区学生公寓7栋0层">
+                <a className="address" href="https://j.map.baidu.com/0d/Il6c" title="地址：前湖校区学生公寓7栋0层">
                   地址：前湖校区学生公寓7栋0层
                 </a>
               </li>

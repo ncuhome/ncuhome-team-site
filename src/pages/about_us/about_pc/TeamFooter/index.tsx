@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
-import BoldButton from '@/pages/components/bold_button';
-import CompanyLogo from '@/assets/img/CompanyLogo.png';
-import './style.scss';
+import React, { ReactNode } from "react";
+import BoldButton from "@/pages/components/bold_button";
+import CompanyLogo from "@/assets/img/CompanyLogo.png";
+import "./style.scss";
 
 const Bubbles: ReactNode = (
   <>
@@ -22,10 +22,13 @@ const About: React.FC = () => (
       <img className="team-footer-top-img" src={CompanyLogo} alt="company" />
     </div>
     <div className="team-footer-middle">
-      <p className="team-footer-middle-text1">Let&apos;s make something great</p>
+      <p className="team-footer-middle-text1">
+        Let&apos;s make something great
+      </p>
       <br />
       <p className="team-footer-middle-text2">together</p>
-      <div className="team-footer-middle-btn">
+      <div className="team-footer-middle-btn"
+        onClick={() => window.location.replace('/join-us')}>
         <BoldButton text="JOIN US" bgColor="#FAFCFF" />
       </div>
       {Bubbles}
@@ -64,7 +67,7 @@ const About: React.FC = () => (
             </li>
 
             <li>
-              <a className="address" title="地址：前湖校区学生公寓7栋0层">
+              <a className="address" href="https://j.map.baidu.com/0d/Il6c" title="地址：前湖校区学生公寓7栋0层">
                 地址：前湖校区学生公寓7栋0层
               </a>
             </li>
