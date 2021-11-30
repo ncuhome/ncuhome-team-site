@@ -19,7 +19,7 @@
       letter-spacing: 1.2px;
       margin-bottom: 10px;
       font-size: calc(1.1vw);
-      color: #808388
+      color: #808388;
     }
     .team-act-title {
       font-size: calc(2vw);
@@ -29,10 +29,18 @@
     .team-act-decs {
       margin-top: 10px;
       font-size: calc(1vw);
-      letter-spacing: .8px;
+      letter-spacing: 0.8px;
       line-height: calc(1.5vw);
       white-space: pre;
-      color: #3e4042
+      color: #3e4042;
+    }
+
+    .team-act-author {
+      margin-top: 20px;
+      font-size: calc(1vw);
+      letter-spacing: 0.8px;
+      line-height: calc(1.5vw);
+      color: #3e4042;
     }
   }
 }
