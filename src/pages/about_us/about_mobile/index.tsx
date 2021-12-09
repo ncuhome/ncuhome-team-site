@@ -6,8 +6,8 @@ import TeamSlider from './TeamSlider';
 import TeamFooter from './TeamFooter';
 import ArrowLeft from '@/assets/img/arrow-left.png';
 import ArrowRight from '@/assets/img/arrow-right.png';
-import team_play from '@/assets/img/team-act-play.svg';
-import team_share from '@/assets/img/team-act-share.svg';
+import team_play from '@/assets/img/team-act-play.jpg';
+import hackweek from '@/assets/img/hackweek.png';
 import downHandle from '@/assets/img/down-handle.png';
 
 const TeamSmall: React.FC = () => {
@@ -32,19 +32,19 @@ const TeamSmall: React.FC = () => {
           <div className={styles.team_content_actcard}>
             <img src={team_play} />
             <div className={styles.actcard_title}>
-              To do Things
+             家园人
             </div>
             <div className={styles.actcard_desc}>
-              创意输出、设计呈现、开发测试、运营推广······我们一步一步摸索，以力求完美的精神，不甘平庸的态度，实现产品的从0到1···
+              家园最宝贵的财富
             </div>
           </div>
           <div className={styles.team_content_actcard}>
-            <img src={team_share} />
+            <img src={hackweek} />
             <div className={styles.actcard_title}>
-              Share Us
+              HackWeek
             </div>
             <div className={styles.actcard_desc}>
-              每一届都有优秀的家园人返回家园为后辈们做分享，不论是经验分享，还是技术传授，皆是一场新奇交流，此外，家园还提供各组培训和大量书籍帮助家园人不断提升。
+              家园人骨子里的不安分
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@ const TeamSmall: React.FC = () => {
 家园工作室成年的庆典
 是庆祝，是狂欢
 更是回首过去r s
-展望未来的初心与决心。"
+展望未来的初心与决心"
             />
             <TeamAct
               imgName="https://incu-orbit.ncuos.com/18.jpg"
@@ -92,7 +92,7 @@ const TeamSmall: React.FC = () => {
 家园工作室成年的庆典
 是庆祝，是狂欢
 更是回首过去
-展望未来的初心与决心。"
+展望未来的初心与决心"
             />
 
           </Slider>

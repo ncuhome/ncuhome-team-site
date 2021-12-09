@@ -16,7 +16,7 @@ const About: React.FC = () => {
           <p className="home-about-text1">TOGETHER</p>
           <img src={line} />
           <p className="home-about-text2">
-            家园欢迎每一位热爱互联网的的出色青年
+            家园欢迎每一位热爱互联网的出色青年
           </p>
           <div onClick={() => history.push('/join-us')}>
             <BoldButton text="JOIN US" bgColor="#ABD9F8" />
@@ -32,7 +32,7 @@ const About: React.FC = () => {
               </li>
               <li>
                 <a href="#" className="wechat">
-                  微信
+                  微信：「南昌大学家园网」
                 </a>
               </li>
               <li>
@@ -40,12 +40,12 @@ const About: React.FC = () => {
                   className="zhihu"
                   href="https://www.zhihu.com/people/nan-chang-da-xue-jia-yuan-gong-zuo-shi"
                 >
-                  知乎
+                  知乎：「小家园传声机」
                 </a>
               </li>
               <li>
                 <a className="bili" href="https://space.bilibili.com/444274979">
-                  bilibili
+                  bilibili：「小家园传声机」
                 </a>
               </li>
             </ul>
@@ -70,7 +70,7 @@ const About: React.FC = () => {
                   邮箱：ncuadmin@163.com
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="tel:0791-83969124"
                   title="电话：0791-83969124"
@@ -78,7 +78,7 @@ const About: React.FC = () => {
                 >
                   电话：0791-83969124
                 </a>
-              </li>
+              </li> */}
             </ul>
           </li>
         </ul>
