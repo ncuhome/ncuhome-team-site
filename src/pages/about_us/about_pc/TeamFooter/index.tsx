@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
-import BoldButton from "@/pages/components/bold_button";
-import CompanyLogo from "@/assets/img/CompanyLogo.png";
-import "./style.scss";
+import React, { ReactNode } from 'react';
+import BoldButton from '@/pages/components/bold_button';
+import CompanyLogo from '@/assets/img/CompanyLogo.png';
+import './style.scss';
 
 const Bubbles: ReactNode = (
   <>
