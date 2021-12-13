@@ -13,11 +13,11 @@ const Blog: React.FC = () => (
     </div>
     <div className="home-blog-right">
       <div className="home-blog-title home-title">
-        Blogs
+        Treasures
       </div>
       <div className="home-blog-desc">
-        <p>关于前端架构的一些思考</p>
-        <p>南大家园的从0到1</p>
+        <p>家园四年：破釜沉舟</p>
+        <p>家园人的知识分享</p>
       </div>
       <div onClick={() => {
         window.location.replace('https://ncuhome.yuque.com/ncuhome');

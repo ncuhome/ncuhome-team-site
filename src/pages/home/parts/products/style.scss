@@ -6,6 +6,14 @@
   }
 }
 
+.home-prod-desc {
+  p {
+    // color: red;
+    width: 100%;
+    text-align: left;
+  }
+}
+
 @media (max-width: 767px) {
   .home-prod-wrapper {
     height: 100%;
@@ -47,9 +55,10 @@
         flex-direction: column;
         align-items: flex-end;
         letter-spacing: 3px;
-        & > p {
+        p {
           font-size: 16px;
-          margin-bottom: 16px;
+          margin-bottom: 10px;
+          line-height: 18px;
         }
       }
     }
@@ -98,7 +107,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        & > p{
+        p{
           font-size: 16px;
           // letter-spacing: 2px;
           margin-bottom: 16px;

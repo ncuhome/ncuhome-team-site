@@ -18,8 +18,10 @@ const Products: React.FC = () => {
           <p className="sub-title">灵感在这里落地生根</p>
         </div>
         <div className="home-prod-desc">
-          <p>南大家园APP —— 改变，从这里开始</p>
+          <p>南大家园 —— 改变，从这里开始</p>
+          <p>香樟祺 —— 疫情之下，南大学子的安全保障</p>
           <p>云家园 —— 数字化南大，尽在掌握</p>
+          <p>US —— 专属于家园人的网络社区</p>
         </div>
         <div onClick={() => history.push('./products')}>
           <BoldButton text="MORE" bgColor="#ABD9F8" />
