@@ -15,6 +15,7 @@ const Products: React.FC = () => {
       <div className="home-prod-right">
         <div className="home-prod-title home-title">
           Products
+          <p className="sub-title">灵感在这里落地生根</p>
         </div>
         <div className="home-prod-desc">
           <p>南大家园APP —— 改变，从这里开始</p>

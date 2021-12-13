@@ -1,3 +1,11 @@
+.home-title {
+  .sub-title {
+    margin-top: 5px;
+    color: #666;
+    text-align: right;
+  }
+}
+
 @media (max-width: 767px) {
   .home-prod-wrapper {
     height: 100%;
@@ -28,12 +36,9 @@
         font-weight: bold;
         margin-bottom: 50px;
         position: relative;
-        .home-prod-tailling-s {
-          color: #FAFCFF;
-          position: absolute;
-          bottom: -10px;
-          right: -12px;
-          z-index: -1;
+
+        .sub-title {
+          font-size: .6rem;
         }
       }
       .home-prod-desc {
@@ -83,6 +88,10 @@
         font-weight: bolder;
         margin-bottom: 72px;
         position: relative;
+
+        .sub-title {
+          font-size: 1.3rem;
+        }
       }
       .home-prod-desc {
         margin-bottom: 60px;
