@@ -19,7 +19,7 @@ const Dialog: React.FC<DialogData> = (props) => {
         <div className="dialog_box_descrpition">
           <p>老生报名请直接将简历（可添加作品集）发送至:</p>
           <p style={{ color: '#1B8FF4' }}>hr@ncuhome.cn</p>
-          <p> 文件名格式: 【南大家园 + 岗位】年级-姓名 </p>
+          <p> 文件名格式: 【家园工作室 + 岗位】年级-姓名 </p>
         </div>
         <div className="dialog_box_button" onClick={props.onOk}><p>确定</p></div>
       </div>
