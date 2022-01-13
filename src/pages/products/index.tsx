@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import ProductSmall from './products_mobile';
-import ProductBig from './products_pc';
+import React from "react";
+import ProductSmall from "./products_mobile";
+import ProductBig from "./products_pc";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const Product: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    const onResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener('resize', onResize);
-  }, []);
-  return (
-    <div>
-      {isMobile
-        ? <ProductSmall />
-        : <ProductBig />}
-    </div>
-  );
+  return <div>{isMobile ? <ProductSmall /> : <ProductBig />}</div>;
 };
 
 export default Product;

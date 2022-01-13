@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 import { useHistory } from 'react-router-dom';
-import BoldButton from '@/pages/components/bold_button';
+import BoldButton from '@/components/bold_button';
 import circle from '@/assets/img/circle.png';
 import line from '@/assets/img/line.png';
 

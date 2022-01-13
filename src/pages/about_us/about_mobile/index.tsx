@@ -102,7 +102,7 @@ const TeamSmall: React.FC = () => {
           <img onClick={() => sliderRef.current?.slickNext()} style={{ width: '30px', marginLeft: '60px' }} src={ArrowRight} />
         </div>
       </div>
-      <div className={styles.team_footer_wrapper}>
+      <div className={styles.team_wrapper}>
         <TeamFooter />
       </div>
     </div>

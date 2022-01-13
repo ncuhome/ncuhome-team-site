@@ -1,13 +1,31 @@
-import { defineConfig } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
-import path from 'path';
+import { defineConfig } from "vite";
+import viteSSR from "vite-ssr/plugin";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
+  server: {
+    fs: {
+      // The API logic is in outside of the project
+      strict: false,
     },
   },
-  plugins: [reactRefresh()],
+  resolve: {
+    alias: {
+      // eslint-disable-next-line no-undef
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
+  plugins: [
+    react(),
+    viteSSR({
+      features: {
+        // Manually disable features that are
+        // detected because this is a mono repo
+        reactStyledComponents: false,
+        reactApolloRenderer: false,
+      },
+    }),
+  ],
 });

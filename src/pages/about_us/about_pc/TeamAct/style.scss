@@ -1,7 +1,7 @@
 .team-act-wrapper {
   width: 80%;
-  height: 320px;
-  margin: 60px;
+  height: 270px;
+  margin: 85px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
   }
   .team-act-text {
     display: flex;
-    height: calc(17vw);
+    height: 100%;
     flex-direction: column;
     .team-act-time {
       letter-spacing: 1.2px;

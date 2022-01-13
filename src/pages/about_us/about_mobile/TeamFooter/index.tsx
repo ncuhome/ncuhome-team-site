@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import CompanyLogo from '@/assets/img/company-logo-s.svg';
 import styles from './style.module.scss';
 
@@ -7,17 +7,17 @@ const About: React.FC = () => {
   const history = useHistory();
 
   return (
-    <div className={styles.team_footer_wrapper}>
-      <div className={styles.team_footer_top}>
-        <p className={styles.team_footer_top_text1}>Ncu Homers </p>
-        <p className={styles.team_footer_top_text2}> travel</p>
-        <p className={styles.team_footer_top_text3}> around the world</p>
-        <div className={styles.team_footer_top_img}>
+    <div className={styles.wrapper}>
+      <div className={styles.top}>
+        <p className={styles.top_text1}>Ncu Homers </p>
+        <p className={styles.top_text2}> travel</p>
+        <p className={styles.top_text3}> around the world</p>
+        <div className={styles.top_img}>
           <img src={CompanyLogo} alt="company" />
         </div>
       </div>
-      <div className={styles.team_footer_middle}>
-        <p className={styles.team_footer_middle_text1}>
+      <div className={styles.middle}>
+        <p className={styles.middle_text1}>
           Let&apos;s
           <br />
           make something
@@ -27,15 +27,15 @@ const About: React.FC = () => {
         </p>
         <br />
 
-        <div className={styles.team_footer_middle_btn}>
+        <div className={styles.middle_btn}>
           <div onClick={() => history.push('/about')} className={styles.bold_btn}>Join us</div>
         </div>
         {/* {Bubbles} */}
       </div>
-      <div className={styles.team_footer_bottom}>
-        <ul className={styles.team_footer_list}>
+      <div className={styles.bottom}>
+        <ul className={styles.list}>
           <li>
-            <ul className={styles.team_footer_ul_about}>
+            <ul className={styles.ul_about}>
               <li>
                 <p>关注我们</p>
               </li>
@@ -60,7 +60,7 @@ const About: React.FC = () => {
             </ul>
           </li>
           <li>
-            <ul className={styles.team_footer_ul_contact}>
+            <ul className={styles.ul_contact}>
               <li>
                 <p>联系我们</p>
               </li>

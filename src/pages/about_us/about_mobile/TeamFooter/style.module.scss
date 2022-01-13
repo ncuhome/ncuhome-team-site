@@ -1,11 +1,11 @@
-.team_footer_wrapper {
+.wrapper {
   width: 100%;
-  height: calc(vh);
+  height: calc(1vh);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  .team_footer_top {
+  .top {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -13,25 +13,25 @@
     height: calc(100vh);
     width: 100%;
     background-color: #191919;
-    .team_footer_top_text1 {
+    .top_text1 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team_footer_top_text2 {
+    .top_text2 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team_footer_top_text3 {
+    .top_text3 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team_footer_top_img {
+    .top_img {
       padding-top: 20px;
       display: flex;
       justify-content: center;
@@ -40,7 +40,7 @@
       height: 100px;
     }
   }
-  .team_footer_middle {
+  .middle {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,20 +48,20 @@
     background-color: #1b8ff4;
     height: calc(70vh);
     width: 100%;
-    .team_footer_middle_text1 {
+    .middle_text1 {
       padding-top: 5%;
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team_footer_middle_text2 {
+    .middle_text2 {
       display: flex;
       font-size: 30px;
       color: #ffffff;
       padding-bottom: 20px;
     }
-    .team_footer_middle_btn {
+    .middle_btn {
       padding-top: 20px;
       display: flex;
       height: 100px;
@@ -80,14 +80,14 @@
       }
     }
   }
-  .team_footer_bottom {
+  .bottom {
     height: calc(30vh);
     width: 100%;
     display: flex;
     box-sizing: border-box;
     padding-left: 8%;
     flex-flow: column nowrap;
-    .team_footer_list {
+    .list {
       margin-top: 15%;
       height: calc(30vh);
       overflow: hidden;

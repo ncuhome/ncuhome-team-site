@@ -11,8 +11,8 @@
     background-color: #fafcff;
     .product-content-wrapper {
       width: 100%;
-      min-height: calc(100vh - 57px);
-      background-color: red;
+      height: 100vh;
+      overflow: hidden;
       display: flex;
       flex-direction: row;
       background-color: #fafafa;
@@ -36,6 +36,7 @@
           color: #2e2e2e;
           flex-direction: column;
           align-items: center;
+          letter-spacing: .8px;
 
           .bold {
             font-weight: 450;
@@ -82,7 +83,7 @@
     .product-content-wrapper5-b {
       display: flex;
       width: 100%;
-      height: calc(100vh);
+      height: 100vh;
       flex-wrap: wrap;
       flex-direction: column;
       align-items: space-between;
@@ -94,7 +95,7 @@
         justify-content: center;
         display: flex;
         width: 50%;
-        height: calc(80vh);
+        height: 80vh;
         .product-content-gameTitle-b {
           height: 10%;
           font-size: 45px;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Dialog from './components/dialog';
 import about_bg from '@/assets/img/about-bg.svg';
-import BoldButton from '@/pages/components/bold_button';
+import BoldButton from '@/components/bold_button';
 import './style.scss';
 
 const About: React.FC = () => {

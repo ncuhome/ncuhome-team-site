@@ -1,16 +1,16 @@
-import React, { useRef } from 'react';
-import Slider from 'react-slick';
-import TeamAct from './TeamAct';
-import TeamSlider from './TeamSlider';
-import TeamFooter from './TeamFooter';
-import ArrowLeft from '@/assets/img/arrow-left.png';
-import ArrowRight from '@/assets/img/arrow-right.png';
-import team_play from '@/assets/img/team-act-play.jpg';
-import hackweek from '@/assets/img/hackweek.png';
-import downHandle from '@/assets/img/down-handle.png';
-import line3 from '@/assets/img/line3.png';
-import cxy from '@/assets/img/cxy.jpg';
-import './style.scss';
+import React, { useRef } from "react";
+import Slider from "react-slick";
+import TeamAct from "./TeamAct";
+import TeamSlider from "./TeamSlider";
+import TeamFooter from "./TeamFooter";
+import ArrowLeft from "@/assets/img/arrow-left.png";
+import ArrowRight from "@/assets/img/arrow-right.png";
+import team_play from "@/assets/img/team-act-play.jpg";
+import hackweek from "@/assets/img/hackweek.png";
+import downHandle from "@/assets/img/down-handle.png";
+import line3 from "@/assets/img/line3.png";
+import cxy from "@/assets/img/cxy.jpg";
+import "./style.scss";
 
 const settings = {
   infinite: true,
@@ -29,47 +29,44 @@ const TeamBig: React.FC = () => {
         <TeamSlider />
       </div>
       <div className="team-content-rectangle">
-        <img style={{ width: '25px' }} src={downHandle} />
+        <img style={{ width: "25px" }} src={downHandle} />
       </div>
       <div className="team-content-wrapper">
         <div className="team-content-title">
-          <img style={{ height: '1px' }} src={line3} />
+          <img style={{ height: "1px" }} src={line3} />
           <div>
-            <p style={{ fontSize: '22px', margin: '0 12px' }}>
+            <p style={{ fontSize: "22px", margin: "0 12px", letterSpacing: "1px" }}>
               WE ARE NCUHOMERS
             </p>
           </div>
-          <img style={{ height: '1px' }} src={line3} />
+          <img style={{ height: "1px" }} src={line3} />
         </div>
         <div className="team-content-actcard-left">
           <img src={team_play} />
-          <div>
-            <p>
-              家园人
-              <br />
-              家园最宝贵的财富
-            </p>
+          <div className="text-container">
+            <p className="title">NCUHOMERS·家园人</p>
+            <p className="decs">家园最宝贵的财富</p>
           </div>
         </div>
         <div className="team-content-actcard-right">
-          <div>
-            <p>HackWeek</p>
-            <p>家园人骨子里的不安分</p>
+          <div className="text-container">
+            <p className="title">HackWeek</p>
+            <p className="decs">家园人骨子里的不安分</p>
           </div>
           <img src={hackweek} />
         </div>
         <div className="team-content-rectangle">
-          <img style={{ width: '25px' }} src={downHandle} />
+          <img style={{ width: "25px" }} src={downHandle} />
         </div>
       </div>
 
       <div className="c-wrapper">
         <p
           style={{
-            marginTop: '-20px',
-            marginLeft: '40px',
-            fontSize: '40px',
-            letterSpacing: '5px',
+            marginTop: "-20px",
+            marginLeft: "40px",
+            fontSize: "40px",
+            letterSpacing: "5px",
           }}
         >
           ACTIVITY
@@ -124,14 +121,14 @@ const TeamBig: React.FC = () => {
             className="team-slider-bottom-item"
             onClick={() => sliderRef.current?.slickPrev()}
           >
-            <img style={{ width: '30px' }} src={ArrowLeft} />
+            <img style={{ width: "30px" }} src={ArrowLeft} />
           </div>
-          <div style={{ width: '32px' }} />
+          <div style={{ width: "32px" }} />
           <div
             className="team-slider-bottom-item"
             onClick={() => sliderRef.current?.slickNext()}
           >
-            <img style={{ width: '30px' }} src={ArrowRight} />
+            <img style={{ width: "30px" }} src={ArrowRight} />
           </div>
         </div>
       </div>

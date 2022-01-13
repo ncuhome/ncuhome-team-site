@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import BoldButton from '@/pages/components/bold_button';
+import BoldButton from '@/components/bold_button';
 import homeBlog from '@/assets/img/home-blog.png';
 
 const Blog: React.FC = () => (

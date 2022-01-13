@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import Header from '@/pages/components/header';
+import Header from '@/components/header';
 import product from '@/assets/img/product.png';
 import design from '@/assets/img/design.png';
 import research from '@/assets/img/research.png';

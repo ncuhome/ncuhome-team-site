@@ -6,8 +6,9 @@
 
 + React (with Hooks) & react-router-dom
 + Sass
-+ snowpack
++ Vite
 + TypeScript
++ SSR
 
 ## 设计图稿
 
@@ -16,4 +17,3 @@
 ## License
 
 MIT License @Wzb3422
-

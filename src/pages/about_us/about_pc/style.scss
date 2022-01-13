@@ -40,26 +40,54 @@
         width: 100%;
         height: 22px;
       }
+
+      .title {
+        font-size: 38px;
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        letter-spacing: .6px;
+      }
+
+      .decs {
+        font-size: 18px;
+        line-height: 14px;
+        width: 100%;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.5;
+        letter-spacing: .6px;
+      }
+
+      img {
+        width: 687px;
+        height: 318px;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+      }
+
       .team-content-actcard-left {
         display: flex;
         margin-top: 50px;
         background-color: #f4f4f5;
         width: 80%;
         height: 318px;
-        img {
-          width: 687px;
-          height: 318px;
-          margin: 0;
-          padding: 0;
-        }
-        div {
-          display: flex;
-          width: 40%;
-          align-items: center;
-          justify-content: center;
-          font-size: 45px;
-        }
       }
+
       .team-content-actcard-right {
         display: flex;
         margin-top: 50px;
@@ -67,21 +95,8 @@
         background-color: #f4f4f5;
         width: 80%;
         height: 318px;
-        img {
-          width: 687px;
-          height: 318px;
-          margin: 0;
-          padding: 0;
-        }
-        div {
-          display: flex;
-          flex-direction: column;
-          width: 40%;
-          align-items: center;
-          justify-content: center;
-          font-size: 45px;
-        }
       }
+
       & > img {
         margin: 10px 0;
         height: 1px;

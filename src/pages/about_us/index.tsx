@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import AboutMobile from './about_mobile';
-import AboutPC from './about_pc';
+import React from "react";
+import AboutMobile from "./about_mobile";
+import AboutPC from "./about_pc";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const AboutUs: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    const onResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener('resize', onResize);
-  }, []);
-  return (
-    <div>
-      {isMobile
-        ? <AboutMobile />
-        : <AboutPC />}
-    </div>
-  );
+  return <div>{isMobile ? <AboutMobile /> : <AboutPC />}</div>;
 };
 
 export default AboutUs;
