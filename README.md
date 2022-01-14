@@ -36,4 +36,4 @@ $ pnpm start
 
 ## License
 
-MIT License @Wzb3422
+GPL-3.0 License @FuzzyFade
