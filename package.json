@@ -5,8 +5,10 @@
   "scripts": {
     "dev:ssr": "vite-ssr --open --force",
     "dev:spa": "vite --open --force",
+    "dev": "npm run dev:ssr",
     "build:ssr": "vite build",
     "build:spa": "vite build",
+    "build": "npm run build:ssr",
     "deploy": "rm -rf dist && vite-ssr build && node server.js"
   },
   "dependencies": {
