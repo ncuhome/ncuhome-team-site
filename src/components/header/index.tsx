@@ -90,7 +90,8 @@ const Header: React.FC = () => {
       sr = e.default();
       sr.reveal(".fade-in", {
         delay: 400,
-        distance: "40px",
+        distance: "100px",
+        duration: 1000,
       });
 
       sr.reveal(".fade-in-fast", {
