@@ -84,6 +84,26 @@ const Header: React.FC = () => {
     };
   }, [index, tabContainerRef]);
 
+  useEffect(() => {
+    let sr = null;
+    import("scrollreveal").then((e: any) => {
+      sr = e.default();
+      sr.reveal(".fade-in", {
+        delay: 400,
+        distance: "40px",
+      });
+
+      sr.reveal(".fade-in-fast", {
+        delay: 300,
+        distance: "40px",
+      });
+    });
+
+    return () => {
+      sr?.destroy?.();
+    };
+  }, [index]);
+
   const tabPush = (url: string) => {
     if (typeof window === "undefined") return null;
 

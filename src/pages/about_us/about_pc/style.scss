@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: #fff;
+    font-family: "DIN Alternate", sans-serif;
     .team-header-wrapper {
       display: fixed;
       z-index: 100;
@@ -113,6 +114,7 @@
     }
 
     .team-footer-wrapper {
+      font-family: "DIN Alternate", sans-serif;
       display: flex;
       width: 100%;
       height: 800px;

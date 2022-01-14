@@ -8,15 +8,17 @@ interface Props {
   };
 }
 
-const Routes: React.FC<Props> = ({ router }) => (
-  <>
-    <HomeHeader />
-    <Switch>
-      {router.routes.map((props, index) => (
-        <Route key={String(new Date()) + index} {...props} />
-      ))}
-    </Switch>
-  </>
-);
+const Routes: React.FC<Props> = ({ router }) => {
+  return (
+    <>
+      <HomeHeader />
+      <Switch>
+        {router.routes.map((props, index) => (
+          <Route key={String(new Date()) + index} {...props} />
+        ))}
+      </Switch>
+    </>
+  );
+};
 
 export default Routes;

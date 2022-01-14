@@ -9,7 +9,7 @@ import team_play from "@/assets/img/team-act-play.jpg";
 import hackweek from "@/assets/img/hackweek.png";
 import downHandle from "@/assets/img/down-handle.png";
 import line3 from "@/assets/img/line3.png";
-import cxy from "@/assets/img/cxy.jpg";
+import { teamActivity, teamContent } from "../content";
 import "./style.scss";
 
 const settings = {
@@ -35,7 +35,13 @@ const TeamBig: React.FC = () => {
         <div className="team-content-title">
           <img style={{ height: "1px" }} src={line3} />
           <div>
-            <p style={{ fontSize: "22px", margin: "0 12px", letterSpacing: "1px" }}>
+            <p
+              style={{
+                fontSize: "22px",
+                margin: "0 12px",
+                letterSpacing: "1px",
+              }}
+            >
               WE ARE NCUHOMERS
             </p>
           </div>
@@ -43,15 +49,15 @@ const TeamBig: React.FC = () => {
         </div>
         <div className="team-content-actcard-left">
           <img src={team_play} />
-          <div className="text-container">
-            <p className="title">NCUHOMERS·家园人</p>
-            <p className="decs">家园最宝贵的财富</p>
+          <div className="text-container fade-in-fast">
+            <p className="title">{teamContent.left.title}</p>
+            <p className="decs">{teamContent.left.decs}</p>
           </div>
         </div>
         <div className="team-content-actcard-right">
-          <div className="text-container">
-            <p className="title">HackWeek</p>
-            <p className="decs">家园人骨子里的不安分</p>
+          <div className="text-container fade-in-fast">
+            <p className="title">{teamContent.right.title}</p>
+            <p className="decs">{teamContent.right.decs}</p>
           </div>
           <img src={hackweek} />
         </div>
@@ -73,46 +79,9 @@ const TeamBig: React.FC = () => {
         </p>
         <div className="c-content-act">
           <Slider ref={sliderRef} {...settings}>
-            <TeamAct
-              imgName="https://incu-orbit.ncuos.com/18.jpg"
-              actTitle_CN="周年庆"
-              actTime="2021.5.23"
-              actDes="
-家园工作室成年的庆典
-是庆祝，是狂欢
-更是回首过去
-展望未来的初心与决心"
-            />
-            <TeamAct
-              imgName="https://incu-orbit.ncuos.com/19.png"
-              actTitle_CN="全体大会"
-              actTime="2021.3.28"
-              actDes="
-家园人相聚的盛宴
-沉浸在专属我们的旋律里
-因热爱而无惧
-邂逅值得珍藏的记忆"
-            />
-            <TeamAct
-              imgName="https://incu-orbit.ncuos.com/20.jpg"
-              actTitle_CN="冬至奇遇"
-              actTime="2020.12.23"
-              actDes="
-专属家园人的冬至冒险
-国王与小天使的奇遇
-其实是相互依偎的
-温暖与被温暖"
-            />
-            <TeamAct
-              imgName={cxy}
-              actTitle_CN="程序员大改造"
-              actTime="2021.10.24"
-              actDes="
-一年一度的程序员大改造
-想不到的打扮 想不到的妆容
-这一次，我们做出了违背祖宗的决定
-把程序员真正改造成了“程序媛”"
-            />
+            {teamActivity.map((item, index) => (
+              <TeamAct {...item} key={index} />
+            ))}
           </Slider>
         </div>
 

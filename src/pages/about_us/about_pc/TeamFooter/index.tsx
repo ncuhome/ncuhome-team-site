@@ -16,18 +16,18 @@ const Bubbles: ReactNode = (
 const About: React.FC = () => (
   <div className="team-footer-wrapper">
     <div className="team-footer-top">
-      <p className="team-footer-top-text1">Ncuhomers</p>
-      <p className="team-footer-top-text2">Travel</p>
-      <p className="team-footer-top-text3">Around the World</p>
-      <img className="team-footer-top-img" src={CompanyLogo} alt="company" />
+      <p className="team-footer-top-text1 fade-in-fast">Ncuhomers</p>
+      <p className="team-footer-top-text2 fade-in-fast">Travel</p>
+      <p className="team-footer-top-text3 fade-in-fast">Around the World</p>
+      <img className="team-footer-top-img fade-in-fast" src={CompanyLogo} alt="company" />
     </div>
     <div className="team-footer-middle">
-      <p className="team-footer-middle-text1">
+      <p className="team-footer-middle-text1 fade-in-fast">
         Let&apos;s make something great
       </p>
       <br />
-      <p className="team-footer-middle-text2">together</p>
-      <div className="team-footer-middle-btn"
+      <p className="team-footer-middle-text2 fade-in-fast">together</p>
+      <div className="team-footer-middle-btn fade-in-fast"
         onClick={() => window.location.replace('/join-us')}>
         <BoldButton text="JOIN US" bgColor="#FAFCFF" />
       </div>

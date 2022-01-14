@@ -20,20 +20,20 @@ const achivements: AchivementItemProps[] = [
     iconPath: clockIcon,
     startVal: 1921,
     endVal: 2001,
-    descWord: '年'
+    descWord: ' 年'
   },
   {
     title: '用户量',
     iconPath: avatarIcon,
     startVal: 0,
     endVal: 20,
-    descWord: 'W+'
+    descWord: ' W+'
   },
   {
     title: '获奖情况',
     iconPath: trophyIcon,
     startVal: 0, endVal: 10,
-    descWord: '余项'
+    descWord: ' 余项'
   },
 ];
 

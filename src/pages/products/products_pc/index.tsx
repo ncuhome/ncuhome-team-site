@@ -12,10 +12,8 @@ const ProductBig: React.FC = () => {
   return (
     <div className="product-wrapper-b">
       {productList.map((product, index) => (
-        <div className="product-content-wrapper" key={index}>
-          <div
-            className="product-content-left"
-          >
+        <div className="product-content-wrapper fade-in" key={index}>
+          <div className="product-content-left">
             <img
               src={product.logo}
               className="product-content-logo"
@@ -28,7 +26,7 @@ const ProductBig: React.FC = () => {
               {product.description}
             </div>
           </div>
-          <div className="product-content-example-container" fade-in-up="">
+          <div className="product-content-example-container">
             <img
               src={product.example}
               style={{

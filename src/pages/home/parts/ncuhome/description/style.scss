@@ -1,5 +1,6 @@
 @media (max-width: 767px) {
   .home-desc {
+    font-family: "DIN Alternate", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,6 +37,7 @@
 
 @media (min-width: 768px) {
   .home-desc {
+    font-family: "DIN Alternate", sans-serif;
     display: flex;
     flex-direction: column;
     z-index: 2;

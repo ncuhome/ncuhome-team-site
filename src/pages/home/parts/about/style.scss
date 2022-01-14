@@ -1,5 +1,6 @@
 @media (min-width: 768px) {
   .home-about-wrapper {
+    font-family: "DIN Alternate", sans-serif;
     width: 870px;
     height: 100%;
     display: flex;
@@ -9,11 +10,11 @@
     margin-bottom: 0px;
     margin-left: 260px;
     & .bold-btn {
-      background-color: #ABD9F8;
+      background-color: #abd9f8;
     }
     .home-about-content {
       width: 770px;
-      height: 78%;
+      height: 74%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -125,6 +126,7 @@
 
 @media (max-width: 767px) {
   .home-about-wrapper {
+    font-family: "DIN Alternate", sans-serif;
     height: 580px;
     width: 100%;
     background-color: #f5f5f5;
@@ -145,7 +147,7 @@
         position: relative;
         top: 140px;
         & .bold-btn {
-          background-color: #FAFCFF;
+          background-color: #fafcff;
         }
         .home-about-text1 {
           font-size: 36px;
