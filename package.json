@@ -6,10 +6,10 @@
     "dev:ssr": "vite-ssr --open --force",
     "dev:spa": "vite --open --force",
     "dev": "npm run dev:ssr",
-    "build:ssr": "vite build",
+    "build:ssr": "rm -rf dist && vite-ssr build",
     "build:spa": "vite build",
     "build": "npm run build:ssr",
-    "deploy": "rm -rf dist && vite-ssr build && node server.js"
+    "deploy": "npm run build:ssr && node server.js"
   },
   "dependencies": {
     "@terwanerik/scrolltrigger": "^1.0.5",
