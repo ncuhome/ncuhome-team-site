@@ -95,7 +95,7 @@ const Header: React.FC = () => {
       });
 
       sr.reveal(".fade-in-fast", {
-        delay: 300,
+        delay: 240,
         distance: "40px",
       });
     });

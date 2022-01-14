@@ -29,7 +29,7 @@ const About: React.FC = () => (
       <p className="team-footer-middle-text2 fade-in-fast">together</p>
       <div className="team-footer-middle-btn fade-in-fast"
         onClick={() => window.location.replace('/join-us')}>
-        <BoldButton text="JOIN US" bgColor="#FAFCFF" />
+        <BoldButton text="JOIN US" theme="light" bgColor="#FAFCFF" />
       </div>
       {Bubbles}
     </div>

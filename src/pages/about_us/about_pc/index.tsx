@@ -25,7 +25,7 @@ const TeamBig: React.FC = () => {
 
   return (
     <div className="team-wrapper">
-      <div className="team-slider-wrapper">
+      <div className="team-slider-wrapper fade-in">
         <TeamSlider />
       </div>
       <div className="team-content-rectangle">

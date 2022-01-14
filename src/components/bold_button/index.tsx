@@ -1,13 +1,24 @@
-import React from 'react';
-import './style.scss';
+import React from "react";
+import "./style.scss";
 
 interface Props {
   text: string;
-  bgColor: '#fff' | '#FAFCFF' | '#ABD9F8' | '#1B8FF4';
+  bgColor: string;
+  theme?: "light" | "dark";
+  textColor?: string;
+  borderColor?: string;
 }
 
-const BoldButton: React.FC<Props> = ({ text }) => (
-  <div className="bold-btn">
+const BoldButton: React.FC<Props> = ({
+  theme = "dark",
+  text,
+  textColor,
+  borderColor,
+}) => (
+  <div
+    className={theme === "dark" ? "bold-btn-color" : "bold-btn"}
+    style={{ color: textColor, borderColor }}
+  >
     {text}
   </div>
 );

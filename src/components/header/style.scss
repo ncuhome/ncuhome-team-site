@@ -115,6 +115,7 @@ $margin-border: 98px;
       display: flex;
       align-items: center;
       font-size: 16px;
+      font-weight: 500;
       color: $text-color;
 
       .header-home-fixed {
@@ -159,10 +160,11 @@ $margin-border: 98px;
         }
 
         .home-tab-underline {
-          height: 2px;
+          height: 3px;
           background: $primary-color;
           position: absolute;
-          bottom: 12px;
+          bottom: 10px;
+          border-radius: 3px;
           transition: all ease 0.2s;
         }
       }

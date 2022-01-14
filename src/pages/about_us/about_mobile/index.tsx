@@ -57,13 +57,9 @@ const TeamSmall: React.FC = () => {
           backgroundColor: "#f4f4f5",
         }}
         className={styles.c_wrapper}
-      >
+      >     
         <p className={styles.active_text}>ACTIVITY</p>
-        <div
-          style={{
-            width: "90%",
-          }}
-        >
+        <div>
           <Slider ref={sliderRef} {...settings}>
             {teamActivity.map((item, index) => (
               <TeamAct {...item} key={index} />

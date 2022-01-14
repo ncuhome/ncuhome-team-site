@@ -1,18 +1,37 @@
-import React, { useState } from 'react';
-import Dialog from './components/dialog';
-import about_bg from '@/assets/img/about-bg.svg';
-import BoldButton from '@/components/bold_button';
-import './style.scss';
+import React, { useState } from "react";
+import about_bg from "@/assets/img/about-bg.svg";
+import BoldButton from "@/components/bold_button";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./style.scss";
 
 const About: React.FC = () => {
-  const [isShowDialog, setIsShowDialog] = useState(false);
+  const renderContent = () => {
+    return (
+      <div style={{ fontSize: "14px", lineHeight: "18px"}}>
+        <div style={{ fontSize: "14px", marginBottom: 8 }}>
+          🦄 老生报名请直接将简历（可添加作品集）发送至:{" "}
+          <a style={{ color: "#1B8FF4" }} href={"mailto:hr@ncuhome.cn"}>
+            hr@ncuhome.cn
+          </a>
+        </div>
 
-  const openDialog = () => {
-    setIsShowDialog(true);
+        <div style={{ marginBottom: 5 }}>
+          文件名格式: 【家园工作室 + 岗位】年级-姓名{" "}
+        </div>
+      </div>
+    );
   };
 
-  const closeDialog = () => {
-    setIsShowDialog(false);
+  const openDialog = () => {
+    toast(renderContent(), {
+      position: "bottom-center",
+      autoClose: 15000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: false,
+    });
   };
 
   return (
@@ -22,31 +41,71 @@ const About: React.FC = () => {
           <img src={about_bg} />
         </div>
         <div className="about_content_text">
-          <p style={{ color: 'white', fontSize: '50px', margin: '50px' }}>JOIN US</p>
-          <p style={{ color: 'white', fontSize: '20px' }}>Work & Play together </p>
+          <p
+            style={{
+              color: "white",
+              fontSize: "50px",
+              margin: "30px",
+              letterSpacing: 10,
+            }}
+          >
+            JOIN US
+          </p>
+          <p style={{ color: "white", fontSize: "16px", letterSpacing: 1 }}>
+            // 用不长的四年，做几件值得骄傲一生的事情 //
+          </p>
           <div className="about_content_button_area">
             <div className="about_content_button">
               <div onClick={openDialog}>
-                <BoldButton text="🥳 老生招聘" bgColor="#1B8FF4" />
+                <BoldButton
+                  text="🥳 老生投递"
+                  bgColor="#2e2e2e"
+                  textColor={"#fff"}
+                  borderColor={"#e2e2e2"}
+                />
               </div>
             </div>
-            {
-              isShowDialog
-                ? (
-                  <Dialog
-                    onOk={closeDialog}
-                  />
-                )
-                : null
-            }
             <div className="about_content_button">
-              <div onClick={() => { window.open('https://2021hr.ncuos.com'); }}>
-                <BoldButton text="🥰 新生招聘" bgColor="#1B8FF4" />
+              <div
+                onClick={() => {
+                  window.open("https://2021hr.ncuos.com");
+                }}
+              >
+                <BoldButton
+                  text="🥰 新生专区"
+                  bgColor="transparent"
+                  textColor={"#fff"}
+                  borderColor={"#e2e2e2"}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ToastContainer />
+      {/* <Modal open={isShowDialog} onClose={closeDialog}>
+        <div
+          style={{
+            marginTop: 30,
+            marginBottom: 12,
+            padding: 8,
+            textAlign: "center",
+          }}
+        >
+          <div style={{ marginBottom: 5 }}>
+            老生报名请直接将简历（可添加作品集）发送至:
+          </div>
+          <a
+            style={{ color: "#1B8FF4", marginBottom: 5 }}
+            href={"mailto:hr@ncuhome.cn"}
+          >
+            hr@ncuhome.cn
+          </a>
+          <div style={{ marginBottom: 5 }}>
+            文件名格式: 【家园工作室 + 岗位】年级-姓名{" "}
+          </div>
+        </div>
+      </Modal> */}
     </div>
   );
 };

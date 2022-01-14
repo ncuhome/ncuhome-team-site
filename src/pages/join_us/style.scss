@@ -39,19 +39,9 @@ $theme: #1B8FF4;
       .about_content_button_area{
         display: flex;
         .about_content_button{
-          margin-top: 40px;
-          margin-left: 20px;
-          margin-right: 20px;
-        }
-        .bold-btn{
-          background-color: $theme;
-          border: $theme;
-          color: #FFFFFF;
-          font-size: calc(1.3vw);
-          font-weight: normal;
-        }
-        .bold-btn:hover{
-          color: black;
+          margin-top: 60px;
+          margin-left: 25px;
+          margin-right: 25px;
         }
       }
     }

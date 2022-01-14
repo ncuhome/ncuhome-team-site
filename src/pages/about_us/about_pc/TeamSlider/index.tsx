@@ -10,9 +10,9 @@ import TeamBG5 from '@/assets/img/teamBG5.svg';
 
 const settings = {
   autoplay: true,
-  // fade: true,
+  dots: true,
   infinite: true,
-  autoplayspeed: 200,
+  speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
