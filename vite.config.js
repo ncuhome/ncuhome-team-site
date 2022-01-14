@@ -17,6 +17,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  css: { preprocessorOptions: { scss: { charset: false } } },
   plugins: [
     react(),
     viteSSR({

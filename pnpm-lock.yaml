@@ -41,6 +41,7 @@ dependencies:
   react-use: 17.3.2_react-dom@17.0.2+react@17.0.2
   react-visibility-sensor: 5.1.1_react-dom@17.0.2+react@17.0.2
   reset.css: 2.0.2
+  scrollreveal: 4.0.9
   slick-carousel: 1.8.1
 
 devDependencies:
@@ -56,7 +57,6 @@ devDependencies:
   compression: 1.7.4
   express: 4.17.2
   sass: 1.47.0
-  scrollreveal: 4.0.9
   ts-node: 10.4.0_faf01e1d5a40372a98081522dcafc186
   typescript: 4.5.4
   vite: 2.7.10_sass@1.47.0
@@ -1265,11 +1265,11 @@ packages:
     resolution: {integrity: sha512-P1H071iT5TGG8pAHslhrLDo/tQLYc8tGuWABVqhGU4l2mm7aDNb9cx2myQ2AujEQO6B2cAujcW4a0/+6UfXInw==}
     dependencies:
       is-dom-node: 1.0.4
-    dev: true
+    dev: false
 
   /is-dom-node/1.0.4:
     resolution: {integrity: sha512-NEnTHKCeyGJTL0cKdzATF8SWzyTMYf5CbNKWBvsXvyMxZG32g+a09qkeCbrfQNLTD85CbPeHb4YjIJCjyzF0yA==}
-    dev: true
+    dev: false
 
   /is-extglob/2.1.1:
     resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
@@ -1399,7 +1399,7 @@ packages:
 
   /miniraf/1.0.0:
     resolution: {integrity: sha512-XpvhtJYzVrpXe+JoAthrT9E40NIrSDDMcdHEYL2M+lR/OCas0nadetcBBq/MWYqlgV5aDWVQ3mfAqd+fG6Y/EQ==}
-    dev: true
+    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
@@ -1723,7 +1723,7 @@ packages:
 
   /rematrix/0.3.0:
     resolution: {integrity: sha512-xB/9ZvJIKaDgXX0qkvV9/pLD8zK23A6TVV6F8Vhsl+SrxbBeVYutz5uszxgC6Rt3RP9LZiH8OXaYjr+x6WXWmQ==}
-    dev: true
+    dev: false
 
   /reset.css/2.0.2:
     resolution: {integrity: sha1-nAEwnIILcujyGevMjhQRlJYE99c=}
@@ -1801,7 +1801,7 @@ packages:
       miniraf: 1.0.0
       rematrix: 0.3.0
       tealight: 0.3.6
-    dev: true
+    dev: false
 
   /semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
@@ -1940,7 +1940,7 @@ packages:
     dependencies:
       is-dom-node: 1.0.4
       is-dom-node-list: 1.2.1
-    dev: true
+    dev: false
 
   /throttle-debounce/3.0.1:
     resolution: {integrity: sha512-dTEWWNu6JmeVXY0ZYoPuH5cRIwc0MeGbJwah9KUNYSJwommQpCzTySTpEe8Gs1J23aeWEuAobe4Ag7EHVt/LOg==}
