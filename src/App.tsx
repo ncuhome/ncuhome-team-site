@@ -16,9 +16,9 @@ const Routes: React.FC<Props> = ({ router }) => {
       <HomeHeader />
       <TransitionGroup>
         <CSSTransition timeout={300} classNames="fade" key={location.key}>
-          <Switch>
+          <Switch location={location}>
             {router.routes.map((props, index) => (
-              <Route key={String(new Date()) + index} {...props} />
+              <Route key={index} {...props} />
             ))}
           </Switch>
         </CSSTransition>

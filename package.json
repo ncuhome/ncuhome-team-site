@@ -39,6 +39,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.3.2",
     "@types/react-slick": "^0.23.5",
+    "@types/react-transition-group": "^4.4.4",
     "@types/scrollreveal": "^0.0.7",
     "@vitejs/plugin-react": "^1.1.4",
     "compression": "^1.7.4",

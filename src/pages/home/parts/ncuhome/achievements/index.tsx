@@ -49,7 +49,7 @@ const HomeAchievementItem: React.FC<AchivementItemProps> = ({ title, iconPath, s
               <CountUp
                 start={startVal}
                 end={endVal}
-                duration={3}
+                duration={2}
                 delay={.3}
                 suffix={descWord}
                 useEasing

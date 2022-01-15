@@ -34,6 +34,11 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const listener = history.listen((item) => {
+      if (item.pathname === "/join-us") {
+        setUnderlineShow(false);
+        setIndex(routes.length);
+        return;
+      }
       const value = routes.findIndex((i) => i.url === item.pathname);
       setIndex(value);
     });
@@ -89,7 +94,7 @@ const Header: React.FC = () => {
     import("scrollreveal").then((e: any) => {
       sr = e.default();
       sr.reveal(".fade-in", {
-        delay: 400,
+        delay: 320,
         distance: "100px",
         duration: 1000,
       });
@@ -133,7 +138,6 @@ const Header: React.FC = () => {
           <div
             className="header-join-us"
             onClick={() => {
-              setUnderlineShow(false);
               history.push(about.url);
             }}
           >
