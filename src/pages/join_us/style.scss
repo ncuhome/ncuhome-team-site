@@ -1,5 +1,5 @@
-$theme: #1B8FF4;
-.about_wrapper{
+$theme: #1b8ff4;
+.about_wrapper {
   font-family: "DIN Alternate", sans-serif;
   height: calc(100vh);
   width: calc(100vw);
@@ -7,44 +7,55 @@ $theme: #1B8FF4;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #FAFCFF;
+  background-color: #fafcff;
   .about_header_wrapper {
     display: fixed;
     margin-top: 0px;
     width: 100%;
   }
-  .about_content_wrapper{
+  .about_content_wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    .about_content_img_area{
+    .about_content_img_area {
       width: 100%;
       height: 100%;
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    .about_content_text{
+    .about_content_text {
       position: absolute;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-top: -calc(50vh);
-      .about_content_button_area{
+      .about_content_button_area {
         display: flex;
-        .about_content_button{
+        .about_content_button {
           margin-top: 60px;
-          margin-left: 25px;
-          margin-right: 25px;
+          margin-left: 14px;
+          margin-right: 14px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .about_content_button_area {
+          display: flex;
+          flex-direction: column;
+          margin-top: 60px;
+          .about_content_button {
+            margin-bottom: 8px;
+            margin-top: 0;
+          }
         }
       }
     }
-    
   }
 }

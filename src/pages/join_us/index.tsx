@@ -83,29 +83,6 @@ const About: React.FC = () => {
         </div>
       </div>
       <ToastContainer />
-      {/* <Modal open={isShowDialog} onClose={closeDialog}>
-        <div
-          style={{
-            marginTop: 30,
-            marginBottom: 12,
-            padding: 8,
-            textAlign: "center",
-          }}
-        >
-          <div style={{ marginBottom: 5 }}>
-            老生报名请直接将简历（可添加作品集）发送至:
-          </div>
-          <a
-            style={{ color: "#1B8FF4", marginBottom: 5 }}
-            href={"mailto:hr@ncuhome.cn"}
-          >
-            hr@ncuhome.cn
-          </a>
-          <div style={{ marginBottom: 5 }}>
-            文件名格式: 【家园工作室 + 岗位】年级-姓名{" "}
-          </div>
-        </div>
-      </Modal> */}
     </div>
   );
 };

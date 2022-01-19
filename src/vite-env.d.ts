@@ -7,4 +7,7 @@ declare module '*.gif';
 declare module '*.bmp';
 declare module '*.tiff';
 declare module 'swiper';
-declare module '@terwanerik/scrolltrigger';
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}

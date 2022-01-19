@@ -12,10 +12,6 @@
     "deploy": "npm run build:ssr && node server.js"
   },
   "dependencies": {
-    "@terwanerik/scrolltrigger": "^1.0.5",
-    "rc-banner-anim": "^2.4.5",
-    "rc-queue-anim": "^2.0.0",
-    "rc-tween-one": "^3.0.3",
     "react": "^17.0.0",
     "react-countup": "^6.0.0",
     "react-dom": "^17.0.0",

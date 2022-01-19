@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import upHandle from "@/assets/img/up-handle.png";
 import downHandle from "@/assets/img/down-handle.png";
@@ -33,6 +33,7 @@ const Header: React.FC = () => {
   const tabContainerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
+    // 生成 underline 位置
     const listener = history.listen((item) => {
       if (item.pathname === "/join-us") {
         setUnderlineShow(false);
@@ -48,36 +49,8 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  const renderFirstElement = () => {
-    if (isMobile) {
-      return (
-        <>
-          <p>NCUHOME</p>
-          <img
-            onClick={() => setShowControl(!showControl)}
-            src={showControl ? upHandle : downHandle}
-          />
-        </>
-      );
-    }
-  };
-
-  const onResize = () => {
-    if (!isMobile) {
-      if (tabContainerRef.current?.children[index]) {
-        setUnderlineShow(true);
-        const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current
-          .children[index] as HTMLUListElement;
-        setLineStyle({
-          width,
-          left,
-        });
-      }
-    }
-  };
-
-  // 调整tab下面的线的位置和宽度
   useEffect(() => {
+    // 调整tab下面的线的位置和宽度
     if (typeof window === "undefined") return null;
 
     onResize();
@@ -109,6 +82,41 @@ const Header: React.FC = () => {
       sr?.destroy?.();
     };
   }, [index]);
+
+  useEffect(() => {
+    // React Router 组件切换时滚动条重置到页面顶部
+    if (typeof window === "undefined") return null;
+
+    window.scrollTo(0, 0);
+  }, [index]);
+
+  const renderFirstElement = () => {
+    if (isMobile) {
+      return (
+        <>
+          <p style={{ fontFamily: "DIN Alternate" }}>NCUHOME</p>
+          <img
+            onClick={() => setShowControl(!showControl)}
+            src={showControl ? upHandle : downHandle}
+          />
+        </>
+      );
+    }
+  };
+
+  const onResize = () => {
+    if (!isMobile) {
+      if (tabContainerRef.current?.children[index]) {
+        setUnderlineShow(true);
+        const { offsetLeft: left, offsetWidth: width } = tabContainerRef.current
+          .children[index] as HTMLUListElement;
+        setLineStyle({
+          width,
+          left,
+        });
+      }
+    }
+  };
 
   const tabPush = (url: string) => {
     if (typeof window === "undefined") return null;

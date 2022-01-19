@@ -40,6 +40,7 @@ const TeamBig: React.FC = () => {
                 fontSize: "22px",
                 margin: "0 12px",
                 letterSpacing: "1px",
+                whiteSpace: "nowrap",
               }}
             >
               WE ARE NCUHOMERS
