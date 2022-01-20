@@ -1,13 +1,15 @@
-FROM node:apline
+FROM node:16
 
 RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
 
-COPY .npmrc package.json pnpm-lock.yaml .pnpmfile.cjs ./
+COPY package.json pnpm-lock.yaml ./
 
 RUN pnpm install --frozen-lockfile
 
 COPY . .
 
+RUN pnpm build:ssr
+
 EXPOSE 8080
 
-CMD [ "pnpm", "deploy" ]
+CMD [ "node", "./server.js" ]
