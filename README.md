@@ -27,7 +27,7 @@ $ pnpm dev
 **作为 production 在 local 部署**
 
 ```shell
-$ pnpm start
+$ pnpm deploy
 ```
 
 ## 设计图稿
