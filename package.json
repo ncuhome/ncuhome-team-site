@@ -25,6 +25,7 @@
     "react-visibility-sensor": "^5.1.1",
     "reset.css": "^2.0.2",
     "scrollreveal": "^4.0.9",
+    "seamless-scroll-polyfill": "^2.1.6",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

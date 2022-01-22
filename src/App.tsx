@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { polyfill } from "seamless-scroll-polyfill";
 import HomeHeader from "@/components/header";
 
 interface Props {
@@ -11,6 +12,11 @@ interface Props {
 
 const Routes: React.FC<Props> = ({ router }) => {
   const location = useLocation();
+
+  useEffect(() => {
+    polyfill()
+  }, []);
+
   return (
     <>
       <HomeHeader />
