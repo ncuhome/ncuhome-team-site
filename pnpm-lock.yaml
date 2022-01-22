@@ -13,6 +13,7 @@ specifiers:
   '@vitejs/plugin-react': ^1.1.4
   compression: ^1.7.4
   express: ^4.17.2
+  ga-lite: ^2.1.4
   react: ^17.0.0
   react-countup: ^6.0.0
   react-dom: ^17.0.0
@@ -35,6 +36,7 @@ specifiers:
   vite-ssr: ^0.15.0
 
 dependencies:
+  ga-lite: 2.1.4
   react: 17.0.2
   react-countup: 6.1.0_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -1189,6 +1191,10 @@ packages:
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
+
+  /ga-lite/2.1.4:
+    resolution: {integrity: sha512-OJqPbutD8SfgF8SebyLh0uHdpQH32d5TuviXao5yPjyO2sGW3Gm+ooDmOhvXITgPepwwKxzv7ZMVKk2/hg/+lg==}
+    dev: false
 
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}

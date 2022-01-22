@@ -12,6 +12,7 @@
     "deploy": "npm run build:ssr && node server.js"
   },
   "dependencies": {
+    "ga-lite": "^2.1.4",
     "react": "^17.0.0",
     "react-countup": "^6.0.0",
     "react-dom": "^17.0.0",

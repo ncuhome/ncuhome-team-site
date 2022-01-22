@@ -3,6 +3,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { polyfill } from "seamless-scroll-polyfill";
 import HomeHeader from "@/components/header";
+import ga from "ga-lite";
 
 interface Props {
   router: {
@@ -14,7 +15,11 @@ const Routes: React.FC<Props> = ({ router }) => {
   const location = useLocation();
 
   useEffect(() => {
-    polyfill()
+    polyfill();
+
+    if (typeof navigator !== "undefined") {
+      ga("create", "UA-80324378-25", "auto");
+    }
   }, []);
 
   return (
