@@ -15,11 +15,12 @@ const Routes: React.FC<Props> = ({ router }) => {
   const location = useLocation();
 
   useEffect(() => {
-    polyfill();
-
     if (typeof navigator !== "undefined") {
       ga("create", "UA-80324378-25", "auto");
+      ga('send', 'pageview');
     }
+
+    polyfill();
   }, []);
 
   return (
