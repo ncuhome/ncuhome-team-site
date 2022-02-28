@@ -68,7 +68,7 @@ const About: React.FC = () => {
             <div className="about_content_button">
               <div
                 onClick={() => {
-                  window.open("https://2021hr.ncuos.com");
+                  window.open("https://www.wenjuan.com/s/UZBZJvWTLL");
                 }}
               >
                 <BoldButton
