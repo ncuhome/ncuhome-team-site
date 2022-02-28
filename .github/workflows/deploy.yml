@@ -47,7 +47,7 @@ jobs:
           incremental: true # 开启增量上传，只上传 md5 值变化、新增、删除 的文件
 
   ssr:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     steps:
       - uses: actions/checkout@v2
         with:
