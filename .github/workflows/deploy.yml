@@ -59,13 +59,13 @@ jobs:
       #     registry: registry.ncuos.com
       #     username: ${{ secrets.NCUOS_REGISTRY_USERNAME }}
       #     password: ${{ secrets.NCUOS_REGISTRY_PASSWORD }}
-
-      - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: registry.ncuos.com/ncuhome-main-site:latest
+      
+      - name: build image
+        run: docker build -t registry.ncuos.com/ncuhome-main-site .
+        
+      - name: push image
+        run: docker push registry.ncuos.com/ncuhome-main-site
+          
 
       - name: Redeploy
         uses: kuhsinyv/rancher-workloads-redeploy-action@v1.2
