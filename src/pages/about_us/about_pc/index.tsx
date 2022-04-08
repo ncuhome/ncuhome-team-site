@@ -63,7 +63,7 @@ const TeamBig: React.FC = () => {
           <img src={hackweek} />
         </div>
         <div className="team-content-rectangle">
-          <img style={{ width: "25px" }} src={downHandle} />
+          <img style={{ width: "25px", height: "25px" }} src={downHandle} />
         </div>
       </div>
 
