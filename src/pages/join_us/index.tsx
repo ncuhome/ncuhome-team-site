@@ -11,7 +11,7 @@ const About: React.FC = () => {
       <div style={{ fontSize: "14px", lineHeight: "18px"}}>
         <div style={{ fontSize: "14px", marginBottom: 8 }}>
           🦄 老生报名请直接将简历（可添加作品集）发送至:{" "}
-          <a style={{ color: "#1B8FF4" }} href={"mailto:hr@ncuhome.cn"}>
+          <a style={{ color: "#1B8FF4" }} href={"mailto:hr@ncuhome.club"}>
             hr@ncuhome.cn
           </a>
         </div>
