@@ -73,11 +73,11 @@ const About: React.FC = () => (
             </li>
             <li>
               <a
-                href="mailto:admin@ncuhome.cn"
-                title="邮箱：admin@ncuhome.cn"
+                href="mailto:center@ncuhome.club"
+                title="邮箱：center@ncuhome.club"
                 className="mail"
               >
-                邮箱：admin@ncuhome.cn
+                邮箱：center@ncuhome.club
               </a>
             </li>
             {/* <li>
