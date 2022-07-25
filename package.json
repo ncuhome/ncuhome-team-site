@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "ga-lite": "^2.1.4",
+    "jquery": "3.6.0",
     "minimist": "^1.2.6",
     "react": "^17.0.0",
     "react-countup": "^6.0.0",
@@ -26,9 +27,11 @@
     "react-use": "^17.3.1",
     "react-visibility-sensor": "^5.1.1",
     "reset.css": "^2.0.2",
+    "rollup": "^2.0.0",
     "scrollreveal": "^4.0.9",
     "seamless-scroll-polyfill": "^2.1.6",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vue": "^3.2.26"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",
