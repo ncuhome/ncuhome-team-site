@@ -61,11 +61,10 @@ jobs:
       #     password: ${{ secrets.NCUOS_REGISTRY_PASSWORD }}
       
       - name: build image
-        run: docker build -t registry.ncuos.com/ncuhome-main-site .
+        run: docker build -t harbor.ncuos.com/us/team-site:latest .
         
       - name: push image
-        run: docker push registry.ncuos.com/ncuhome-main-site
-          
+        run: docker push harbor.ncuos.com/us/team-site:latest
 
       - name: Redeploy
         uses: kuhsinyv/rancher-workloads-redeploy-action@v1.2
