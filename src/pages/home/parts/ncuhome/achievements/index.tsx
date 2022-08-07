@@ -18,7 +18,7 @@ const achivements: AchivementItemProps[] = [
   {
     title: '成立时间',
     iconPath: clockIcon,
-    startVal: 1921,
+    startVal: (new Date()).getFullYear(),
     endVal: 2001,
     descWord: ' 年'
   },
