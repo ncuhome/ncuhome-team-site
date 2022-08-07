@@ -45,33 +45,3 @@ jobs:
           bucket: team-site # 要上传到的 bucket, 若不存在会自动新建
           endpoint: oss-cn-shanghai.aliyuncs.com # 指定区域的 oss endpoint
           incremental: true # 开启增量上传，只上传 md5 值变化、新增、删除 的文件
-
-  ssr:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-
-      # - name: Login to NCUOS Registry
-      #   uses: docker/login-action@v1
-      #   with:
-      #     registry: registry.ncuos.com
-      #     username: ${{ secrets.NCUOS_REGISTRY_USERNAME }}
-      #     password: ${{ secrets.NCUOS_REGISTRY_PASSWORD }}
-      
-      - name: build image
-        run: docker build -t harbor.ncuos.com/us/team-site:latest .
-        
-      - name: push image
-        run: docker push harbor.ncuos.com/us/team-site:latest
-
-      - name: Redeploy
-        uses: kuhsinyv/rancher-workloads-redeploy-action@v1.2
-        env:
-          API_ACCESS_ADDR: https://rancher.ncuos.com/v3
-          CLUSTER: local
-          PROJECT: p-qld78
-          NAMESPACE: us
-          WORKLOAD: us:ncuhome-team-site
-          RANCHER_TOKEN: ${{ secrets.RANCHER_TOKEN }}

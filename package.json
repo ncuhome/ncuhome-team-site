@@ -3,13 +3,8 @@
   "version": "0.0.0",
   "license": "GPLV3",
   "scripts": {
-    "dev:ssr": "vite-ssr --open --force",
-    "dev:spa": "vite --open --force",
-    "dev": "npm run dev:ssr",
-    "build:ssr": "rm -rf dist && vite-ssr build",
-    "build:spa": "vite build",
-    "build": "npm run build:ssr",
-    "deploy": "npm run build:ssr && node server.js"
+    "dev": "vite --open --force",
+    "build": "npm run build"
   },
   "dependencies": {
     "ga-lite": "^2.1.4",
