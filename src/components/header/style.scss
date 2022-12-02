@@ -1,8 +1,8 @@
 $shadow: 0 1px 2px 0 rgba(35, 41, 51, 0.08),
-  0 2px 12px 0px rgba(0, 31, 71, 0.04);
+0 2px 12px 0px rgba(0, 31, 71, 0.04);
 $primary-color: #1b8ff4;
-$text-color: #1f2329;
-$right-m: 40px;
+$text-color   : #1f2329;
+$right-m      : 40px;
 $margin-border: 98px;
 
 .home-tab-active {
@@ -10,14 +10,14 @@ $margin-border: 98px;
 }
 
 .header-logo {
-  height: 42px;
+  height      : 42px;
   margin-right: 48px;
 }
 
 @media (max-width: 767px) {
   a {
     text-decoration: none;
-    transition: color 0.2s;
+    transition     : color 0.2s;
   }
 
   a:hover {
@@ -25,166 +25,172 @@ $margin-border: 98px;
   }
 
   .header-home {
-    z-index: 1000;
-    width: 100%;
-    height: 52px;
+    z-index         : 1000;
+    width           : 100%;
+    height          : 52px;
     background-color: #fff;
-    position: fixed;
+    position        : fixed;
+
     ul {
-      height: auto;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+      height         : auto;
+      width          : 100%;
+      display        : flex;
+      flex-direction : column;
       justify-content: center;
-      align-items: center;
-      color: $text-color;
+      align-items    : center;
+      color          : $text-color;
 
       .header-home-fixed {
-        display: flex;
-        height: 52px;
+        display        : flex;
+        height         : 52px;
         justify-content: center;
-        align-items: center;
+        align-items    : center;
       }
 
       .header-home-list {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        height         : 100%;
+        width          : 100%;
+        display        : flex;
+        flex-direction : column;
         justify-content: center;
-        align-items: center;
+        align-items    : center;
       }
 
       .header-join-us {
-        width: 100%;
-        height: 40px;
-        margin: 0 0 -1px -1px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width           : 100%;
+        height          : 40px;
+        margin          : 0 0 -1px -1px;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
         background-color: #fff;
-        box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+        box-shadow      : 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+
         a {
-          font-size: 14px;
-          color: #fff;
-          padding: 5px 10px;
+          font-size       : 14px;
+          color           : #fff;
+          padding         : 5px 10px;
           background-color: $primary-color;
-          border-radius: 20px;
+          border-radius   : 20px;
         }
       }
 
       li {
-        width: 100%;
-        height: 40px;
-        margin: 0 0 -1px -1px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width           : 100%;
+        height          : 40px;
+        margin          : 0 0 -1px -1px;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
         background-color: #fff;
-        box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+        box-shadow      : 0 5px 10px -5px rgba(0, 0, 0, 0.5);
       }
 
       p {
-        display: flex;
+        display       : flex;
         letter-spacing: 4px;
-        margin-right: 10px;
+        margin-right  : 10px;
       }
 
       img {
-        width: 16px;
+        width : 16px;
         height: 16px;
       }
     }
+
     box-shadow: $shadow;
   }
 }
 
 @media (min-width: 768px) {
   .header-home {
-    height: 56px;
-    width: calc(100vw - 196px);
-    z-index: 1000;
-    padding: 0 $margin-border;
-    top: 0px;
+    box-sizing      : border-box;
+    height          : 56px;
+    width           : 100vw;
+    z-index         : 1000;
+    padding         : 0 $margin-border;
+    top             : 0px;
     background-color: rgb(252, 252, 252);
-    position: fixed;
-    border-bottom: 1px solid rgb(228, 228, 228);
-    box-shadow: $shadow;
+    position        : fixed;
+    border-bottom   : 1px solid rgb(228, 228, 228);
+    box-shadow      : $shadow;
+
     ul {
-      height: 100%;
-      display: flex;
+      height     : 100%;
+      display    : flex;
       align-items: center;
-      font-size: 16px;
+      font-size  : 16px;
       font-weight: 500;
-      color: $text-color;
+      color      : $text-color;
 
       .header-home-fixed {
         p {
-          white-space: nowrap;
-          text-align: center;
+          white-space : nowrap;
+          text-align  : center;
           margin-right: $right-m;
-          cursor: pointer;
-          transition: color 0.3s;
+          cursor      : pointer;
+          transition  : color 0.3s;
         }
 
         p:hover {
-          text-align: center;
+          text-align  : center;
           margin-right: $right-m;
-          cursor: pointer;
+          cursor      : pointer;
         }
       }
+
       .header-home-list {
-        display: flex;
+        display    : flex;
         align-items: center;
-        flex: 1;
-        height: 100%;
+        flex       : 1;
+        height     : 100%;
 
         li {
-          white-space: nowrap;
-          height: 30px;
-          line-height: 30px;
-          text-align: center;
-          margin-right: $right-m;
+          white-space  : nowrap;
+          height       : 30px;
+          line-height  : 30px;
+          text-align   : center;
+          margin-right : $right-m;
           border-bottom: 2px solid transparent;
-          cursor: pointer;
-          transition: color 0.3s;
+          cursor       : pointer;
+          transition   : color 0.3s;
         }
 
         li:hover {
-          height: 30px;
-          line-height: 30px;
-          color: $primary-color;
-          text-align: center;
+          height      : 30px;
+          line-height : 30px;
+          color       : $primary-color;
+          text-align  : center;
           margin-right: $right-m;
-          cursor: pointer;
+          cursor      : pointer;
         }
 
         .home-tab-underline {
-          height: 3px;
-          background: $primary-color;
-          position: absolute;
-          bottom: 10px;
+          height       : 3px;
+          background   : $primary-color;
+          position     : absolute;
+          bottom       : 10px;
           border-radius: 3px;
-          transition: all ease 0.2s;
+          transition   : all ease 0.2s;
         }
       }
 
       .header-join-us {
-        width: 125px;
-        height: 100%;
+        width           : 125px;
+        height          : 100%;
         background-color: $primary-color;
-        margin: 0;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s;
-        cursor: pointer;
+        margin          : 0;
+        color           : white;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        transition      : all 0.3s;
+        cursor          : pointer;
 
         a {
-          color: white;
+          color          : white;
           text-decoration: none;
-          transition: color 0.3s;
+          transition     : color 0.3s;
         }
 
         &:hover {
