@@ -68,7 +68,7 @@ const About: React.FC = () => {
             <div className="about_content_button">
               <div
                 onClick={() => {
-                  window.open("https://qm.qq.com/cgi-bin/qm/qr?k=H4Ydf7Lv00MUdqL8OnIfUHc7FR9eyrmY&jump_from=webapi&qr=1");
+                  window.open("https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=aSDUwK-u3ONhV9g15Ej8QfBAG-hs_hy1&group_code=853882202");
                 }}
               >
                 <BoldButton
